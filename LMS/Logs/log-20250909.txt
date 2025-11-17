@@ -1,0 +1,366 @@
+2025-09-09 20:11:06.217 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:11:06.309 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:11:06.312 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:11:06.313 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:11:06.363 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 20:11:06.375 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-09-09 20:14:09.932 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:14:10.030 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:14:10.033 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:14:10.034 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:14:10.079 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 20:14:10.095 +05:30 [INF] Applying migration '20250909144357_CompanyHolidays'.
+2025-09-09 20:14:10.149 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909144357_CompanyHolidays', N'8.0.18');
+2025-09-09 20:18:33.525 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:18:33.650 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:18:33.653 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:18:33.654 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:18:33.713 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 20:18:33.727 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-09-09 20:19:12.870 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:19:12.919 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:19:12.944 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 20:22:09.936 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:22:10.023 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:22:10.027 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 20:22:10.029 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 20:22:10.079 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 20:22:10.091 +05:30 [INF] Applying migration '20250909144936_CompanyHoliday'.
+2025-09-09 20:22:10.166 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909144936_CompanyHoliday', N'8.0.18');
+2025-09-09 20:22:10.177 +05:30 [INF] Applying migration '20250909145155_HolidayForCompany'.
+2025-09-09 20:22:10.275 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [companyHoliday] (
+    [Id] int NOT NULL IDENTITY,
+    [CompanyId] int NOT NULL,
+    [HolidayDate] datetime2 NOT NULL,
+    [HolidayName] nvarchar(max) NOT NULL,
+    [HolidayType] nvarchar(max) NOT NULL,
+    [Year] int NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [LastUpdatedAt] datetime2 NOT NULL,
+    [IsActive] int NOT NULL,
+    [IsDeleted] int NOT NULL,
+    CONSTRAINT [PK_companyHoliday] PRIMARY KEY ([Id])
+);
+2025-09-09 20:22:10.281 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909145155_HolidayForCompany', N'8.0.18');
+2025-09-09 21:38:33.753 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 21:38:33.855 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 21:38:33.857 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 21:38:33.858 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 21:38:33.913 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 21:38:33.925 +05:30 [INF] Applying migration '20250909160625_LeaveApplication'.
+2025-09-09 21:38:33.987 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909160625_LeaveApplication', N'8.0.18');
+2025-09-09 21:38:33.997 +05:30 [INF] Applying migration '20250909160740_LeaveApplications'.
+2025-09-09 21:38:34.088 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [leaveApplication] (
+    [Id] int NOT NULL IDENTITY,
+    [EmployeeId] int NOT NULL,
+    [LeaveTypeId] int NOT NULL,
+    [StartDate] datetime2 NOT NULL,
+    [EndDate] datetime2 NOT NULL,
+    [TotalDays] int NOT NULL,
+    [Reason] nvarchar(max) NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    [AppliedAt] datetime2 NOT NULL,
+    [DateApproved] datetime2 NULL,
+    [ReviewedBy] int NULL,
+    [CompanyId] int NOT NULL,
+    [IsActive] bit NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_leaveApplication] PRIMARY KEY ([Id])
+);
+2025-09-09 21:38:34.111 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909160740_LeaveApplications', N'8.0.18');
+2025-09-09 22:54:53.883 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 22:54:56.118 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 22:54:57.246 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 22:54:57.725 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 22:54:57.731 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 22:54:57.862 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 22:54:57.864 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 22:54:57.865 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 22:54:57.898 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 22:54:57.901 +05:30 [INF] Hosting environment: Development
+2025-09-09 22:54:57.903 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 22:54:57.944 +05:30 [INF] Server hhlap0012:35540:af06f50c successfully announced in 47.1951 ms
+2025-09-09 22:54:57.950 +05:30 [INF] Server hhlap0012:35540:af06f50c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 22:54:58.035 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-09 22:54:58.183 +05:30 [INF] Server hhlap0012:35540:af06f50c all the dispatchers started
+2025-09-09 22:55:03.824 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 22:55:04.779 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 976.559ms
+2025-09-09 22:55:05.013 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 22:55:05.022 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 22:55:05.143 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 130.3578ms
+2025-09-09 22:55:06.126 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1113.3772ms
+2025-09-09 22:55:06.346 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 22:55:06.866 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 521.5674ms
+2025-09-09 22:56:04.911 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 22:56:06.343 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 22:56:07.194 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 22:56:07.507 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 22:56:07.510 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 22:56:07.622 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 22:56:07.624 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 22:56:07.626 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 22:56:07.653 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 22:56:07.656 +05:30 [INF] Hosting environment: Development
+2025-09-09 22:56:07.657 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 22:56:07.696 +05:30 [INF] Server hhlap0012:34204:732be7f6 successfully announced in 43.7497 ms
+2025-09-09 22:56:07.704 +05:30 [INF] Server hhlap0012:34204:732be7f6 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 22:56:07.876 +05:30 [INF] Server hhlap0012:34204:732be7f6 all the dispatchers started
+2025-09-09 22:56:10.150 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 22:56:11.265 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1142.3666ms
+2025-09-09 22:56:11.423 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 22:56:11.425 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 22:56:11.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 48.3729ms
+2025-09-09 22:56:11.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 183.2073ms
+2025-09-09 22:56:11.785 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 22:56:12.191 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 412.6469ms
+2025-09-09 22:57:38.797 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - application/json 335
+2025-09-09 22:57:38.974 +05:30 [INF] Executing endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 22:57:39.188 +05:30 [INF] Route matched with {action = "AddLeaveRequest", controller = "Leave"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddLeaveRequest(LMS.DTOs.Employee.LeaveRequest) on controller LMS.Controllers.Leave (LMS).
+2025-09-09 22:57:42.400 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-09-09 22:57:42.935 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveApplication] ([AppliedAt], [CompanyId], [CreatedAt], [DateApproved], [EmployeeId], [EndDate], [IsActive], [IsDeleted], [LeaveTypeId], [Reason], [ReviewedBy], [StartDate], [Status], [TotalDays], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-09-09 22:57:43.044 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-09-09 22:57:43.070 +05:30 [INF] Executed action LMS.Controllers.Leave.AddLeaveRequest (LMS) in 3869.0364ms
+2025-09-09 22:57:43.079 +05:30 [INF] Executed endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 22:57:43.101 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - 200 null application/json; charset=utf-8 4309.6914ms
+2025-09-09 23:01:07.794 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-09 23:07:28.267 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 23:07:29.873 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 23:07:30.594 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 23:07:30.910 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 23:07:30.914 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 23:07:31.063 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 23:07:31.066 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 23:07:31.068 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 23:07:31.108 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 23:07:31.111 +05:30 [INF] Hosting environment: Development
+2025-09-09 23:07:31.113 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 23:07:31.157 +05:30 [INF] Server hhlap0012:34944:ddf1a3aa successfully announced in 52.6948 ms
+2025-09-09 23:07:31.169 +05:30 [INF] Server hhlap0012:34944:ddf1a3aa is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 23:07:31.359 +05:30 [INF] Server hhlap0012:34944:ddf1a3aa all the dispatchers started
+2025-09-09 23:07:35.345 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 23:07:36.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1145.9752ms
+2025-09-09 23:07:36.755 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 23:07:36.809 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 55.7993ms
+2025-09-09 23:07:36.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 23:07:37.092 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 192.0673ms
+2025-09-09 23:07:37.382 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 23:07:37.660 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 278.9818ms
+2025-09-09 23:09:49.897 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 23:09:51.662 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 23:09:52.194 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 23:09:52.461 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 23:09:52.463 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 23:09:52.550 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 23:09:52.553 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 23:09:52.555 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 23:09:52.585 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 23:09:52.587 +05:30 [INF] Hosting environment: Development
+2025-09-09 23:09:52.590 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 23:09:52.617 +05:30 [INF] Server hhlap0012:17500:0dc5e210 successfully announced in 33.2858 ms
+2025-09-09 23:09:52.628 +05:30 [INF] Server hhlap0012:17500:0dc5e210 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 23:09:52.884 +05:30 [INF] Server hhlap0012:17500:0dc5e210 all the dispatchers started
+2025-09-09 23:09:55.818 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 23:09:56.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 817.7507ms
+2025-09-09 23:09:56.974 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 23:09:56.998 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 23:09:57.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 37.9372ms
+2025-09-09 23:09:57.180 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.8901ms
+2025-09-09 23:09:57.402 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 23:09:57.864 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 462.6951ms
+2025-09-09 23:11:15.320 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 23:11:16.691 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 23:11:17.218 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 23:11:17.530 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 23:11:17.534 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 23:11:17.640 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 23:11:17.642 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 23:11:17.644 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 23:11:17.674 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 23:11:17.677 +05:30 [INF] Hosting environment: Development
+2025-09-09 23:11:17.679 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 23:11:17.725 +05:30 [INF] Server hhlap0012:37720:97184981 successfully announced in 52.729 ms
+2025-09-09 23:11:17.735 +05:30 [INF] Server hhlap0012:37720:97184981 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 23:11:17.917 +05:30 [INF] Server hhlap0012:37720:97184981 all the dispatchers started
+2025-09-09 23:11:20.825 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 23:11:22.041 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1244.4208ms
+2025-09-09 23:11:22.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 23:11:22.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 23:11:22.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 24.4767ms
+2025-09-09 23:11:22.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.3452ms
+2025-09-09 23:11:22.722 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 23:11:22.956 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 234.4707ms
+2025-09-09 23:11:39.114 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - application/json 190
+2025-09-09 23:11:39.150 +05:30 [INF] Executing endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 23:11:39.237 +05:30 [INF] Route matched with {action = "AddLeaveRequest", controller = "Leave"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddLeaveRequest(LMS.DTOs.Employee.LeaveRequest) on controller LMS.Controllers.Leave (LMS).
+2025-09-09 23:11:42.054 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-09-09 23:11:42.511 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveApplication] ([AppliedAt], [CompanyId], [CreatedAt], [DateApproved], [EmployeeId], [EndDate], [IsActive], [IsDeleted], [LeaveTypeId], [Reason], [ReviewedBy], [StartDate], [Status], [TotalDays], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-09-09 23:11:42.615 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-09-09 23:11:42.639 +05:30 [INF] Executed action LMS.Controllers.Leave.AddLeaveRequest (LMS) in 3365.4562ms
+2025-09-09 23:11:42.643 +05:30 [INF] Executed endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 23:11:42.661 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - 200 null application/json; charset=utf-8 3547.3046ms
+2025-09-09 23:14:45.118 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 23:14:45.227 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 23:14:45.229 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-09-09 23:14:45.230 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-09-09 23:14:45.275 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-09-09 23:14:45.300 +05:30 [INF] Applying migration '20250909174437_NullableUpdateAtCreatedAtInLeaveApplication'.
+2025-09-09 23:14:45.640 +05:30 [INF] Executed DbCommand (261ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[leaveApplication]') AND [c].[name] = N'UpdatedAt');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [leaveApplication] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [leaveApplication] ALTER COLUMN [UpdatedAt] datetime2 NULL;
+2025-09-09 23:14:45.718 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[leaveApplication]') AND [c].[name] = N'CreatedAt');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [leaveApplication] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [leaveApplication] ALTER COLUMN [CreatedAt] datetime2 NULL;
+2025-09-09 23:14:45.732 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250909174437_NullableUpdateAtCreatedAtInLeaveApplication', N'8.0.18');
+2025-09-09 23:15:00.067 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-09 23:15:01.508 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-09 23:15:02.509 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-09 23:15:03.060 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-09 23:15:03.063 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-09 23:15:03.335 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-09 23:15:03.338 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-09 23:15:03.341 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-09 23:15:03.392 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-09 23:15:03.397 +05:30 [INF] Hosting environment: Development
+2025-09-09 23:15:03.400 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-09 23:15:03.469 +05:30 [INF] Server hhlap0012:17684:19946e57 successfully announced in 79.1551 ms
+2025-09-09 23:15:03.508 +05:30 [INF] Server hhlap0012:17684:19946e57 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-09 23:15:03.592 +05:30 [INF] 2 servers were removed due to timeout
+2025-09-09 23:15:03.874 +05:30 [INF] Server hhlap0012:17684:19946e57 all the dispatchers started
+2025-09-09 23:15:08.607 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-09 23:15:09.904 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1340.1569ms
+2025-09-09 23:15:10.155 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-09 23:15:10.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-09 23:15:10.231 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 13742 application/javascript; charset=utf-8 74.0216ms
+2025-09-09 23:15:10.574 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 360.0648ms
+2025-09-09 23:15:10.820 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-09 23:15:11.156 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 337.2001ms
+2025-09-09 23:15:27.036 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - application/json 190
+2025-09-09 23:15:27.085 +05:30 [INF] Executing endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 23:15:27.194 +05:30 [INF] Route matched with {action = "AddLeaveRequest", controller = "Leave"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddLeaveRequest(LMS.DTOs.Employee.LeaveRequest) on controller LMS.Controllers.Leave (LMS).
+2025-09-09 23:15:30.184 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-09-09 23:15:30.658 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveApplication] ([AppliedAt], [CompanyId], [CreatedAt], [DateApproved], [EmployeeId], [EndDate], [IsActive], [IsDeleted], [LeaveTypeId], [Reason], [ReviewedBy], [StartDate], [Status], [TotalDays], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-09-09 23:15:30.743 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-09-09 23:15:30.771 +05:30 [INF] Executed action LMS.Controllers.Leave.AddLeaveRequest (LMS) in 3553.621ms
+2025-09-09 23:15:30.777 +05:30 [INF] Executed endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-09 23:15:30.799 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - 200 null application/json; charset=utf-8 3764.211ms

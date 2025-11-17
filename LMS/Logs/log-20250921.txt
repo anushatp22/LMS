@@ -1,0 +1,794 @@
+2025-09-21 10:57:17.314 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 10:57:20.290 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 10:57:21.590 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 10:57:22.091 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 10:57:22.095 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 10:57:22.231 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 10:57:22.233 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 10:57:22.236 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 10:57:22.334 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 10:57:22.348 +05:30 [INF] Hosting environment: Development
+2025-09-21 10:57:22.356 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 10:57:22.387 +05:30 [INF] Server hhlap0012:40860:8a7fa7c5 successfully announced in 54.9204 ms
+2025-09-21 10:57:22.401 +05:30 [INF] Server hhlap0012:40860:8a7fa7c5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 10:57:22.441 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 10:57:22.638 +05:30 [INF] Server hhlap0012:40860:8a7fa7c5 all the dispatchers started
+2025-09-21 10:57:26.406 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 10:57:27.564 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1196.2344ms
+2025-09-21 10:57:27.763 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 10:57:27.772 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 10:57:27.831 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 68.5431ms
+2025-09-21 10:57:29.100 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1335.6887ms
+2025-09-21 10:57:29.268 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 10:57:29.321 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.1536ms
+2025-09-21 11:00:01.289 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 27
+2025-09-21 11:00:01.592 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:00:02.049 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 11:00:03.388 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-21 11:00:03.529 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 1458.8947ms
+2025-09-21 11:00:03.538 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:00:03.549 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/problem+json; charset=utf-8 2270.3861ms
+2025-09-21 11:00:12.120 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-21 11:00:12.185 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:00:12.192 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 11:01:25.966 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:01:26.151 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 11:01:26.227 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 74026.1131ms
+2025-09-21 11:01:26.236 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:01:26.254 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 200 null application/json; charset=utf-8 74134.1724ms
+2025-09-21 11:22:21.550 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 11:22:23.263 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 11:22:24.374 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 11:22:25.070 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 11:22:25.073 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 11:22:25.187 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 11:22:25.189 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 11:22:25.191 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 11:22:25.229 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 11:22:25.232 +05:30 [INF] Hosting environment: Development
+2025-09-21 11:22:25.233 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 11:22:25.306 +05:30 [INF] Server hhlap0012:488:27c60e9a successfully announced in 76.466 ms
+2025-09-21 11:22:25.318 +05:30 [INF] Server hhlap0012:488:27c60e9a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 11:22:25.367 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 11:22:25.597 +05:30 [INF] Server hhlap0012:488:27c60e9a all the dispatchers started
+2025-09-21 11:22:28.392 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 11:22:32.250 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 3866.9988ms
+2025-09-21 11:22:32.411 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 11:22:32.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 11:22:32.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 59.8714ms
+2025-09-21 11:22:32.669 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 247.6449ms
+2025-09-21 11:22:32.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 11:22:32.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.7121ms
+2025-09-21 11:23:24.372 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 25
+2025-09-21 11:23:24.518 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:23:24.813 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 11:24:33.746 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:24:36.896 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:24:51.105 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:27:06.018 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:27:17.488 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 11:27:17.552 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 232725.1763ms
+2025-09-21 11:27:17.562 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:27:17.585 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 233216.0463ms
+2025-09-21 11:27:26.283 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-21 11:27:26.330 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 11:27:26.344 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 11:27:45.488 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 11:29:50.749 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 12:48:20.429 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 12:48:23.092 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 12:48:24.583 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 12:48:25.376 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 12:48:25.382 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 12:48:25.667 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 12:48:25.671 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 12:48:25.675 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 12:48:25.743 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 12:48:25.749 +05:30 [INF] Hosting environment: Development
+2025-09-21 12:48:25.753 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 12:48:25.867 +05:30 [INF] Server hhlap0012:14212:c944ad18 successfully announced in 132.6375 ms
+2025-09-21 12:48:25.884 +05:30 [INF] Server hhlap0012:14212:c944ad18 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 12:48:25.974 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 12:48:26.227 +05:30 [INF] Server hhlap0012:14212:c944ad18 all the dispatchers started
+2025-09-21 12:48:37.665 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 12:48:38.901 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1291.0742ms
+2025-09-21 12:48:39.201 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 12:48:39.218 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 12:48:39.259 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 58.5706ms
+2025-09-21 12:48:39.428 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 210.9444ms
+2025-09-21 12:48:39.782 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 12:48:39.973 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.1557ms
+2025-09-21 12:49:04.892 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-21 12:49:05.147 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 12:49:05.347 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 12:49:14.448 +05:30 [INF] Executed DbCommand (116ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 12:49:14.514 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 12:49:14.572 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 9213.2793ms
+2025-09-21 12:49:14.584 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 12:49:14.658 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 200 null application/json; charset=utf-8 9767.3757ms
+2025-09-21 13:02:08.949 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 81
+2025-09-21 13:02:09.067 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:09.113 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 13:02:16.223 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-21 13:02:16.237 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 13:02:16.246 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 7124.2526ms
+2025-09-21 13:02:16.248 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:16.251 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 7315.3126ms
+2025-09-21 13:02:41.152 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 83
+2025-09-21 13:02:41.187 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:41.190 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 13:02:41.304 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-21 13:02:41.435 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 238.7548ms
+2025-09-21 13:02:41.443 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:41.451 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/problem+json; charset=utf-8 303.1783ms
+2025-09-21 13:02:53.531 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 82
+2025-09-21 13:02:53.549 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:53.554 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 13:02:57.174 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-21 13:02:57.182 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 13:02:57.187 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 3625.0398ms
+2025-09-21 13:02:57.193 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:02:57.197 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 3668.2171ms
+2025-09-21 13:03:36.945 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 82
+2025-09-21 13:03:36.979 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:03:36.982 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 13:05:01.293 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-21 13:05:19.856 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-21 13:05:19.867 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 13:05:19.876 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 102887.3599ms
+2025-09-21 13:05:19.880 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:05:19.891 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 102945.9638ms
+2025-09-21 13:05:34.256 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 58
+2025-09-21 13:05:34.274 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:05:34.280 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 13:05:38.476 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__filter_StartDate_Value_0='?' (DbType = DateTime2), @__filter_EndDate_Value_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[StartDate] >= @__filter_StartDate_Value_0 AND [l].[EndDate] <= @__filter_EndDate_Value_1
+2025-09-21 13:05:38.481 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 13:05:38.485 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 4201.1778ms
+2025-09-21 13:05:38.490 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:05:38.492 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 4238.2061ms
+2025-09-21 13:07:18.122 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 58
+2025-09-21 13:07:18.174 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 13:07:18.193 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 14:00:15.222 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 14:00:17.477 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 14:00:18.589 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 14:00:19.221 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 14:00:19.225 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 14:00:19.354 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 14:00:19.359 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 14:00:19.363 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 14:00:19.406 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 14:00:19.412 +05:30 [INF] Hosting environment: Development
+2025-09-21 14:00:19.415 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 14:00:19.504 +05:30 [INF] Server hhlap0012:41744:e748edec successfully announced in 99.5545 ms
+2025-09-21 14:00:19.518 +05:30 [INF] Server hhlap0012:41744:e748edec is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 14:00:19.580 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 14:00:19.756 +05:30 [INF] Server hhlap0012:41744:e748edec all the dispatchers started
+2025-09-21 14:00:24.386 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 14:00:25.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1321.2809ms
+2025-09-21 14:00:25.909 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 14:00:25.923 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 14:00:25.977 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 68.6494ms
+2025-09-21 14:00:27.274 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1351.0929ms
+2025-09-21 14:00:27.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 14:00:27.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.5565ms
+2025-09-21 14:00:52.073 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-21 14:00:52.117 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 14:00:52.275 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 14:00:58.798 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-21 14:00:58.864 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 14:00:58.945 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 6648.4654ms
+2025-09-21 14:00:58.958 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 14:00:58.992 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 200 null application/json; charset=utf-8 6919.4868ms
+2025-09-21 14:04:58.116 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 14:04:58.233 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 118.4397ms
+2025-09-21 14:04:58.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 14:04:58.514 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 14:04:58.529 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 16.2891ms
+2025-09-21 14:04:58.582 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.8879ms
+2025-09-21 14:04:59.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 14:04:59.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.0706ms
+2025-09-21 14:05:39.814 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 58
+2025-09-21 14:05:39.857 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 14:05:39.956 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 14:05:43.849 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__start_0='?' (DbType = DateTime2), @__end_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[StartDate] >= @__start_0 AND [l].[EndDate] <= @__end_1
+2025-09-21 14:05:43.921 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 14:05:43.969 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 4005.9953ms
+2025-09-21 14:05:43.976 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-21 14:05:43.980 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 200 null application/json; charset=utf-8 4170.5686ms
+2025-09-21 15:11:53.129 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 15:11:55.090 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 15:11:55.728 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 15:11:56.058 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 15:11:56.061 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 15:11:56.178 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 15:11:56.181 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 15:11:56.184 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 15:11:56.228 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 15:11:56.232 +05:30 [INF] Hosting environment: Development
+2025-09-21 15:11:56.234 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 15:11:56.269 +05:30 [INF] Server hhlap0012:15020:e02674c3 successfully announced in 43.8914 ms
+2025-09-21 15:11:56.275 +05:30 [INF] Server hhlap0012:15020:e02674c3 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 15:11:56.479 +05:30 [INF] Server hhlap0012:15020:e02674c3 all the dispatchers started
+2025-09-21 15:12:00.254 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 15:12:01.735 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1520.4935ms
+2025-09-21 15:12:02.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 15:12:02.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 15:12:02.276 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 134.7045ms
+2025-09-21 15:12:02.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 300.019ms
+2025-09-21 15:12:02.729 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 15:12:02.855 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.9582ms
+2025-09-21 15:12:23.428 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id} - null null
+2025-09-21 15:12:23.470 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:12:23.604 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:12:26.408 +05:30 [INF] Executed DbCommand (84ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 15:12:26.495 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:12:26.571 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 2951.0914ms
+2025-09-21 15:12:26.580 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:12:26.603 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id} - 200 null application/json; charset=utf-8 3262.9377ms
+2025-09-21 15:13:01.158 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - null null
+2025-09-21 15:13:01.177 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:13:01.183 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:13:01.263 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 15:13:01.272 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:13:01.276 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 88.8736ms
+2025-09-21 15:13:01.282 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:13:01.286 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - 200 null application/json; charset=utf-8 130.8684ms
+2025-09-21 15:13:09.110 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - null null
+2025-09-21 15:13:09.126 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:13:09.134 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:13:09.309 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 15:13:09.317 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:13:09.321 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 173.6435ms
+2025-09-21 15:13:09.327 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:13:09.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - 200 null application/json; charset=utf-8 221.2336ms
+2025-09-21 15:13:26.646 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - null null
+2025-09-21 15:13:26.670 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:13:26.679 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:16:32.353 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 15:16:32.423 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:16:32.455 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 185766.8588ms
+2025-09-21 15:16:32.462 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:16:32.469 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23/{Id}?Id=2 - 200 null application/json; charset=utf-8 185822.0666ms
+2025-09-21 15:16:56.374 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 15:18:53.506 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 15:18:55.584 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 15:18:56.494 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 15:18:56.840 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 15:18:56.844 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 15:18:57.013 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 15:18:57.017 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 15:18:57.019 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 15:18:57.079 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 15:18:57.084 +05:30 [INF] Hosting environment: Development
+2025-09-21 15:18:57.089 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 15:18:57.124 +05:30 [INF] Server hhlap0012:42472:b74fba82 successfully announced in 46.2978 ms
+2025-09-21 15:18:57.131 +05:30 [INF] Server hhlap0012:42472:b74fba82 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 15:18:57.331 +05:30 [INF] Server hhlap0012:42472:b74fba82 all the dispatchers started
+2025-09-21 15:19:01.364 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 15:19:02.369 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1026.193ms
+2025-09-21 15:19:02.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 15:19:02.654 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 15:19:02.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 41.9082ms
+2025-09-21 15:19:02.830 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 176.5491ms
+2025-09-21 15:19:03.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 15:19:03.336 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 91.487ms
+2025-09-21 15:19:29.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=2 - null null
+2025-09-21 15:19:29.846 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:19:29.998 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:19:42.777 +05:30 [INF] Executed DbCommand (98ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:19:42.823 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:19:42.865 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 12856.3553ms
+2025-09-21 15:19:42.870 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:19:42.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=2 - 200 null application/json; charset=utf-8 13140.3727ms
+2025-09-21 15:19:57.933 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=1 - null null
+2025-09-21 15:19:57.952 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:19:57.961 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:19:59.999 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:20:00.021 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:20:00.032 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 2063.7357ms
+2025-09-21 15:20:00.041 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:20:00.049 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=1 - 200 null application/json; charset=utf-8 2117.2191ms
+2025-09-21 15:20:42.337 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=1 - null null
+2025-09-21 15:20:42.381 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:20:42.394 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:21:10.114 +05:30 [INF] Executed DbCommand (91ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:22:53.320 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 15:22:55.169 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 15:22:55.784 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 15:22:56.194 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 15:22:56.198 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 15:22:56.293 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 15:22:56.297 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 15:22:56.301 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 15:22:56.360 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 15:22:56.364 +05:30 [INF] Hosting environment: Development
+2025-09-21 15:22:56.366 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 15:22:56.425 +05:30 [INF] Server hhlap0012:14036:45d3edf5 successfully announced in 67.1042 ms
+2025-09-21 15:22:56.433 +05:30 [INF] Server hhlap0012:14036:45d3edf5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 15:22:56.642 +05:30 [INF] Server hhlap0012:14036:45d3edf5 all the dispatchers started
+2025-09-21 15:23:01.147 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 15:23:02.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1000.4113ms
+2025-09-21 15:23:02.320 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 15:23:02.326 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 15:23:02.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 63.5469ms
+2025-09-21 15:23:02.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 255.0083ms
+2025-09-21 15:23:02.886 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 15:23:02.996 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 110.2548ms
+2025-09-21 15:23:17.384 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=1 - null null
+2025-09-21 15:23:17.411 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:23:17.484 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:23:31.389 +05:30 [INF] Executed DbCommand (120ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:24:15.286 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:25:00.831 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__Id_Value_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0 AND [l].[Id] = @__Id_Value_1
+2025-09-21 15:25:06.525 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:25:06.603 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 109102.7821ms
+2025-09-21 15:25:06.612 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 15:25:06.666 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveRequests/23?Id=1 - 400 null application/json; charset=utf-8 109281.3527ms
+2025-09-21 15:27:56.514 +05:30 [INF] 2 servers were removed due to timeout
+2025-09-21 15:58:19.654 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 15:58:21.526 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 15:58:22.235 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 15:58:22.548 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 15:58:22.550 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 15:58:22.658 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 15:58:22.663 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 15:58:22.665 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 15:58:22.731 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 15:58:22.736 +05:30 [INF] Hosting environment: Development
+2025-09-21 15:58:22.738 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 15:58:22.774 +05:30 [INF] Server hhlap0012:14168:3396d22e successfully announced in 45.1982 ms
+2025-09-21 15:58:22.781 +05:30 [INF] Server hhlap0012:14168:3396d22e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 15:58:22.987 +05:30 [INF] Server hhlap0012:14168:3396d22e all the dispatchers started
+2025-09-21 15:58:26.226 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 15:58:27.525 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1342.8465ms
+2025-09-21 15:58:27.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 15:58:27.911 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 15:58:28.074 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 161.2221ms
+2025-09-21 15:58:28.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 388.0253ms
+2025-09-21 15:58:28.604 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 15:58:28.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 291.518ms
+2025-09-21 15:58:52.561 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveBalance/23 - null null
+2025-09-21 15:58:52.632 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-09-21 15:58:52.825 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 15:58:56.411 +05:30 [INF] Executed DbCommand (106ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-09-21 15:58:56.498 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 15:58:56.610 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 3771.6011ms
+2025-09-21 15:58:56.621 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-09-21 15:58:56.657 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveBalance/23 - 200 null application/json; charset=utf-8 4099.9562ms
+2025-09-21 16:03:22.874 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 16:04:01.277 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - application/json 189
+2025-09-21 16:04:01.330 +05:30 [INF] Executing endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-21 16:04:01.410 +05:30 [INF] Route matched with {action = "AddLeaveRequest", controller = "Leave"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddLeaveRequest(LMS.DTOs.Employee.LeaveRequest) on controller LMS.Controllers.Leave (LMS).
+2025-09-21 16:04:01.771 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-09-21 16:04:02.126 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveApplication] ([AppliedAt], [CompanyId], [CreatedAt], [DateApproved], [EmployeeId], [EndDate], [IsActive], [IsDeleted], [LeaveTypeId], [Reason], [ReviewedBy], [StartDate], [Status], [TotalDays], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-09-21 16:04:02.167 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-09-21 16:04:02.176 +05:30 [INF] Executed action LMS.Controllers.Leave.AddLeaveRequest (LMS) in 758.6488ms
+2025-09-21 16:04:02.179 +05:30 [INF] Executed endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-21 16:04:02.186 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - 200 null application/json; charset=utf-8 913.8912ms
+2025-09-21 16:07:30.753 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Admin/UpdateLeaveStatus - application/json 65
+2025-09-21 16:07:30.788 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-21 16:07:30.831 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 16:07:37.129 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-09-21 16:07:37.260 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-09-21 16:07:37.297 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [DateApproved] = @p0, [ReviewedBy] = @p1, [Status] = @p2, [UpdatedAt] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-09-21 16:07:37.334 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-09-21 16:07:37.363 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-09-21 16:07:37.390 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-09-21 16:07:42.898 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveBalance] ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2025-09-21 16:07:42.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 16:07:42.924 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 12088.4288ms
+2025-09-21 16:07:42.927 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-21 16:07:42.931 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 12179.7969ms
+2025-09-21 16:09:35.169 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/4 - null 0
+2025-09-21 16:09:35.197 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-21 16:09:35.236 +05:30 [INF] Route matched with {action = "CancelLeaveRequest", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelLeaveRequest(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 16:09:35.351 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__LeaveApplicationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__LeaveApplicationId_0
+2025-09-21 16:09:35.369 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 16:09:35.379 +05:30 [INF] Executed action LMS.Controllers.Employee.CancelLeaveRequest (LMS) in 139.5985ms
+2025-09-21 16:09:35.385 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-21 16:09:35.396 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/4 - 400 null application/json; charset=utf-8 229.169ms
+2025-09-21 16:10:52.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/GetLeaveBalance/18 - null null
+2025-09-21 16:10:52.652 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-09-21 16:10:52.664 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 16:10:52.718 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-09-21 16:10:52.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 16:10:52.735 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 62.8892ms
+2025-09-21 16:10:52.739 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-09-21 16:10:52.742 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/GetLeaveBalance/18 - 200 null application/json; charset=utf-8 164.699ms
+2025-09-21 16:21:17.572 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Admin/RegisterEmployee - application/json 225
+2025-09-21 16:21:17.654 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.RegisterEmployee (LMS)'
+2025-09-21 16:21:17.756 +05:30 [INF] Route matched with {action = "RegisterEmployee", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterEmployee(LMS.DTOs.Admin.RegisterEmployee) on controller LMS.Controllers.Admin (LMS).
+2025-09-21 16:21:17.930 +05:30 [INF] Attempting to register new employee with EmployeeId: , Name: admin2, CompanyId: 0
+2025-09-21 16:21:22.942 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-09-21 16:21:23.432 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime2), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [employeeRegistration] ([CompanyId], [CreatedAt], [Department], [Email], [EmployeeId], [ForcePasswordChange], [Gender], [IsActive], [IsDeleted], [JoiningDate], [LastUpdatedAt], [Name], [PasswordHash], [Role])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-09-21 16:21:25.884 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__requestValue_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[AllocationFrequency] IN (
+    SELECT [r].[value]
+    FROM OPENJSON(@__requestValue_0) WITH ([value] nvarchar(max) '$') AS [r]
+)
+2025-09-21 16:21:25.912 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__targetYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Year] = @__targetYear_0
+2025-09-21 16:21:27.610 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (DbType = Boolean), @p16='?' (DbType = Boolean), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (DbType = Boolean), @p28='?' (DbType = Boolean), @p29='?' (DbType = DateTime2), @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime2), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = DateTime2), @p38='?' (DbType = Int32), @p39='?' (DbType = Boolean), @p40='?' (DbType = Boolean), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?' (DbType = Int32), @p46='?' (DbType = DateTime2), @p47='?' (DbType = Int32), @p48='?' (DbType = Int32), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Int32), @p51='?' (DbType = Boolean), @p52='?' (DbType = Boolean), @p53='?' (DbType = DateTime2), @p54='?' (DbType = Int32), @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?' (DbType = Int32), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Int32), @p60='?' (DbType = Int32), @p61='?' (DbType = DateTime2), @p62='?' (DbType = Int32), @p63='?' (DbType = Boolean), @p64='?' (DbType = Boolean), @p65='?' (DbType = DateTime2), @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?' (DbType = Int32), @p69='?' (DbType = Int32), @p70='?' (DbType = DateTime2), @p71='?' (DbType = Int32), @p72='?' (DbType = Int32), @p73='?' (DbType = DateTime2), @p74='?' (DbType = Int32), @p75='?' (DbType = Boolean), @p76='?' (DbType = Boolean), @p77='?' (DbType = DateTime2), @p78='?' (DbType = Int32), @p79='?' (DbType = Int32), @p80='?' (DbType = Int32), @p81='?' (DbType = Int32), @p82='?' (DbType = DateTime2), @p83='?' (DbType = Int32), @p84='?' (DbType = Int32), @p85='?' (DbType = DateTime2), @p86='?' (DbType = Int32), @p87='?' (DbType = Boolean), @p88='?' (DbType = Boolean), @p89='?' (DbType = DateTime2), @p90='?' (DbType = Int32), @p91='?' (DbType = Int32), @p92='?' (DbType = Int32), @p93='?' (DbType = Int32), @p94='?' (DbType = DateTime2), @p95='?' (DbType = Int32), @p96='?' (DbType = Int32), @p97='?' (DbType = DateTime2), @p98='?' (DbType = Int32), @p99='?' (DbType = Boolean), @p100='?' (DbType = Boolean), @p101='?' (DbType = DateTime2), @p102='?' (DbType = Int32), @p103='?' (DbType = Int32), @p104='?' (DbType = Int32), @p105='?' (DbType = Int32), @p106='?' (DbType = DateTime2), @p107='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [leaveBalance] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, 0),
+(@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 1),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, 2),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, 3),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, 4),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, 5),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, 6),
+(@p84, @p85, @p86, @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, 7),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, 8)) AS i ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year])
+VALUES (i.[CompanyId], i.[CreatedAt], i.[EmployeeId], i.[IsActive], i.[IsDeleted], i.[LastAllocatedDate], i.[LeaveTypeId], i.[RemainingDays], i.[TotalAllocatedDays], i.[TotalTakenDays], i.[UpdatedAt], i.[Year])
+OUTPUT INSERTED.[Id], i._Position;
+2025-09-21 16:21:32.848 +05:30 [INF] Successfully registered employee. EmployeeId: , CompanyId: 1
+2025-09-21 16:21:32.859 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[LMS.ResponseModel.EmployeeRegistrationResult, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-21 16:21:32.875 +05:30 [INF] Executed action LMS.Controllers.Admin.RegisterEmployee (LMS) in 15109.3641ms
+2025-09-21 16:21:32.879 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.RegisterEmployee (LMS)'
+2025-09-21 16:21:32.882 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Admin/RegisterEmployee - 200 null application/json; charset=utf-8 15318.5486ms
+2025-09-21 16:38:48.018 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 16:38:50.126 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 16:38:50.839 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 16:38:51.198 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 16:38:51.202 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 16:38:51.344 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 16:38:51.348 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 16:38:51.353 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 16:38:51.409 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 16:38:51.412 +05:30 [INF] Hosting environment: Development
+2025-09-21 16:38:51.416 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 16:38:51.490 +05:30 [INF] Server hhlap0012:2624:afecb0ec successfully announced in 82.9231 ms
+2025-09-21 16:38:51.498 +05:30 [INF] Server hhlap0012:2624:afecb0ec is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 16:38:51.692 +05:30 [INF] Server hhlap0012:2624:afecb0ec all the dispatchers started
+2025-09-21 16:38:56.351 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 16:38:57.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 906.1724ms
+2025-09-21 16:38:57.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 16:38:57.456 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 16:38:57.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 92.9088ms
+2025-09-21 16:38:57.690 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 234.6779ms
+2025-09-21 16:38:58.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 16:38:58.273 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 236.0666ms
+2025-09-21 16:43:51.629 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 21:24:27.000 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 21:24:27.663 +05:30 [WRN] Server hhlap0012:2624:afecb0ec was considered dead by other servers, restarting...
+2025-09-21 21:24:27.692 +05:30 [INF] Server hhlap0012:2624:afecb0ec caught restart signal...
+2025-09-21 21:24:28.538 +05:30 [WRN] Server hhlap0012:2624:afecb0ec stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2025-09-21 21:24:29.161 +05:30 [INF] Server hhlap0012:2624:afecb0ec successfully reported itself as stopped in 361.5133 ms
+2025-09-21 21:24:29.206 +05:30 [INF] Server hhlap0012:2624:afecb0ec has been stopped in total 875.611 ms
+2025-09-21 21:24:29.528 +05:30 [INF] Server hhlap0012:2624:b202c548 successfully announced in 272.9938 ms
+2025-09-21 21:24:29.622 +05:30 [INF] Server hhlap0012:2624:b202c548 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 21:24:32.170 +05:30 [INF] Server hhlap0012:2624:b202c548 all the dispatchers started
+2025-09-21 21:35:05.913 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-21 21:35:08.008 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-21 21:35:08.843 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-21 21:35:09.246 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-21 21:35:09.251 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-21 21:35:09.508 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-21 21:35:09.513 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-21 21:35:09.516 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-21 21:35:09.567 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-21 21:35:09.571 +05:30 [INF] Hosting environment: Development
+2025-09-21 21:35:09.576 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-21 21:35:09.684 +05:30 [INF] Server hhlap0012:34688:76fb0f7d successfully announced in 120.8569 ms
+2025-09-21 21:35:09.698 +05:30 [INF] Server hhlap0012:34688:76fb0f7d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-21 21:35:09.959 +05:30 [INF] Server hhlap0012:34688:76fb0f7d all the dispatchers started
+2025-09-21 21:35:13.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-21 21:35:14.378 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 673.8755ms
+2025-09-21 21:35:14.607 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-21 21:35:14.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-21 21:35:14.680 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 73.9298ms
+2025-09-21 21:35:14.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 318.634ms
+2025-09-21 21:35:15.121 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-21 21:35:15.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.0849ms
+2025-09-21 21:40:09.872 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-21 21:41:31.352 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/User/Login - null null
+2025-09-21 21:41:31.519 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:41:31.554 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/User/Login - 204 null null 212.898ms
+2025-09-21 21:41:31.574 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/User/Login - application/json 50
+2025-09-21 21:41:31.593 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:41:32.172 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/User/Login - 404 0 null 598.0942ms
+2025-09-21 21:41:32.195 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7284/api/User/Login, Response status code: 404
+2025-09-21 21:43:59.086 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-21 21:43:59.251 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:43:59.266 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 229.8822ms
+2025-09-21 21:43:59.290 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-21 21:43:59.361 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:43:59.434 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-21 21:43:59.867 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 21:44:29.044 +05:30 [INF] Executed DbCommand (119ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-21 21:44:29.529 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 21:44:29.606 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 29721.1091ms
+2025-09-21 21:44:29.616 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-21 21:44:29.674 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 30383.6529ms
+2025-09-21 21:50:27.255 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-21 21:50:27.326 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:50:27.348 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 95.3669ms
+2025-09-21 21:50:27.376 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-21 21:50:27.418 +05:30 [INF] CORS policy execution successful.
+2025-09-21 21:50:27.475 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-21 21:50:27.517 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 21:50:35.426 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-21 21:50:35.576 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 21:50:35.591 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 8061.3984ms
+2025-09-21 21:50:35.595 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-21 21:50:35.607 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 8253.5707ms
+2025-09-21 23:50:02.725 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-21 23:50:02.838 +05:30 [INF] CORS policy execution successful.
+2025-09-21 23:50:02.867 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:50:03.083 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 23:50:13.832 +05:30 [INF] Executed DbCommand (78ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 23:50:13.863 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 23:50:13.982 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 10893.5212ms
+2025-09-21 23:50:13.987 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:50:13.991 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 11320.1106ms
+2025-09-21 23:56:34.946 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-21 23:56:35.208 +05:30 [INF] CORS policy execution successful.
+2025-09-21 23:56:35.258 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:56:35.304 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 23:56:52.023 +05:30 [INF] Executed DbCommand (97ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 23:56:52.097 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 23:56:52.148 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 16826.7734ms
+2025-09-21 23:56:52.168 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:56:52.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 17280.8855ms
+2025-09-21 23:56:54.805 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-21 23:56:54.905 +05:30 [INF] CORS policy execution successful.
+2025-09-21 23:56:54.975 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:56:55.016 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 23:56:55.210 +05:30 [INF] Executed DbCommand (80ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 23:56:55.260 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 23:56:55.283 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 253.0716ms
+2025-09-21 23:56:55.296 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:56:55.307 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 513.6805ms
+2025-09-21 23:59:52.829 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-21 23:59:53.016 +05:30 [INF] CORS policy execution successful.
+2025-09-21 23:59:53.075 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:59:53.174 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-21 23:59:53.626 +05:30 [INF] Executed DbCommand (73ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-21 23:59:53.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-21 23:59:53.709 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 524.4554ms
+2025-09-21 23:59:53.716 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-21 23:59:53.722 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 944.6147ms

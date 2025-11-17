@@ -1,0 +1,339 @@
+2025-09-17 23:06:08.238 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-17 23:06:11.987 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-17 23:06:13.434 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 23:06:14.224 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-17 23:06:14.231 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-17 23:06:14.456 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-17 23:06:14.461 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-17 23:06:14.466 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-17 23:06:14.541 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-17 23:06:14.546 +05:30 [INF] Hosting environment: Development
+2025-09-17 23:06:14.551 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-17 23:06:14.665 +05:30 [INF] Server hhlap0012:13132:103d6adc successfully announced in 126.137 ms
+2025-09-17 23:06:14.690 +05:30 [INF] Server hhlap0012:13132:103d6adc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-17 23:06:14.774 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-17 23:06:15.074 +05:30 [INF] Server hhlap0012:13132:103d6adc all the dispatchers started
+2025-09-17 23:06:23.337 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:06:24.309 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1014.5ms
+2025-09-17 23:06:24.508 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:06:24.726 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:06:24.750 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 24.2083ms
+2025-09-17 23:06:25.830 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1322.6706ms
+2025-09-17 23:06:25.964 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:06:26.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.3465ms
+2025-09-17 23:07:08.718 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:07:08.871 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 166.2662ms
+2025-09-17 23:07:09.011 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:07:09.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:07:09.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 16.7066ms
+2025-09-17 23:07:09.110 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.7351ms
+2025-09-17 23:07:09.521 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:07:09.616 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.0355ms
+2025-09-17 23:07:22.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:07:22.432 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 54.8883ms
+2025-09-17 23:07:22.508 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:07:22.508 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:07:22.553 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 44.8242ms
+2025-09-17 23:07:22.661 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 153.2846ms
+2025-09-17 23:07:22.844 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:07:22.944 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 99.6264ms
+2025-09-17 23:07:29.937 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/4 - null 0
+2025-09-17 23:07:29.980 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:07:30.086 +05:30 [INF] Route matched with {action = "CancelLeaveRequest", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelLeaveRequest(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-17 23:07:32.468 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[@__LeaveApplicationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__LeaveApplicationId_0
+2025-09-17 23:07:32.545 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:07:32.592 +05:30 [INF] Executed action LMS.Controllers.Employee.CancelLeaveRequest (LMS) in 2489.7602ms
+2025-09-17 23:07:32.598 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:07:32.619 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/4 - 400 null application/json; charset=utf-8 2682.3433ms
+2025-09-17 23:13:27.793 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-17 23:13:30.108 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-17 23:13:30.907 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 23:13:31.320 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-17 23:13:31.325 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-17 23:13:31.472 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-17 23:13:31.475 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-17 23:13:31.478 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-17 23:13:31.512 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-17 23:13:31.514 +05:30 [INF] Hosting environment: Development
+2025-09-17 23:13:31.516 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-17 23:13:31.568 +05:30 [INF] Server hhlap0012:35144:f73cdc80 successfully announced in 58.2049 ms
+2025-09-17 23:13:31.579 +05:30 [INF] Server hhlap0012:35144:f73cdc80 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-17 23:13:31.815 +05:30 [INF] Server hhlap0012:35144:f73cdc80 all the dispatchers started
+2025-09-17 23:13:35.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:13:36.975 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1385.6137ms
+2025-09-17 23:13:37.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:13:37.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:13:37.387 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 37.7505ms
+2025-09-17 23:13:37.580 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 231.6638ms
+2025-09-17 23:13:37.945 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:13:42.877 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4935.1004ms
+2025-09-17 23:14:11.407 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/5 - null 0
+2025-09-17 23:14:11.585 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:14:11.883 +05:30 [INF] Route matched with {action = "CancelLeaveRequest", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelLeaveRequest(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-17 23:14:14.898 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__LeaveApplicationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__LeaveApplicationId_0
+2025-09-17 23:14:14.959 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:14:15.021 +05:30 [INF] Executed action LMS.Controllers.Employee.CancelLeaveRequest (LMS) in 3121.4369ms
+2025-09-17 23:14:15.028 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:14:15.040 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/5 - 400 null application/json; charset=utf-8 3641.045ms
+2025-09-17 23:14:33.269 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/3 - null 0
+2025-09-17 23:14:33.313 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:14:33.317 +05:30 [INF] Route matched with {action = "CancelLeaveRequest", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelLeaveRequest(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-17 23:14:33.373 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__LeaveApplicationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__LeaveApplicationId_0
+2025-09-17 23:14:33.520 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:14:33.529 +05:30 [INF] Executed action LMS.Controllers.Employee.CancelLeaveRequest (LMS) in 206.0222ms
+2025-09-17 23:14:33.534 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:14:33.538 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/3 - 400 null application/json; charset=utf-8 270.1345ms
+2025-09-17 23:15:26.089 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/1 - null 0
+2025-09-17 23:15:26.112 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:15:26.117 +05:30 [INF] Route matched with {action = "CancelLeaveRequest", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelLeaveRequest(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-17 23:15:26.250 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__LeaveApplicationId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__LeaveApplicationId_0
+2025-09-17 23:15:26.592 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = Boolean), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [IsActive] = @p0, [IsDeleted] = @p1, [Status] = @p2, [UpdatedAt] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-09-17 23:15:26.632 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:15:26.636 +05:30 [INF] Executed action LMS.Controllers.Employee.CancelLeaveRequest (LMS) in 512.6972ms
+2025-09-17 23:15:26.639 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.CancelLeaveRequest (LMS)'
+2025-09-17 23:15:26.641 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/User/CancelLeaveRequest/1 - 200 null application/json; charset=utf-8 552.5692ms
+2025-09-17 23:18:31.760 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-17 23:37:22.708 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-17 23:37:24.402 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-17 23:37:25.051 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 23:37:25.384 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-17 23:37:25.388 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-17 23:37:25.522 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-17 23:37:25.525 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-17 23:37:25.527 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-17 23:37:25.589 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-17 23:37:25.592 +05:30 [INF] Hosting environment: Development
+2025-09-17 23:37:25.594 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-17 23:37:25.652 +05:30 [INF] Server hhlap0012:15732:03b48999 successfully announced in 63.9181 ms
+2025-09-17 23:37:25.669 +05:30 [INF] Server hhlap0012:15732:03b48999 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-17 23:37:25.727 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-17 23:37:25.880 +05:30 [INF] Server hhlap0012:15732:03b48999 all the dispatchers started
+2025-09-17 23:37:29.361 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:37:30.532 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1226.3065ms
+2025-09-17 23:37:30.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:37:30.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:37:30.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 85.3169ms
+2025-09-17 23:37:31.008 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 260.6544ms
+2025-09-17 23:37:31.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:37:31.353 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.5158ms
+2025-09-17 23:37:56.967 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:37:57.228 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 263.8192ms
+2025-09-17 23:37:57.736 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:37:57.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:37:57.756 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 20.383ms
+2025-09-17 23:37:57.853 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 116.0158ms
+2025-09-17 23:37:58.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:37:58.383 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.3975ms
+2025-09-17 23:38:17.593 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 61
+2025-09-17 23:38:17.729 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:38:18.114 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:38:19.368 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-09-17 23:38:19.497 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 1367.2135ms
+2025-09-17 23:38:19.506 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:38:19.536 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/problem+json; charset=utf-8 1951.9485ms
+2025-09-17 23:38:39.037 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:38:39.090 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 53.4925ms
+2025-09-17 23:38:39.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:38:39.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:38:39.179 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 15.3773ms
+2025-09-17 23:38:39.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.3675ms
+2025-09-17 23:38:39.526 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:38:39.610 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.263ms
+2025-09-17 23:38:46.720 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 109
+2025-09-17 23:38:46.727 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:38:46.737 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:38:49.793 +05:30 [INF] Executed DbCommand (213ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-17 23:38:49.860 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:38:49.882 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 3139.6292ms
+2025-09-17 23:38:49.889 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:38:49.911 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 3190.6332ms
+2025-09-17 23:39:24.863 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 110
+2025-09-17 23:39:24.877 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:39:24.879 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:39:24.937 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-17 23:39:24.946 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:39:24.953 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 70.8977ms
+2025-09-17 23:39:24.956 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:39:24.959 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 97.6487ms
+2025-09-17 23:40:28.255 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:40:28.471 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 221.3648ms
+2025-09-17 23:40:28.801 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:40:28.802 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:40:28.814 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 13.2411ms
+2025-09-17 23:40:28.932 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 130.9515ms
+2025-09-17 23:40:29.542 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:40:29.711 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.0412ms
+2025-09-17 23:40:58.427 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-17 23:40:59.923 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-17 23:41:00.824 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 23:41:01.406 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-17 23:41:01.410 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-17 23:41:01.817 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-17 23:41:01.821 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-17 23:41:01.829 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-17 23:41:01.918 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-17 23:41:01.926 +05:30 [INF] Hosting environment: Development
+2025-09-17 23:41:01.935 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-17 23:41:02.066 +05:30 [INF] Server hhlap0012:20228:02607e3c successfully announced in 149.8243 ms
+2025-09-17 23:41:02.097 +05:30 [INF] Server hhlap0012:20228:02607e3c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-17 23:41:02.449 +05:30 [INF] Server hhlap0012:20228:02607e3c all the dispatchers started
+2025-09-17 23:41:06.795 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:41:09.508 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 2788.4377ms
+2025-09-17 23:41:09.980 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:41:09.980 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:41:10.153 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 172.3554ms
+2025-09-17 23:41:10.275 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 294.9765ms
+2025-09-17 23:41:10.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:41:10.896 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 259.6809ms
+2025-09-17 23:41:49.438 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:41:49.527 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 85.6885ms
+2025-09-17 23:41:49.753 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:41:49.754 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:41:49.762 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 9.2188ms
+2025-09-17 23:41:49.863 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.5709ms
+2025-09-17 23:41:50.440 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:41:50.514 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.3528ms
+2025-09-17 23:42:03.119 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:42:03.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 48.8527ms
+2025-09-17 23:42:03.225 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:42:03.236 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:42:03.249 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 25.5872ms
+2025-09-17 23:42:03.306 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.3034ms
+2025-09-17 23:42:03.516 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:42:03.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.5912ms
+2025-09-17 23:42:09.070 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 109
+2025-09-17 23:42:09.140 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:42:09.327 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:42:41.531 +05:30 [INF] Executed DbCommand (92ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__filter_StartDate_Value_1='?' (DbType = DateTime2), @__filter_EndDate_Value_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__filter_StartDate_Value_1 AND [l].[EndDate] <= @__filter_EndDate_Value_2
+2025-09-17 23:42:41.645 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:42:41.701 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 32359.4954ms
+2025-09-17 23:42:41.710 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:42:41.733 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 32661.8042ms
+2025-09-17 23:46:02.301 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-17 23:47:05.543 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:47:05.721 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 188.9292ms
+2025-09-17 23:47:06.229 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:47:06.229 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:47:06.282 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 53.7089ms
+2025-09-17 23:47:06.374 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.4741ms
+2025-09-17 23:47:07.403 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:47:07.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.1175ms
+2025-09-17 23:49:19.173 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 25
+2025-09-17 23:49:19.294 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:49:19.484 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:56:02.874 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-17 23:56:05.698 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-17 23:56:06.868 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-17 23:56:07.471 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-17 23:56:07.477 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-17 23:56:08.148 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-17 23:56:08.152 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-17 23:56:08.155 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-17 23:56:08.216 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-17 23:56:08.221 +05:30 [INF] Hosting environment: Development
+2025-09-17 23:56:08.224 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-17 23:56:08.305 +05:30 [INF] Server hhlap0012:11912:3e7a68a2 successfully announced in 90.6436 ms
+2025-09-17 23:56:08.314 +05:30 [INF] Server hhlap0012:11912:3e7a68a2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-17 23:56:08.351 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-17 23:56:08.547 +05:30 [INF] Server hhlap0012:11912:3e7a68a2 all the dispatchers started
+2025-09-17 23:56:13.114 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:56:14.258 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1157.364ms
+2025-09-17 23:56:14.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:56:14.534 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:56:14.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 41.7497ms
+2025-09-17 23:56:14.737 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 202.5985ms
+2025-09-17 23:56:15.028 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:56:15.100 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 73.1791ms
+2025-09-17 23:56:26.167 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 25
+2025-09-17 23:56:26.308 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:56:26.606 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:56:39.951 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-09-17 23:56:40.013 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 13389.4313ms
+2025-09-17 23:56:40.023 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:56:40.067 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null text/plain; charset=utf-8 13903.2311ms
+2025-09-17 23:56:50.854 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-17 23:56:50.887 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:56:50.903 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:56:53.117 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-09-17 23:56:53.132 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 2220.1161ms
+2025-09-17 23:56:53.137 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:56:53.141 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null text/plain; charset=utf-8 2288.9826ms
+2025-09-17 23:56:58.903 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-17 23:56:58.916 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:56:58.924 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:57:01.030 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-09-17 23:57:01.040 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 2110.882ms
+2025-09-17 23:57:01.046 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:57:01.053 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null text/plain; charset=utf-8 2149.7177ms
+2025-09-17 23:57:06.171 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-17 23:57:06.184 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:57:06.210 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:58:27.818 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:58:27.956 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 81735.8954ms
+2025-09-17 23:58:27.967 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:58:27.975 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 400 null application/json; charset=utf-8 81803.1745ms
+2025-09-17 23:59:12.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-17 23:59:12.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 172.7889ms
+2025-09-17 23:59:12.549 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-17 23:59:12.550 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-17 23:59:12.567 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 18.4199ms
+2025-09-17 23:59:12.665 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 116.0105ms
+2025-09-17 23:59:13.270 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-17 23:59:13.356 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.5703ms
+2025-09-17 23:59:43.163 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Filter - application/json 26
+2025-09-17 23:59:43.186 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:59:43.232 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-17 23:59:48.112 +05:30 [INF] Executed DbCommand (122ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-17 23:59:48.288 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-17 23:59:48.374 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 5132.3094ms
+2025-09-17 23:59:48.380 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-17 23:59:48.390 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Filter - 200 null application/json; charset=utf-8 5231.1276ms

@@ -1,0 +1,1465 @@
+2025-10-01 00:41:38.499 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:16.8224138 and is in the Running state now
+2025-10-01 09:27:27.299 +05:30 [INF] Executed DbCommand (409ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id] AS [UserId], [e].[Name], [e].[EmployeeId], [e].[CompanyId], [e].[Gender], [e].[IsActive], [e].[IsDeleted]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 09:27:28.584 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:36.8832343 and is in the Running state now
+2025-10-01 09:27:29.118 +05:30 [INF] Executed DbCommand (1,151ms) [Parameters=[@__requestValue_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[AllocationFrequency] IN (
+    SELECT [r].[value]
+    FROM OPENJSON(@__requestValue_0) WITH ([value] nvarchar(max) '$') AS [r]
+)
+2025-10-01 09:27:29.928 +05:30 [INF] Executed DbCommand (295ms) [Parameters=[@__targetYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Year] = @__targetYear_0
+2025-10-01 09:27:30.300 +05:30 [INF] Executed DbCommand (100ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-10-01 15:36:51.112 +05:30 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 06:09:59.6624149 and is in the Running state now
+2025-10-01 15:36:51.888 +05:30 [WRN] Background job identifier '20' was fetched by another worker, will not execute keep alive.
+2025-10-01 15:36:52.020 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id] AS [UserId], [e].[Name], [e].[EmployeeId], [e].[CompanyId], [e].[Gender], [e].[IsActive], [e].[IsDeleted]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 15:36:52.035 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime2), @p20='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [UpdatedAt] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+UPDATE [leaveBalance] SET [RemainingDays] = @p3, [UpdatedAt] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [leaveBalance] SET [RemainingDays] = @p6, [UpdatedAt] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+UPDATE [leaveBalance] SET [RemainingDays] = @p9, [UpdatedAt] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+UPDATE [leaveBalance] SET [RemainingDays] = @p12, [UpdatedAt] = @p13
+OUTPUT 1
+WHERE [Id] = @p14;
+UPDATE [leaveBalance] SET [RemainingDays] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+UPDATE [leaveBalance] SET [RemainingDays] = @p18, [UpdatedAt] = @p19
+OUTPUT 1
+WHERE [Id] = @p20;
+UPDATE [leaveBalance] SET [RemainingDays] = @p21, [UpdatedAt] = @p22
+OUTPUT 1
+WHERE [Id] = @p23;
+UPDATE [leaveBalance] SET [RemainingDays] = @p24, [UpdatedAt] = @p25
+OUTPUT 1
+WHERE [Id] = @p26;
+2025-10-01 15:36:52.075 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__requestValue_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[AllocationFrequency] IN (
+    SELECT [r].[value]
+    FROM OPENJSON(@__requestValue_0) WITH ([value] nvarchar(max) '$') AS [r]
+)
+2025-10-01 15:36:52.098 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__targetYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Year] = @__targetYear_0
+2025-10-01 15:36:52.119 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-10-01 15:36:58.769 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p5='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime2), @p20='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [UpdatedAt] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+UPDATE [leaveBalance] SET [RemainingDays] = @p3, [UpdatedAt] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [leaveBalance] SET [RemainingDays] = @p6, [UpdatedAt] = @p7
+OUTPUT 1
+WHERE [Id] = @p8;
+UPDATE [leaveBalance] SET [RemainingDays] = @p9, [UpdatedAt] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+UPDATE [leaveBalance] SET [RemainingDays] = @p12, [UpdatedAt] = @p13
+OUTPUT 1
+WHERE [Id] = @p14;
+UPDATE [leaveBalance] SET [RemainingDays] = @p15, [UpdatedAt] = @p16
+OUTPUT 1
+WHERE [Id] = @p17;
+UPDATE [leaveBalance] SET [RemainingDays] = @p18, [UpdatedAt] = @p19
+OUTPUT 1
+WHERE [Id] = @p20;
+UPDATE [leaveBalance] SET [RemainingDays] = @p21, [UpdatedAt] = @p22
+OUTPUT 1
+WHERE [Id] = @p23;
+2025-10-01 15:37:02.083 +05:30 [INF] Executed DbCommand (206ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (DbType = Boolean), @p16='?' (DbType = Boolean), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (DbType = Boolean), @p28='?' (DbType = Boolean), @p29='?' (DbType = DateTime2), @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime2), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = DateTime2), @p38='?' (DbType = Int32), @p39='?' (DbType = Boolean), @p40='?' (DbType = Boolean), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?' (DbType = Int32), @p46='?' (DbType = DateTime2), @p47='?' (DbType = Int32), @p48='?' (DbType = Int32), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Int32), @p51='?' (DbType = Boolean), @p52='?' (DbType = Boolean), @p53='?' (DbType = DateTime2), @p54='?' (DbType = Int32), @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?' (DbType = Int32), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Int32), @p60='?' (DbType = Int32), @p61='?' (DbType = DateTime2), @p62='?' (DbType = Int32), @p63='?' (DbType = Boolean), @p64='?' (DbType = Boolean), @p65='?' (DbType = DateTime2), @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?' (DbType = Int32), @p69='?' (DbType = Int32), @p70='?' (DbType = DateTime2), @p71='?' (DbType = Int32), @p72='?' (DbType = Int32), @p73='?' (DbType = DateTime2), @p74='?' (DbType = Int32), @p75='?' (DbType = Boolean), @p76='?' (DbType = Boolean), @p77='?' (DbType = DateTime2), @p78='?' (DbType = Int32), @p79='?' (DbType = Int32), @p80='?' (DbType = Int32), @p81='?' (DbType = Int32), @p82='?' (DbType = DateTime2), @p83='?' (DbType = Int32), @p84='?' (DbType = Int32), @p85='?' (DbType = DateTime2), @p86='?' (DbType = Int32), @p87='?' (DbType = Boolean), @p88='?' (DbType = Boolean), @p89='?' (DbType = DateTime2), @p90='?' (DbType = Int32), @p91='?' (DbType = Int32), @p92='?' (DbType = Int32), @p93='?' (DbType = Int32), @p94='?' (DbType = DateTime2), @p95='?' (DbType = Int32), @p96='?' (DbType = Int32), @p97='?' (DbType = DateTime2), @p98='?' (DbType = Int32), @p99='?' (DbType = Boolean), @p100='?' (DbType = Boolean), @p101='?' (DbType = DateTime2), @p102='?' (DbType = Int32), @p103='?' (DbType = Int32), @p104='?' (DbType = Int32), @p105='?' (DbType = Int32), @p106='?' (DbType = DateTime2), @p107='?' (DbType = Int32), @p108='?' (DbType = Int32), @p109='?' (DbType = DateTime2), @p110='?' (DbType = Int32), @p111='?' (DbType = Boolean), @p112='?' (DbType = Boolean), @p113='?' (DbType = DateTime2), @p114='?' (DbType = Int32), @p115='?' (DbType = Int32), @p116='?' (DbType = Int32), @p117='?' (DbType = Int32), @p118='?' (DbType = DateTime2), @p119='?' (DbType = Int32), @p120='?' (DbType = Int32), @p121='?' (DbType = DateTime2), @p122='?' (DbType = Int32), @p123='?' (DbType = Boolean), @p124='?' (DbType = Boolean), @p125='?' (DbType = DateTime2), @p126='?' (DbType = Int32), @p127='?' (DbType = Int32), @p128='?' (DbType = Int32), @p129='?' (DbType = Int32), @p130='?' (DbType = DateTime2), @p131='?' (DbType = Int32), @p132='?' (DbType = Int32), @p133='?' (DbType = DateTime2), @p134='?' (DbType = Int32), @p135='?' (DbType = Boolean), @p136='?' (DbType = Boolean), @p137='?' (DbType = DateTime2), @p138='?' (DbType = Int32), @p139='?' (DbType = Int32), @p140='?' (DbType = Int32), @p141='?' (DbType = Int32), @p142='?' (DbType = DateTime2), @p143='?' (DbType = Int32), @p144='?' (DbType = Int32), @p145='?' (DbType = DateTime2), @p146='?' (DbType = Int32), @p147='?' (DbType = Boolean), @p148='?' (DbType = Boolean), @p149='?' (DbType = DateTime2), @p150='?' (DbType = Int32), @p151='?' (DbType = Int32), @p152='?' (DbType = Int32), @p153='?' (DbType = Int32), @p154='?' (DbType = DateTime2), @p155='?' (DbType = Int32), @p156='?' (DbType = Int32), @p157='?' (DbType = DateTime2), @p158='?' (DbType = Int32), @p159='?' (DbType = Boolean), @p160='?' (DbType = Boolean), @p161='?' (DbType = DateTime2), @p162='?' (DbType = Int32), @p163='?' (DbType = Int32), @p164='?' (DbType = Int32), @p165='?' (DbType = Int32), @p166='?' (DbType = DateTime2), @p167='?' (DbType = Int32), @p168='?' (DbType = Int32), @p169='?' (DbType = DateTime2), @p170='?' (DbType = Int32), @p171='?' (DbType = Boolean), @p172='?' (DbType = Boolean), @p173='?' (DbType = DateTime2), @p174='?' (DbType = Int32), @p175='?' (DbType = Int32), @p176='?' (DbType = Int32), @p177='?' (DbType = Int32), @p178='?' (DbType = DateTime2), @p179='?' (DbType = Int32), @p180='?' (DbType = Int32), @p181='?' (DbType = DateTime2), @p182='?' (DbType = Int32), @p183='?' (DbType = Boolean), @p184='?' (DbType = Boolean), @p185='?' (DbType = DateTime2), @p186='?' (DbType = Int32), @p187='?' (DbType = Int32), @p188='?' (DbType = Int32), @p189='?' (DbType = Int32), @p190='?' (DbType = DateTime2), @p191='?' (DbType = Int32), @p192='?' (DbType = Int32), @p193='?' (DbType = DateTime2), @p194='?' (DbType = Int32), @p195='?' (DbType = Boolean), @p196='?' (DbType = Boolean), @p197='?' (DbType = DateTime2), @p198='?' (DbType = Int32), @p199='?' (DbType = Int32), @p200='?' (DbType = Int32), @p201='?' (DbType = Int32), @p202='?' (DbType = DateTime2), @p203='?' (DbType = Int32), @p204='?' (DbType = Int32), @p205='?' (DbType = DateTime2), @p206='?' (DbType = Int32), @p207='?' (DbType = Boolean), @p208='?' (DbType = Boolean), @p209='?' (DbType = DateTime2), @p210='?' (DbType = Int32), @p211='?' (DbType = Int32), @p212='?' (DbType = Int32), @p213='?' (DbType = Int32), @p214='?' (DbType = DateTime2), @p215='?' (DbType = Int32), @p216='?' (DbType = Int32), @p217='?' (DbType = DateTime2), @p218='?' (DbType = Int32), @p219='?' (DbType = Boolean), @p220='?' (DbType = Boolean), @p221='?' (DbType = DateTime2), @p222='?' (DbType = Int32), @p223='?' (DbType = Int32), @p224='?' (DbType = Int32), @p225='?' (DbType = Int32), @p226='?' (DbType = DateTime2), @p227='?' (DbType = Int32), @p228='?' (DbType = Int32), @p229='?' (DbType = DateTime2), @p230='?' (DbType = Int32), @p231='?' (DbType = Boolean), @p232='?' (DbType = Boolean), @p233='?' (DbType = DateTime2), @p234='?' (DbType = Int32), @p235='?' (DbType = Int32), @p236='?' (DbType = Int32), @p237='?' (DbType = Int32), @p238='?' (DbType = DateTime2), @p239='?' (DbType = Int32), @p240='?' (DbType = Int32), @p241='?' (DbType = DateTime2), @p242='?' (DbType = Int32), @p243='?' (DbType = Boolean), @p244='?' (DbType = Boolean), @p245='?' (DbType = DateTime2), @p246='?' (DbType = Int32), @p247='?' (DbType = Int32), @p248='?' (DbType = Int32), @p249='?' (DbType = Int32), @p250='?' (DbType = DateTime2), @p251='?' (DbType = Int32), @p252='?' (DbType = Int32), @p253='?' (DbType = DateTime2), @p254='?' (DbType = Int32), @p255='?' (DbType = Boolean), @p256='?' (DbType = Boolean), @p257='?' (DbType = DateTime2), @p258='?' (DbType = Int32), @p259='?' (DbType = Int32), @p260='?' (DbType = Int32), @p261='?' (DbType = Int32), @p262='?' (DbType = DateTime2), @p263='?' (DbType = Int32), @p264='?' (DbType = Int32), @p265='?' (DbType = DateTime2), @p266='?' (DbType = Int32), @p267='?' (DbType = Boolean), @p268='?' (DbType = Boolean), @p269='?' (DbType = DateTime2), @p270='?' (DbType = Int32), @p271='?' (DbType = Int32), @p272='?' (DbType = Int32), @p273='?' (DbType = Int32), @p274='?' (DbType = DateTime2), @p275='?' (DbType = Int32), @p276='?' (DbType = Int32), @p277='?' (DbType = DateTime2), @p278='?' (DbType = Int32), @p279='?' (DbType = Boolean), @p280='?' (DbType = Boolean), @p281='?' (DbType = DateTime2), @p282='?' (DbType = Int32), @p283='?' (DbType = Int32), @p284='?' (DbType = Int32), @p285='?' (DbType = Int32), @p286='?' (DbType = DateTime2), @p287='?' (DbType = Int32), @p288='?' (DbType = Int32), @p289='?' (DbType = DateTime2), @p290='?' (DbType = Int32), @p291='?' (DbType = Boolean), @p292='?' (DbType = Boolean), @p293='?' (DbType = DateTime2), @p294='?' (DbType = Int32), @p295='?' (DbType = Int32), @p296='?' (DbType = Int32), @p297='?' (DbType = Int32), @p298='?' (DbType = DateTime2), @p299='?' (DbType = Int32), @p300='?' (DbType = Int32), @p301='?' (DbType = DateTime2), @p302='?' (DbType = Int32), @p303='?' (DbType = Boolean), @p304='?' (DbType = Boolean), @p305='?' (DbType = DateTime2), @p306='?' (DbType = Int32), @p307='?' (DbType = Int32), @p308='?' (DbType = Int32), @p309='?' (DbType = Int32), @p310='?' (DbType = DateTime2), @p311='?' (DbType = Int32), @p312='?' (DbType = Int32), @p313='?' (DbType = DateTime2), @p314='?' (DbType = Int32), @p315='?' (DbType = Boolean), @p316='?' (DbType = Boolean), @p317='?' (DbType = DateTime2), @p318='?' (DbType = Int32), @p319='?' (DbType = Int32), @p320='?' (DbType = Int32), @p321='?' (DbType = Int32), @p322='?' (DbType = DateTime2), @p323='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [leaveBalance] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, 0),
+(@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 1),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, 2),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, 3),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, 4),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, 5),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, 6),
+(@p84, @p85, @p86, @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, 7),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, 8),
+(@p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, 9),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, @p130, @p131, 10),
+(@p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143, 11),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152, @p153, @p154, @p155, 12),
+(@p156, @p157, @p158, @p159, @p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, 13),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179, 14),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191, 15),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199, @p200, @p201, @p202, @p203, 16),
+(@p204, @p205, @p206, @p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215, 17),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, 18),
+(@p228, @p229, @p230, @p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, 19),
+(@p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251, 20),
+(@p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, @p260, @p261, @p262, @p263, 21),
+(@p264, @p265, @p266, @p267, @p268, @p269, @p270, @p271, @p272, @p273, @p274, @p275, 22),
+(@p276, @p277, @p278, @p279, @p280, @p281, @p282, @p283, @p284, @p285, @p286, @p287, 23),
+(@p288, @p289, @p290, @p291, @p292, @p293, @p294, @p295, @p296, @p297, @p298, @p299, 24),
+(@p300, @p301, @p302, @p303, @p304, @p305, @p306, @p307, @p308, @p309, @p310, @p311, 25),
+(@p312, @p313, @p314, @p315, @p316, @p317, @p318, @p319, @p320, @p321, @p322, @p323, 26)) AS i ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year])
+VALUES (i.[CompanyId], i.[CreatedAt], i.[EmployeeId], i.[IsActive], i.[IsDeleted], i.[LastAllocatedDate], i.[LeaveTypeId], i.[RemainingDays], i.[TotalAllocatedDays], i.[TotalTakenDays], i.[UpdatedAt], i.[Year])
+OUTPUT INSERTED.[Id], i._Position;
+2025-10-01 15:37:02.094 +05:30 [INF] Executed DbCommand (218ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime2), @p14='?' (DbType = Int32), @p15='?' (DbType = Boolean), @p16='?' (DbType = Boolean), @p17='?' (DbType = DateTime2), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = DateTime2), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (DbType = Boolean), @p28='?' (DbType = Boolean), @p29='?' (DbType = DateTime2), @p30='?' (DbType = Int32), @p31='?' (DbType = Int32), @p32='?' (DbType = Int32), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime2), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = DateTime2), @p38='?' (DbType = Int32), @p39='?' (DbType = Boolean), @p40='?' (DbType = Boolean), @p41='?' (DbType = DateTime2), @p42='?' (DbType = Int32), @p43='?' (DbType = Int32), @p44='?' (DbType = Int32), @p45='?' (DbType = Int32), @p46='?' (DbType = DateTime2), @p47='?' (DbType = Int32), @p48='?' (DbType = Int32), @p49='?' (DbType = DateTime2), @p50='?' (DbType = Int32), @p51='?' (DbType = Boolean), @p52='?' (DbType = Boolean), @p53='?' (DbType = DateTime2), @p54='?' (DbType = Int32), @p55='?' (DbType = Int32), @p56='?' (DbType = Int32), @p57='?' (DbType = Int32), @p58='?' (DbType = DateTime2), @p59='?' (DbType = Int32), @p60='?' (DbType = Int32), @p61='?' (DbType = DateTime2), @p62='?' (DbType = Int32), @p63='?' (DbType = Boolean), @p64='?' (DbType = Boolean), @p65='?' (DbType = DateTime2), @p66='?' (DbType = Int32), @p67='?' (DbType = Int32), @p68='?' (DbType = Int32), @p69='?' (DbType = Int32), @p70='?' (DbType = DateTime2), @p71='?' (DbType = Int32), @p72='?' (DbType = Int32), @p73='?' (DbType = DateTime2), @p74='?' (DbType = Int32), @p75='?' (DbType = Boolean), @p76='?' (DbType = Boolean), @p77='?' (DbType = DateTime2), @p78='?' (DbType = Int32), @p79='?' (DbType = Int32), @p80='?' (DbType = Int32), @p81='?' (DbType = Int32), @p82='?' (DbType = DateTime2), @p83='?' (DbType = Int32), @p84='?' (DbType = Int32), @p85='?' (DbType = DateTime2), @p86='?' (DbType = Int32), @p87='?' (DbType = Boolean), @p88='?' (DbType = Boolean), @p89='?' (DbType = DateTime2), @p90='?' (DbType = Int32), @p91='?' (DbType = Int32), @p92='?' (DbType = Int32), @p93='?' (DbType = Int32), @p94='?' (DbType = DateTime2), @p95='?' (DbType = Int32), @p96='?' (DbType = Int32), @p97='?' (DbType = DateTime2), @p98='?' (DbType = Int32), @p99='?' (DbType = Boolean), @p100='?' (DbType = Boolean), @p101='?' (DbType = DateTime2), @p102='?' (DbType = Int32), @p103='?' (DbType = Int32), @p104='?' (DbType = Int32), @p105='?' (DbType = Int32), @p106='?' (DbType = DateTime2), @p107='?' (DbType = Int32), @p108='?' (DbType = Int32), @p109='?' (DbType = DateTime2), @p110='?' (DbType = Int32), @p111='?' (DbType = Boolean), @p112='?' (DbType = Boolean), @p113='?' (DbType = DateTime2), @p114='?' (DbType = Int32), @p115='?' (DbType = Int32), @p116='?' (DbType = Int32), @p117='?' (DbType = Int32), @p118='?' (DbType = DateTime2), @p119='?' (DbType = Int32), @p120='?' (DbType = Int32), @p121='?' (DbType = DateTime2), @p122='?' (DbType = Int32), @p123='?' (DbType = Boolean), @p124='?' (DbType = Boolean), @p125='?' (DbType = DateTime2), @p126='?' (DbType = Int32), @p127='?' (DbType = Int32), @p128='?' (DbType = Int32), @p129='?' (DbType = Int32), @p130='?' (DbType = DateTime2), @p131='?' (DbType = Int32), @p132='?' (DbType = Int32), @p133='?' (DbType = DateTime2), @p134='?' (DbType = Int32), @p135='?' (DbType = Boolean), @p136='?' (DbType = Boolean), @p137='?' (DbType = DateTime2), @p138='?' (DbType = Int32), @p139='?' (DbType = Int32), @p140='?' (DbType = Int32), @p141='?' (DbType = Int32), @p142='?' (DbType = DateTime2), @p143='?' (DbType = Int32), @p144='?' (DbType = Int32), @p145='?' (DbType = DateTime2), @p146='?' (DbType = Int32), @p147='?' (DbType = Boolean), @p148='?' (DbType = Boolean), @p149='?' (DbType = DateTime2), @p150='?' (DbType = Int32), @p151='?' (DbType = Int32), @p152='?' (DbType = Int32), @p153='?' (DbType = Int32), @p154='?' (DbType = DateTime2), @p155='?' (DbType = Int32), @p156='?' (DbType = Int32), @p157='?' (DbType = DateTime2), @p158='?' (DbType = Int32), @p159='?' (DbType = Boolean), @p160='?' (DbType = Boolean), @p161='?' (DbType = DateTime2), @p162='?' (DbType = Int32), @p163='?' (DbType = Int32), @p164='?' (DbType = Int32), @p165='?' (DbType = Int32), @p166='?' (DbType = DateTime2), @p167='?' (DbType = Int32), @p168='?' (DbType = Int32), @p169='?' (DbType = DateTime2), @p170='?' (DbType = Int32), @p171='?' (DbType = Boolean), @p172='?' (DbType = Boolean), @p173='?' (DbType = DateTime2), @p174='?' (DbType = Int32), @p175='?' (DbType = Int32), @p176='?' (DbType = Int32), @p177='?' (DbType = Int32), @p178='?' (DbType = DateTime2), @p179='?' (DbType = Int32), @p180='?' (DbType = Int32), @p181='?' (DbType = DateTime2), @p182='?' (DbType = Int32), @p183='?' (DbType = Boolean), @p184='?' (DbType = Boolean), @p185='?' (DbType = DateTime2), @p186='?' (DbType = Int32), @p187='?' (DbType = Int32), @p188='?' (DbType = Int32), @p189='?' (DbType = Int32), @p190='?' (DbType = DateTime2), @p191='?' (DbType = Int32), @p192='?' (DbType = Int32), @p193='?' (DbType = DateTime2), @p194='?' (DbType = Int32), @p195='?' (DbType = Boolean), @p196='?' (DbType = Boolean), @p197='?' (DbType = DateTime2), @p198='?' (DbType = Int32), @p199='?' (DbType = Int32), @p200='?' (DbType = Int32), @p201='?' (DbType = Int32), @p202='?' (DbType = DateTime2), @p203='?' (DbType = Int32), @p204='?' (DbType = Int32), @p205='?' (DbType = DateTime2), @p206='?' (DbType = Int32), @p207='?' (DbType = Boolean), @p208='?' (DbType = Boolean), @p209='?' (DbType = DateTime2), @p210='?' (DbType = Int32), @p211='?' (DbType = Int32), @p212='?' (DbType = Int32), @p213='?' (DbType = Int32), @p214='?' (DbType = DateTime2), @p215='?' (DbType = Int32), @p216='?' (DbType = Int32), @p217='?' (DbType = DateTime2), @p218='?' (DbType = Int32), @p219='?' (DbType = Boolean), @p220='?' (DbType = Boolean), @p221='?' (DbType = DateTime2), @p222='?' (DbType = Int32), @p223='?' (DbType = Int32), @p224='?' (DbType = Int32), @p225='?' (DbType = Int32), @p226='?' (DbType = DateTime2), @p227='?' (DbType = Int32), @p228='?' (DbType = Int32), @p229='?' (DbType = DateTime2), @p230='?' (DbType = Int32), @p231='?' (DbType = Boolean), @p232='?' (DbType = Boolean), @p233='?' (DbType = DateTime2), @p234='?' (DbType = Int32), @p235='?' (DbType = Int32), @p236='?' (DbType = Int32), @p237='?' (DbType = Int32), @p238='?' (DbType = DateTime2), @p239='?' (DbType = Int32), @p240='?' (DbType = Int32), @p241='?' (DbType = DateTime2), @p242='?' (DbType = Int32), @p243='?' (DbType = Boolean), @p244='?' (DbType = Boolean), @p245='?' (DbType = DateTime2), @p246='?' (DbType = Int32), @p247='?' (DbType = Int32), @p248='?' (DbType = Int32), @p249='?' (DbType = Int32), @p250='?' (DbType = DateTime2), @p251='?' (DbType = Int32), @p252='?' (DbType = Int32), @p253='?' (DbType = DateTime2), @p254='?' (DbType = Int32), @p255='?' (DbType = Boolean), @p256='?' (DbType = Boolean), @p257='?' (DbType = DateTime2), @p258='?' (DbType = Int32), @p259='?' (DbType = Int32), @p260='?' (DbType = Int32), @p261='?' (DbType = Int32), @p262='?' (DbType = DateTime2), @p263='?' (DbType = Int32), @p264='?' (DbType = Int32), @p265='?' (DbType = DateTime2), @p266='?' (DbType = Int32), @p267='?' (DbType = Boolean), @p268='?' (DbType = Boolean), @p269='?' (DbType = DateTime2), @p270='?' (DbType = Int32), @p271='?' (DbType = Int32), @p272='?' (DbType = Int32), @p273='?' (DbType = Int32), @p274='?' (DbType = DateTime2), @p275='?' (DbType = Int32), @p276='?' (DbType = Int32), @p277='?' (DbType = DateTime2), @p278='?' (DbType = Int32), @p279='?' (DbType = Boolean), @p280='?' (DbType = Boolean), @p281='?' (DbType = DateTime2), @p282='?' (DbType = Int32), @p283='?' (DbType = Int32), @p284='?' (DbType = Int32), @p285='?' (DbType = Int32), @p286='?' (DbType = DateTime2), @p287='?' (DbType = Int32), @p288='?' (DbType = Int32), @p289='?' (DbType = DateTime2), @p290='?' (DbType = Int32), @p291='?' (DbType = Boolean), @p292='?' (DbType = Boolean), @p293='?' (DbType = DateTime2), @p294='?' (DbType = Int32), @p295='?' (DbType = Int32), @p296='?' (DbType = Int32), @p297='?' (DbType = Int32), @p298='?' (DbType = DateTime2), @p299='?' (DbType = Int32), @p300='?' (DbType = Int32), @p301='?' (DbType = DateTime2), @p302='?' (DbType = Int32), @p303='?' (DbType = Boolean), @p304='?' (DbType = Boolean), @p305='?' (DbType = DateTime2), @p306='?' (DbType = Int32), @p307='?' (DbType = Int32), @p308='?' (DbType = Int32), @p309='?' (DbType = Int32), @p310='?' (DbType = DateTime2), @p311='?' (DbType = Int32), @p312='?' (DbType = Int32), @p313='?' (DbType = DateTime2), @p314='?' (DbType = Int32), @p315='?' (DbType = Boolean), @p316='?' (DbType = Boolean), @p317='?' (DbType = DateTime2), @p318='?' (DbType = Int32), @p319='?' (DbType = Int32), @p320='?' (DbType = Int32), @p321='?' (DbType = Int32), @p322='?' (DbType = DateTime2), @p323='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [leaveBalance] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, 0),
+(@p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 1),
+(@p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, 2),
+(@p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, @p45, @p46, @p47, 3),
+(@p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57, @p58, @p59, 4),
+(@p60, @p61, @p62, @p63, @p64, @p65, @p66, @p67, @p68, @p69, @p70, @p71, 5),
+(@p72, @p73, @p74, @p75, @p76, @p77, @p78, @p79, @p80, @p81, @p82, @p83, 6),
+(@p84, @p85, @p86, @p87, @p88, @p89, @p90, @p91, @p92, @p93, @p94, @p95, 7),
+(@p96, @p97, @p98, @p99, @p100, @p101, @p102, @p103, @p104, @p105, @p106, @p107, 8),
+(@p108, @p109, @p110, @p111, @p112, @p113, @p114, @p115, @p116, @p117, @p118, @p119, 9),
+(@p120, @p121, @p122, @p123, @p124, @p125, @p126, @p127, @p128, @p129, @p130, @p131, 10),
+(@p132, @p133, @p134, @p135, @p136, @p137, @p138, @p139, @p140, @p141, @p142, @p143, 11),
+(@p144, @p145, @p146, @p147, @p148, @p149, @p150, @p151, @p152, @p153, @p154, @p155, 12),
+(@p156, @p157, @p158, @p159, @p160, @p161, @p162, @p163, @p164, @p165, @p166, @p167, 13),
+(@p168, @p169, @p170, @p171, @p172, @p173, @p174, @p175, @p176, @p177, @p178, @p179, 14),
+(@p180, @p181, @p182, @p183, @p184, @p185, @p186, @p187, @p188, @p189, @p190, @p191, 15),
+(@p192, @p193, @p194, @p195, @p196, @p197, @p198, @p199, @p200, @p201, @p202, @p203, 16),
+(@p204, @p205, @p206, @p207, @p208, @p209, @p210, @p211, @p212, @p213, @p214, @p215, 17),
+(@p216, @p217, @p218, @p219, @p220, @p221, @p222, @p223, @p224, @p225, @p226, @p227, 18),
+(@p228, @p229, @p230, @p231, @p232, @p233, @p234, @p235, @p236, @p237, @p238, @p239, 19),
+(@p240, @p241, @p242, @p243, @p244, @p245, @p246, @p247, @p248, @p249, @p250, @p251, 20),
+(@p252, @p253, @p254, @p255, @p256, @p257, @p258, @p259, @p260, @p261, @p262, @p263, 21),
+(@p264, @p265, @p266, @p267, @p268, @p269, @p270, @p271, @p272, @p273, @p274, @p275, 22),
+(@p276, @p277, @p278, @p279, @p280, @p281, @p282, @p283, @p284, @p285, @p286, @p287, 23),
+(@p288, @p289, @p290, @p291, @p292, @p293, @p294, @p295, @p296, @p297, @p298, @p299, 24),
+(@p300, @p301, @p302, @p303, @p304, @p305, @p306, @p307, @p308, @p309, @p310, @p311, 25),
+(@p312, @p313, @p314, @p315, @p316, @p317, @p318, @p319, @p320, @p321, @p322, @p323, 26)) AS i ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year])
+VALUES (i.[CompanyId], i.[CreatedAt], i.[EmployeeId], i.[IsActive], i.[IsDeleted], i.[LastAllocatedDate], i.[LeaveTypeId], i.[RemainingDays], i.[TotalAllocatedDays], i.[TotalTakenDays], i.[UpdatedAt], i.[Year])
+OUTPUT INSERTED.[Id], i._Position;
+2025-10-01 15:37:30.693 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:37:30.693 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:37:30.759 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:30.759 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:30.776 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 89.5316ms
+2025-10-01 15:37:30.776 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 89.5309ms
+2025-10-01 15:37:36.233 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:37:36.234 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:37:36.280 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:36.299 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:36.302 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 69.0744ms
+2025-10-01 15:37:36.306 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 71.7478ms
+2025-10-01 15:37:36.320 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:37:36.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:37:36.359 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:36.367 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:37:36.495 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:07:36'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 15:37:36.495 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:07:36'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 15:37:36.555 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:07:36'.
+2025-10-01 15:37:36.555 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:07:36'.
+2025-10-01 15:37:36.578 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:37:36.584 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 262.7914ms
+2025-10-01 15:37:36.602 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:37:36.612 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-10-01 15:37:36.920 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:37:36.946 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:37:36.975 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 362.9661ms
+2025-10-01 15:37:36.984 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:37:36.989 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 666.9464ms
+2025-10-01 15:38:01.149 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 15:38:01.222 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:01.233 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 90.4383ms
+2025-10-01 15:38:01.317 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 15:38:01.351 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:01.419 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:08:01'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 15:38:01.472 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:08:01'.
+2025-10-01 15:38:01.485 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:38:01.503 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:38:01.769 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 15:38:01.954 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 15:38:01.969 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:01.977 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-01 15:38:01.983 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:08:01'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 15:38:01.994 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 474.769ms
+2025-10-01 15:38:01.998 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '30-09-2025 09:50:06', Current time (UTC): '01-10-2025 10:08:01'.
+2025-10-01 15:38:02.001 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:38:02.007 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:38:02.014 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 696.8841ms
+2025-10-01 15:38:02.015 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:38:02.064 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 15:38:02.089 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:38:02.099 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:02.104 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 16.1227ms
+2025-10-01 15:38:02.123 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:38:02.149 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:02.162 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:38:02.167 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:38:02.209 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:38:02.220 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:38:02.227 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-01 15:38:02.230 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 55.3509ms
+2025-10-01 15:38:02.232 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 205.0368ms
+2025-10-01 15:38:02.234 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:38:02.238 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:38:02.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 119.6219ms
+2025-10-01 15:38:02.246 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 293.448ms
+2025-10-01 15:38:08.205 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:38:08.205 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:38:08.228 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:08.241 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:08.245 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 40.9804ms
+2025-10-01 15:38:08.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:38:08.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:38:08.253 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 45.3829ms
+2025-10-01 15:38:08.280 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:08.288 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:38:08.307 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:38:08.308 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 50.5381ms
+2025-10-01 15:38:08.311 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:38:08.328 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-10-01 15:38:08.371 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:38:08.379 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:38:08.387 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 58.1221ms
+2025-10-01 15:38:08.392 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:38:08.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 133.3992ms
+2025-10-01 15:40:54.339 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:40:54.395 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:40:54.408 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 78.4515ms
+2025-10-01 15:40:54.418 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:40:54.449 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:40:54.565 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 147.1848ms
+2025-10-01 15:40:54.612 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-10-01 15:41:10.072 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:41:10.113 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:41:10.118 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 46.7343ms
+2025-10-01 15:41:10.136 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:41:10.151 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:41:10.173 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:41:10.193 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:41:10.458 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:41:10.478 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:41:10.510 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 308.0749ms
+2025-10-01 15:41:10.517 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:41:10.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 396.3913ms
+2025-10-01 15:42:20.796 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:42:20.795 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:20.979 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:20.979 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:20.994 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 235.9965ms
+2025-10-01 15:42:20.994 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 235.6187ms
+2025-10-01 15:42:21.155 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:42:21.156 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:21.216 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:21.219 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:21.514 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:21.537 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 379.8414ms
+2025-10-01 15:42:21.667 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:42:21.764 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-10-01 15:42:23.222 +05:30 [INF] Executed DbCommand (782ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:42:23.353 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:42:23.474 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 1648.3497ms
+2025-10-01 15:42:23.501 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:23.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 2366.5423ms
+2025-10-01 15:42:48.831 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:48.831 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:42:49.028 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:49.028 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:49.216 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 731.9135ms
+2025-10-01 15:42:49.216 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 731.5157ms
+2025-10-01 15:42:49.495 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-10-01 15:42:49.549 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:50.492 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:50.514 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:50.730 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:50.747 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 1337.5867ms
+2025-10-01 15:42:50.788 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:42:50.825 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-10-01 15:42:55.977 +05:30 [INF] Executed DbCommand (4,529ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:42:56.158 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:42:56.274 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 5417.5121ms
+2025-10-01 15:42:56.356 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:56.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 6871.9901ms
+2025-10-01 15:42:57.771 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:42:57.773 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:57.984 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:58.008 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 236.8131ms
+2025-10-01 15:42:58.039 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:58.073 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 300.3775ms
+2025-10-01 15:42:58.103 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:42:58.106 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:42:58.164 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:58.170 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:42:58.177 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:58.192 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:42:58.240 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:42:58.333 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:42:58.353 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:42:58.403 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 152.2387ms
+2025-10-01 15:42:58.413 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:42:58.425 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 320.4396ms
+2025-10-01 15:42:58.820 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:43:27.001 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:43:27.089 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:43:27.244 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 28396.4694ms
+2025-10-01 15:43:27.256 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:43:27.271 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 29165.1242ms
+2025-10-01 15:45:23.975 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:45:24.367 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:45:24.385 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 424.3539ms
+2025-10-01 15:45:24.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:45:24.511 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:45:24.670 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:45:24.732 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:45:38.412 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:45:38.436 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:45:38.448 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 13703.2489ms
+2025-10-01 15:45:38.453 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:45:38.460 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 14045.0493ms
+2025-10-01 15:45:50.542 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:45:50.567 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:45:50.575 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 34.5967ms
+2025-10-01 15:45:50.598 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:45:50.622 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:45:50.651 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:45:50.662 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:45:50.741 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:45:50.750 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:45:50.775 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 108.1323ms
+2025-10-01 15:45:50.779 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:45:50.783 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 186.208ms
+2025-10-01 15:46:13.311 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:46:13.417 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:46:13.452 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 150.9297ms
+2025-10-01 15:46:13.471 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:46:13.531 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:46:13.628 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:46:13.719 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:46:22.907 +05:30 [INF] Executed DbCommand (67ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:46:22.931 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:46:22.953 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 9216.0275ms
+2025-10-01 15:46:22.962 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:46:22.972 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 9503.9363ms
+2025-10-01 15:46:36.107 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:46:36.208 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:46:36.228 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 125.4914ms
+2025-10-01 15:46:36.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:46:36.336 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:46:36.405 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:46:36.428 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:46:36.725 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:46:36.751 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:46:36.771 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 325.9278ms
+2025-10-01 15:46:36.776 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:46:36.784 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 477.2863ms
+2025-10-01 15:47:29.409 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:47:29.489 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:47:29.507 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 108.2076ms
+2025-10-01 15:47:29.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:47:29.582 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:47:29.643 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:47:29.672 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:47:35.958 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:47:36.001 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:47:36.078 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 6380.9697ms
+2025-10-01 15:47:36.085 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:47:36.094 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 6559.3136ms
+2025-10-01 15:47:53.383 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:47:53.525 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:47:53.593 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 251.3769ms
+2025-10-01 15:47:53.640 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:47:53.681 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:47:53.763 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:47:53.791 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:47:54.214 +05:30 [INF] Executed DbCommand (122ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:47:54.291 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:47:54.377 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 552.6524ms
+2025-10-01 15:47:54.400 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:47:54.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 776.3652ms
+2025-10-01 15:52:10.022 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 15:52:10.083 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:10.095 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 122.9284ms
+2025-10-01 15:52:10.234 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 15:52:10.293 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:10.362 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:52:10.381 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:52:10.722 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 15:52:10.955 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-01 15:52:10.981 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 590.4469ms
+2025-10-01 15:52:10.988 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 15:52:11.000 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 765.5655ms
+2025-10-01 15:52:11.047 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:52:11.056 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:11.062 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 15.4826ms
+2025-10-01 15:52:11.067 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:52:11.085 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:11.088 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:52:11.093 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:52:11.120 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:52:11.128 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:52:11.133 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 35.4405ms
+2025-10-01 15:52:11.136 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:52:11.144 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 76.4181ms
+2025-10-01 15:52:13.657 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:52:13.657 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:52:13.666 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:13.676 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 20.526ms
+2025-10-01 15:52:13.677 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:13.682 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:52:13.693 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:52:13.698 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:13.700 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:52:13.702 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:52:13.715 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:52:13.739 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:52:15.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:52:15.850 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 2140.0667ms
+2025-10-01 15:52:15.856 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:52:15.860 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 2204.164ms
+2025-10-01 15:52:15.893 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:52:15.901 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:52:15.909 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 2175.7862ms
+2025-10-01 15:52:15.913 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:52:15.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 2234.7278ms
+2025-10-01 15:52:52.835 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:52:52.961 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:52.969 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 141.1373ms
+2025-10-01 15:52:52.982 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:52:53.016 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:52:53.102 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:52:53.119 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:52:57.014 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:52:57.032 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:52:57.045 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 3915.1688ms
+2025-10-01 15:52:57.050 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:52:57.056 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 4074.6598ms
+2025-10-01 15:53:05.310 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:53:05.324 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:53:05.327 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 17.5379ms
+2025-10-01 15:53:05.340 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:53:05.349 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:53:05.353 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:53:05.356 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:53:05.419 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:53:05.425 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:53:05.434 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 72.105ms
+2025-10-01 15:53:05.439 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:53:05.443 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 103.1658ms
+2025-10-01 15:54:13.741 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:54:13.741 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:54:13.826 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:54:13.826 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:54:13.840 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 116.1128ms
+2025-10-01 15:54:13.870 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:54:13.840 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 116.0851ms
+2025-10-01 15:54:13.882 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:54:13.926 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:54:13.953 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:54:14.054 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:54:14.055 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:54:14.080 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:54:14.080 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:54:21.675 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:54:21.675 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:54:21.691 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:54:21.691 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:54:21.728 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 7635.1862ms
+2025-10-01 15:54:21.728 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 7623.4293ms
+2025-10-01 15:54:21.735 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:54:21.741 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:54:21.748 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 7878.7957ms
+2025-10-01 15:54:21.750 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 7868.3087ms
+2025-10-01 15:56:43.640 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:56:43.640 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:56:43.680 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:56:43.680 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:56:43.688 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 140.8276ms
+2025-10-01 15:56:43.688 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 140.7709ms
+2025-10-01 15:56:43.714 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:56:43.713 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:56:43.753 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:56:43.755 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:56:43.787 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:56:43.787 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:56:43.797 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:56:43.797 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:56:52.279 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:56:52.280 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:56:52.291 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:56:52.291 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:56:52.300 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 8497.7013ms
+2025-10-01 15:56:52.300 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 8493.142ms
+2025-10-01 15:56:52.303 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:56:52.305 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:56:52.308 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 8593.9365ms
+2025-10-01 15:56:52.310 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 8597.6801ms
+2025-10-01 15:59:01.518 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:59:01.518 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:59:01.598 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:59:01.598 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:59:01.615 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 102.7436ms
+2025-10-01 15:59:01.615 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 102.7437ms
+2025-10-01 15:59:01.651 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 15:59:01.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 15:59:01.684 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:59:01.687 +05:30 [INF] CORS policy execution successful.
+2025-10-01 15:59:01.739 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:59:01.739 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:59:01.753 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:59:01.753 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 15:59:01.975 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 15:59:02.000 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:59:02.049 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 283.9918ms
+2025-10-01 15:59:02.061 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 15:59:02.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 415.6873ms
+2025-10-01 15:59:02.097 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 15:59:02.110 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 15:59:02.115 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 346.6848ms
+2025-10-01 15:59:02.121 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 15:59:02.127 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 475.3824ms
+2025-10-01 16:00:48.082 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:00:48.082 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:00:48.125 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:00:48.125 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:00:48.135 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 59.0268ms
+2025-10-01 16:00:48.135 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 58.9822ms
+2025-10-01 16:00:48.145 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:00:48.167 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:00:48.193 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:00:48.195 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:00:48.224 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:00:48.224 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:00:48.232 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:00:48.232 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:00:48.448 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:00:48.452 +05:30 [INF] Executed DbCommand (96ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:00:48.463 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:00:48.463 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:00:48.477 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 239.261ms
+2025-10-01 16:00:48.477 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 235.0155ms
+2025-10-01 16:00:48.480 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:00:48.485 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:00:48.490 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 345.3127ms
+2025-10-01 16:00:48.492 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 325.3185ms
+2025-10-01 16:01:26.595 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:01:26.595 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:01:26.630 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:01:26.638 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:01:26.642 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 47.5785ms
+2025-10-01 16:01:26.645 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 50.752ms
+2025-10-01 16:01:26.647 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:01:26.689 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:01:26.737 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:01:26.744 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:01:26.746 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:01:26.748 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:01:26.749 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:01:26.753 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:01:26.777 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:01:26.780 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:01:26.789 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:01:26.794 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:01:26.797 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 38.165ms
+2025-10-01 16:01:26.801 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 38.8171ms
+2025-10-01 16:01:26.805 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:01:26.811 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:01:26.817 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 169.5509ms
+2025-10-01 16:01:26.822 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 134.1482ms
+2025-10-01 16:02:41.838 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:02:41.838 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:02:42.033 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:02:42.033 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:02:42.091 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 275.9777ms
+2025-10-01 16:02:42.146 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:02:42.140 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 329.9157ms
+2025-10-01 16:02:42.249 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:02:42.379 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:02:42.415 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:02:42.510 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:02:42.510 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:02:42.545 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:02:42.545 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:02:43.065 +05:30 [INF] Executed DbCommand (222ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:02:43.065 +05:30 [INF] Executed DbCommand (224ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:02:43.099 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:02:43.099 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:02:43.167 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 597.1904ms
+2025-10-01 16:02:43.167 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 567.0362ms
+2025-10-01 16:02:43.185 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:02:43.215 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:02:43.230 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 1084.292ms
+2025-10-01 16:02:43.232 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 983.3304ms
+2025-10-01 16:06:30.819 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:06:30.819 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:06:30.895 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:06:30.895 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:06:30.906 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 125.9505ms
+2025-10-01 16:06:30.909 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 126.0732ms
+2025-10-01 16:06:30.942 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:06:30.943 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:06:30.987 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:06:30.988 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:06:31.020 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:06:31.020 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:06:31.030 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:06:31.030 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:06:31.218 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:06:31.218 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:06:31.245 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:06:31.245 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:06:31.278 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 238.9659ms
+2025-10-01 16:06:31.278 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 234.6596ms
+2025-10-01 16:06:31.281 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:06:31.286 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:06:31.294 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 353.6324ms
+2025-10-01 16:06:31.295 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 351.5786ms
+2025-10-01 16:08:20.821 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:08:20.821 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:08:20.932 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:08:20.932 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:08:20.942 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 148.4955ms
+2025-10-01 16:08:20.942 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 148.4526ms
+2025-10-01 16:08:21.008 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:08:21.008 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:08:21.052 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:08:21.054 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:08:21.136 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:08:21.136 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:08:21.154 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:08:21.154 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:08:21.355 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:08:21.355 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:08:21.375 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:08:21.375 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:08:21.390 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 230.2219ms
+2025-10-01 16:08:21.390 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 220.3854ms
+2025-10-01 16:08:21.395 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:08:21.401 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:08:21.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 400.0636ms
+2025-10-01 16:08:21.407 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 401.7707ms
+2025-10-01 16:09:08.400 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:09:08.400 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:09:08.493 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:08.493 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:08.512 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 121.7064ms
+2025-10-01 16:09:08.512 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 121.6968ms
+2025-10-01 16:09:08.558 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:09:08.558 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:09:08.585 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:08.589 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:08.644 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:09:08.644 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:09:08.663 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:09:08.663 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:09:08.937 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:09:08.937 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:09:08.982 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:09:08.982 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:09:09.003 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 318.0846ms
+2025-10-01 16:09:09.003 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 331.7972ms
+2025-10-01 16:09:09.012 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:09:09.017 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:09:09.027 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 471.1122ms
+2025-10-01 16:09:09.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 472.1248ms
+2025-10-01 16:09:22.330 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:09:22.331 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:09:22.357 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:22.381 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:22.384 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 55.1874ms
+2025-10-01 16:09:22.386 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 54.6814ms
+2025-10-01 16:09:22.399 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:09:22.391 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:09:22.420 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:22.430 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:09:22.434 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:09:22.435 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:09:22.437 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:09:22.440 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:09:22.459 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:09:22.475 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:09:22.475 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:09:22.481 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 33.9442ms
+2025-10-01 16:09:22.490 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:09:22.492 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:09:22.500 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 46.1647ms
+2025-10-01 16:09:22.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 106.4879ms
+2025-10-01 16:09:22.506 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:09:22.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 129.5986ms
+2025-10-01 16:10:22.143 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:10:22.143 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:10:22.226 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:10:22.226 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:10:22.277 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 167.8831ms
+2025-10-01 16:10:22.345 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:10:22.278 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 167.8829ms
+2025-10-01 16:10:22.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:10:22.442 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:10:22.459 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:10:22.509 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:10:22.509 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:10:22.523 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:10:22.523 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:10:22.665 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:10:22.672 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:10:22.683 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:10:22.684 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:10:22.701 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 158.0951ms
+2025-10-01 16:10:22.701 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 166.7491ms
+2025-10-01 16:10:22.707 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:10:22.714 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:10:22.721 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 416.4639ms
+2025-10-01 16:10:22.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 379.0196ms
+2025-10-01 16:12:10.569 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:10.569 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:10.620 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:10.620 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:10.637 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 76.0198ms
+2025-10-01 16:12:10.707 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:10.637 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 76.0677ms
+2025-10-01 16:12:10.712 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:10.752 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:10.764 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:10.818 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:10.818 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:10.836 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:10.836 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:11.037 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:12:11.059 +05:30 [INF] Executed DbCommand (64ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:12:11.066 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:11.072 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:11.085 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 240.6471ms
+2025-10-01 16:12:11.085 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 234.6722ms
+2025-10-01 16:12:11.089 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:11.095 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:11.101 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 388.632ms
+2025-10-01 16:12:11.101 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 394.3023ms
+2025-10-01 16:12:29.519 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:29.519 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:29.531 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:29.537 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:29.542 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 23.0164ms
+2025-10-01 16:12:29.552 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:29.556 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:29.548 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 28.6234ms
+2025-10-01 16:12:29.588 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:29.600 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:29.624 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:29.629 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:29.631 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:29.635 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:29.730 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:12:29.731 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:12:29.737 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:29.777 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:29.780 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 133.1837ms
+2025-10-01 16:12:29.786 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 116.8277ms
+2025-10-01 16:12:29.797 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:29.803 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:29.813 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 261.3268ms
+2025-10-01 16:12:29.826 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 270.8746ms
+2025-10-01 16:12:51.498 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:51.499 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:51.516 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:51.527 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:51.529 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 32.1102ms
+2025-10-01 16:12:51.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:12:51.540 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:12:51.562 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:51.531 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 34.3658ms
+2025-10-01 16:12:51.669 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:51.662 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:12:51.687 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:51.696 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:51.701 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:12:51.748 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:12:51.775 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:51.803 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 94.731ms
+2025-10-01 16:12:51.835 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:12:51.853 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 314.0332ms
+2025-10-01 16:12:51.935 +05:30 [INF] Executed DbCommand (206ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:12:51.953 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:12:51.967 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 269.5419ms
+2025-10-01 16:12:51.976 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:12:51.985 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 449.0139ms
+2025-10-01 16:13:13.398 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:13:13.401 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:13:13.443 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:13:13.452 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:13:13.458 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 60.6321ms
+2025-10-01 16:13:13.487 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 16:13:13.461 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 64.7767ms
+2025-10-01 16:13:13.512 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:13:13.463 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 16:13:13.524 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:13:13.529 +05:30 [INF] CORS policy execution successful.
+2025-10-01 16:13:13.532 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:13:13.536 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:13:13.545 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 16:13:13.556 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 16:13:13.566 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:13:13.567 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 16:13:13.573 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 30.4447ms
+2025-10-01 16:13:13.580 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 16:13:13.583 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 16:13:13.587 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 30.0425ms
+2025-10-01 16:13:13.590 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 103.6904ms
+2025-10-01 16:13:13.594 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 16:13:13.606 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 143.8324ms
+2025-10-01 23:01:59.566 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-10-01 23:02:02.132 +05:30 [INF] Hangfire SQL objects installed.
+2025-10-01 23:02:05.024 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-01 23:02:05.688 +05:30 [INF] Now listening on: https://localhost:7284
+2025-10-01 23:02:05.693 +05:30 [INF] Now listening on: http://localhost:5082
+2025-10-01 23:02:06.105 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-10-01 23:02:06.109 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-10-01 23:02:06.111 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-10-01 23:02:06.155 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-01 23:02:06.158 +05:30 [INF] Hosting environment: Development
+2025-10-01 23:02:06.161 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-10-01 23:02:06.222 +05:30 [INF] Server hhlap0012:40396:0b01721a successfully announced in 68.2415 ms
+2025-10-01 23:02:06.240 +05:30 [INF] Server hhlap0012:40396:0b01721a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-10-01 23:02:06.315 +05:30 [INF] 1 servers were removed due to timeout
+2025-10-01 23:02:06.516 +05:30 [INF] Server hhlap0012:40396:0b01721a all the dispatchers started
+2025-10-01 23:02:10.639 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-10-01 23:02:11.384 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 770.3234ms
+2025-10-01 23:02:11.521 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-01 23:02:11.572 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-10-01 23:02:11.667 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 145.6751ms
+2025-10-01 23:02:12.556 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 984.1684ms
+2025-10-01 23:02:12.722 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-10-01 23:02:12.790 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.1975ms
+2025-10-01 23:24:51.220 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 23:24:51.570 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:24:51.647 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 449.9831ms
+2025-10-01 23:24:51.722 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 23:24:51.786 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:24:53.570 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:54:53'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 23:24:53.924 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:54:53'.
+2025-10-01 23:24:53.965 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:24:54.258 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:24:58.967 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 23:24:59.000 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:24:59.002 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 36.2628ms
+2025-10-01 23:24:59.006 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 23:24:59.019 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:24:59.026 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:54:59'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 23:24:59.035 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:54:59'.
+2025-10-01 23:24:59.037 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:24:59.046 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:24:59.388 +05:30 [INF] Executed DbCommand (156ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 23:24:59.388 +05:30 [INF] Executed DbCommand (156ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 23:25:45.662 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-10-01 23:25:48.254 +05:30 [INF] Hangfire SQL objects installed.
+2025-10-01 23:25:49.957 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-01 23:25:50.572 +05:30 [INF] Now listening on: https://localhost:7284
+2025-10-01 23:25:50.574 +05:30 [INF] Now listening on: http://localhost:5082
+2025-10-01 23:25:50.775 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-10-01 23:25:50.779 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-10-01 23:25:50.782 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-10-01 23:25:50.865 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-01 23:25:50.870 +05:30 [INF] Hosting environment: Development
+2025-10-01 23:25:50.873 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-10-01 23:25:50.921 +05:30 [INF] Server hhlap0012:42460:5104737b successfully announced in 57.9611 ms
+2025-10-01 23:25:50.931 +05:30 [INF] Server hhlap0012:42460:5104737b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-10-01 23:25:51.151 +05:30 [INF] Server hhlap0012:42460:5104737b all the dispatchers started
+2025-10-01 23:25:56.273 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-10-01 23:25:57.422 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-01 23:25:57.472 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1227.1336ms
+2025-10-01 23:25:57.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 131.1647ms
+2025-10-01 23:25:57.721 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-10-01 23:25:58.117 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 400.5438ms
+2025-10-01 23:25:58.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-10-01 23:25:58.515 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 142.369ms
+2025-10-01 23:26:19.381 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 23:26:19.675 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:19.737 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 373.067ms
+2025-10-01 23:26:19.930 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 23:26:19.986 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:21.632 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:56:21'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 23:26:21.836 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:56:21'.
+2025-10-01 23:26:21.894 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:26:22.147 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:26:26.547 +05:30 [INF] Executed DbCommand (150ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 23:26:33.213 +05:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-10-01 23:26:33.223 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 11059.3261ms
+2025-10-01 23:26:33.227 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:26:33.241 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 500 null text/plain; charset=utf-8 13311.4767ms
+2025-10-01 23:26:44.845 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-01 23:26:44.862 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:44.866 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 21.7617ms
+2025-10-01 23:26:44.902 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-10-01 23:26:44.917 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:44.935 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:56:44'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-01 23:26:44.952 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '01-10-2025 12:22:10', Current time (UTC): '01-10-2025 17:56:44'.
+2025-10-01 23:26:44.962 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:26:44.967 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:26:45.068 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-01 23:26:45.317 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-01 23:26:45.396 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 418.6602ms
+2025-10-01 23:26:45.407 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-01 23:26:45.426 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 524.8668ms
+2025-10-01 23:26:45.564 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:26:45.569 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:45.573 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 10.4486ms
+2025-10-01 23:26:45.581 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:26:45.594 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:45.635 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:26:45.690 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:26:46.250 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:26:46.280 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:26:46.360 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 661.732ms
+2025-10-01 23:26:46.366 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:26:46.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 793.5631ms
+2025-10-01 23:26:49.145 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 23:26:49.147 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:26:49.163 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:49.175 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:49.176 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveBalance/26 - 204 null null 32.1587ms
+2025-10-01 23:26:49.180 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:26:49.180 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - null null
+2025-10-01 23:26:49.192 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:26:49.199 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:26:49.213 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 23:26:49.234 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:26:49.249 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:26:49.255 +05:30 [INF] Route matched with {action = "GetLeaveBakance", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveBakance(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:26:49.263 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 59.3797ms
+2025-10-01 23:26:49.279 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:26:49.288 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 141.7051ms
+2025-10-01 23:26:49.580 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__UserId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[TotalTakenDays], [l].[RemainingDays]
+FROM [leaveBalance] AS [l]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[EmployeeId] = @__UserId_0 AND [l].[Year] = DATEPART(year, GETUTCDATE()) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-01 23:26:49.604 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:26:49.624 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveBakance (LMS) in 354.5006ms
+2025-10-01 23:26:49.628 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveBakance (LMS)'
+2025-10-01 23:26:49.632 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveBalance/26 - 200 null application/json; charset=utf-8 451.3855ms
+2025-10-01 23:29:25.879 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:29:26.620 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:29:26.752 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 1018.0042ms
+2025-10-01 23:29:26.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:29:27.129 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:29:27.646 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:29:27.776 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:29:29.236 +05:30 [INF] Executed DbCommand (434ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:29:29.320 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:29:29.383 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 1492.6145ms
+2025-10-01 23:29:29.397 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:29:29.412 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 2499.0813ms
+2025-10-01 23:29:52.887 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:29:53.012 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:29:53.033 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 147.8327ms
+2025-10-01 23:29:53.234 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:29:53.337 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:29:53.434 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:29:53.542 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:29:53.790 +05:30 [INF] Executed DbCommand (83ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:29:53.814 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:29:53.838 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 234.4938ms
+2025-10-01 23:29:53.874 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:29:53.916 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 682.0896ms
+2025-10-01 23:30:07.830 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:30:07.848 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:30:07.851 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 24.8909ms
+2025-10-01 23:30:07.863 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:30:07.886 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:30:07.918 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:30:07.931 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:30:08.011 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:30:08.018 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:30:08.026 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 62.146ms
+2025-10-01 23:30:08.030 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:30:08.035 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 173.8901ms
+2025-10-01 23:30:18.051 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:30:18.065 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:30:18.071 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 21.0787ms
+2025-10-01 23:30:18.075 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:30:18.094 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:30:18.105 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:30:18.109 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:30:18.142 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:30:18.159 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:30:18.166 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 48.4139ms
+2025-10-01 23:30:18.171 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:30:18.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 101.4615ms
+2025-10-01 23:30:51.030 +05:30 [INF] 1 servers were removed due to timeout
+2025-10-01 23:31:17.708 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:31:17.760 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:31:17.773 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 65.0857ms
+2025-10-01 23:31:17.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:31:17.790 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:31:17.795 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:31:17.805 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:31:17.834 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:31:17.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:31:17.852 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 41.7391ms
+2025-10-01 23:31:17.857 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:31:17.860 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 84.6636ms
+2025-10-01 23:34:11.218 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:34:11.316 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:34:11.336 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 132.4587ms
+2025-10-01 23:34:11.356 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:34:11.431 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:34:11.532 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:11.564 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:34:11.905 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:34:11.928 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:34:11.950 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 373.6336ms
+2025-10-01 23:34:11.954 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:11.960 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 605.0374ms
+2025-10-01 23:34:42.071 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:34:42.094 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:34:42.099 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 31.2165ms
+2025-10-01 23:34:42.104 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:34:42.116 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:34:42.125 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:42.132 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:34:42.161 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:34:42.172 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:34:42.177 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 40.6894ms
+2025-10-01 23:34:42.183 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:42.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 84.7141ms
+2025-10-01 23:34:46.041 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:34:46.048 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:34:46.053 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:46.056 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:34:46.086 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:34:46.097 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:34:46.105 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 42.0058ms
+2025-10-01 23:34:46.111 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:34:46.116 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 76.7369ms
+2025-10-01 23:36:56.318 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:36:56.429 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:36:56.461 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 166.007ms
+2025-10-01 23:36:56.521 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:36:56.580 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:36:56.691 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:36:56.734 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:36:57.037 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:36:57.062 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:36:57.091 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 332.6623ms
+2025-10-01 23:36:57.095 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:36:57.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 581.0254ms
+2025-10-01 23:39:19.992 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:39:20.096 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:39:20.132 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 150.5608ms
+2025-10-01 23:39:20.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:39:20.257 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:39:20.423 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:39:20.449 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:39:20.798 +05:30 [INF] Executed DbCommand (74ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:39:20.833 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:39:20.864 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 405.0332ms
+2025-10-01 23:39:20.873 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:39:20.879 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 715.7587ms
+2025-10-01 23:39:50.761 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:39:50.797 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:39:50.802 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 60.4108ms
+2025-10-01 23:39:50.813 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:39:50.831 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:39:50.894 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:39:50.899 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:39:50.931 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:39:50.970 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:39:50.979 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 71.9146ms
+2025-10-01 23:39:50.988 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:39:51.002 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 189.2723ms
+2025-10-01 23:41:02.116 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:41:02.233 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:41:02.263 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 154.8238ms
+2025-10-01 23:41:02.279 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-01 23:41:02.362 +05:30 [INF] CORS policy execution successful.
+2025-10-01 23:41:02.494 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:41:02.535 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-01 23:41:02.847 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-01 23:41:02.877 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-01 23:41:02.908 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 355.895ms
+2025-10-01 23:41:02.914 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-01 23:41:02.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 644.847ms

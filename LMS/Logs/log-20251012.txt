@@ -1,0 +1,1460 @@
+2025-10-12 18:50:47.068 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 18:50:47.068 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 18:50:47.465 +05:30 [INF] CORS policy execution successful.
+2025-10-12 18:50:47.465 +05:30 [INF] CORS policy execution successful.
+2025-10-12 18:50:47.487 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 433.4548ms
+2025-10-12 18:50:47.513 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 18:50:47.487 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 433.4416ms
+2025-10-12 18:50:47.505 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 18:50:47.642 +05:30 [INF] CORS policy execution successful.
+2025-10-12 18:50:47.765 +05:30 [INF] CORS policy execution successful.
+2025-10-12 18:50:47.881 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:20:47'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 18:50:47.881 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:20:47'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 18:50:47.982 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:20:47'.
+2025-10-12 18:50:48.014 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:20:47'.
+2025-10-12 18:50:48.035 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 18:50:48.045 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 18:50:48.090 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 18:50:48.090 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 18:50:48.682 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 18:50:48.682 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 18:50:48.720 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 18:50:48.755 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 637.9643ms
+2025-10-12 18:50:48.768 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 18:50:48.778 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 1275.9532ms
+2025-10-12 18:50:48.876 +05:30 [INF] Executed DbCommand (130ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 18:50:48.904 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 18:50:48.942 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 814.058ms
+2025-10-12 18:50:48.962 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 18:50:48.976 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 1463.452ms
+2025-10-12 19:12:27.996 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:12:27.996 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:12:28.183 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:12:28.183 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:12:28.223 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 228.4514ms
+2025-10-12 19:12:28.365 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:12:28.223 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 228.4015ms
+2025-10-12 19:12:28.476 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:12:28.590 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:12:28.721 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:12:28.876 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:42:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:12:28.876 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:42:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:12:29.074 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:42:28'.
+2025-10-12 19:12:29.107 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:42:28'.
+2025-10-12 19:12:29.127 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:12:29.131 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:12:29.179 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:12:29.179 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:12:29.987 +05:30 [INF] Executed DbCommand (199ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:12:30.106 +05:30 [INF] Executed DbCommand (351ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:12:30.215 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:12:30.263 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 991.0352ms
+2025-10-12 19:12:30.308 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:12:30.352 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 1990.28ms
+2025-10-12 19:12:30.714 +05:30 [INF] Executed DbCommand (616ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:12:30.769 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:12:30.873 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 1649.9988ms
+2025-10-12 19:12:30.897 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:12:30.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 2448.5439ms
+2025-10-12 19:15:56.054 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:15:56.054 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:15:56.388 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:15:56.385 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:15:56.464 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 436.9099ms
+2025-10-12 19:15:56.464 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 438.1864ms
+2025-10-12 19:15:56.882 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:15:56.859 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:15:57.406 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:15:57.406 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:15:57.567 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:45:57'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:15:57.567 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:45:57'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:15:57.714 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:45:57'.
+2025-10-12 19:15:57.765 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:45:57'.
+2025-10-12 19:15:57.769 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:15:57.808 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:15:57.859 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:15:57.874 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:15:58.138 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:15:58.174 +05:30 [INF] Executed DbCommand (100ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:15:58.250 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:15:58.283 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 390.7396ms
+2025-10-12 19:15:58.289 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:15:58.313 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 1440.7267ms
+2025-10-12 19:15:58.431 +05:30 [INF] Executed DbCommand (205ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:15:58.550 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:15:58.607 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 696.9374ms
+2025-10-12 19:15:58.628 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:15:58.638 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 1779.6813ms
+2025-10-12 19:16:12.601 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:12.609 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:12.615 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 13.9382ms
+2025-10-12 19:16:12.620 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:12.638 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:12.641 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:12'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:12.648 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:12'.
+2025-10-12 19:16:12.651 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:12.654 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:16:12.673 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:16:12.686 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:12.689 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 30.8542ms
+2025-10-12 19:16:12.692 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:12.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 76.2058ms
+2025-10-12 19:16:19.015 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:19.018 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:16:19.052 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:19.065 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:19.068 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 52.8344ms
+2025-10-12 19:16:19.072 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 54.6916ms
+2025-10-12 19:16:19.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:19.080 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:16:19.162 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:19.188 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:19.206 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:19'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:19.225 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:19'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:19.258 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:19'.
+2025-10-12 19:16:19.296 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:19'.
+2025-10-12 19:16:19.300 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:19.315 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:16:19.323 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:16:19.337 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:16:19.421 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:16:19.455 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:16:19.466 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:19.492 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 118.9827ms
+2025-10-12 19:16:19.506 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:19.518 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:16:19.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 449.3168ms
+2025-10-12 19:16:19.543 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:19.605 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 188.2604ms
+2025-10-12 19:16:19.664 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:16:19.710 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 630.8387ms
+2025-10-12 19:16:24.219 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:24.232 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:24.237 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 17.2447ms
+2025-10-12 19:16:24.250 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:24.266 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:24.271 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:24'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:24.287 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:24'.
+2025-10-12 19:16:24.294 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:24.301 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:16:24.332 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:16:24.352 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:24.361 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 53.7188ms
+2025-10-12 19:16:24.372 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:24.387 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 137.1088ms
+2025-10-12 19:16:31.507 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:16:31.508 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:31.523 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:31.532 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:31.536 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 28.9567ms
+2025-10-12 19:16:31.568 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:16:31.548 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 37.9822ms
+2025-10-12 19:16:31.575 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:31.596 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:31.629 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:31.636 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:31'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:31.648 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:31'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:31.660 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:31'.
+2025-10-12 19:16:31.674 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:31'.
+2025-10-12 19:16:31.694 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:16:31.701 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:31.710 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:16:31.713 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:16:31.765 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:16:31.801 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:16:31.841 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:31.854 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 89.059ms
+2025-10-12 19:16:31.868 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:31.870 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:16:31.874 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 302.5293ms
+2025-10-12 19:16:31.892 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:31.930 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 201.4499ms
+2025-10-12 19:16:31.941 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:16:31.948 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 379.5739ms
+2025-10-12 19:16:33.989 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:16:34.004 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:16:34.010 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:34'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:16:34.023 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:46:34'.
+2025-10-12 19:16:34.037 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:34.042 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:16:34.077 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:16:34.099 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:16:34.119 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 65.7302ms
+2025-10-12 19:16:34.128 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:16:34.145 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 154.8941ms
+2025-10-12 19:19:04.224 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:19:04.320 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:04.400 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 179.8714ms
+2025-10-12 19:19:04.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:19:04.501 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:04.642 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:04'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:04.703 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:04'.
+2025-10-12 19:19:04.716 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:19:04.733 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:04.875 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:04.946 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:04.979 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 103.0976ms
+2025-10-12 19:19:05.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:05.105 +05:30 [INF] Executed DbCommand (200ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:19:05.116 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:05.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:05.170 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:05.190 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 436.4206ms
+2025-10-12 19:19:05.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:19:05.193 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:05'.
+2025-10-12 19:19:05.214 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:19:05.234 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:05.238 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:05.243 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 804.2346ms
+2025-10-12 19:19:05.258 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:05.261 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:05.302 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:05'.
+2025-10-12 19:19:05.314 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:19:05.326 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:05.380 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:19:05.386 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:19:05.407 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:05.456 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 119.4034ms
+2025-10-12 19:19:05.498 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:19:05.513 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 317.4706ms
+2025-10-12 19:19:05.601 +05:30 [INF] Executed DbCommand (118ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:19:05.615 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:05.650 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 341.7197ms
+2025-10-12 19:19:05.666 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:05.673 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 589.9186ms
+2025-10-12 19:19:14.776 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - null null
+2025-10-12 19:19:14.799 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:14.809 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - 204 null null 35.3585ms
+2025-10-12 19:19:14.819 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 54
+2025-10-12 19:19:14.872 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:14.882 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:14'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:14.899 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:14'.
+2025-10-12 19:19:14.903 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:14.911 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:15.189 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-12 19:19:15.323 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-10-12 19:19:15.474 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [DateApproved] = @p0, [ReviewedBy] = @p1, [Status] = @p2, [UpdatedAt] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-10-12 19:19:15.508 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Email]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-10-12 19:19:17.635 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 54
+2025-10-12 19:19:17.652 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:17.670 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:17'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:17.684 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:17'.
+2025-10-12 19:19:17.699 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:17.705 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:17.750 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-12 19:19:17.779 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-10-12 19:19:17.813 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [UpdatedAt] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-10-12 19:19:17.834 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Email]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-10-12 19:19:20.181 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - null null
+2025-10-12 19:19:20.191 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:20.200 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - 204 null null 21.1147ms
+2025-10-12 19:19:20.212 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 54
+2025-10-12 19:19:20.230 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:20.234 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:20'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:20.253 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:20'.
+2025-10-12 19:19:20.257 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:20.268 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:20.305 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-12 19:19:20.333 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-10-12 19:19:20.364 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [UpdatedAt] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-10-12 19:19:20.389 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Email]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-10-12 19:19:20.732 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-10-12 19:19:20.770 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-10-12 19:19:20.851 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-10-12 19:19:20.974 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-10-12 19:19:21.061 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [TotalTakenDays] = @p1, [UpdatedAt] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2025-10-12 19:19:21.101 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:21.113 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 6192.9864ms
+2025-10-12 19:19:21.154 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:21.192 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 6373.4011ms
+2025-10-12 19:19:21.231 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:21.234 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - null null
+2025-10-12 19:19:21.263 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:21.285 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:21.289 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 65.8664ms
+2025-10-12 19:19:21.325 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:21.329 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 126
+2025-10-12 19:19:21.323 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - 204 null null 88.9325ms
+2025-10-12 19:19:21.367 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:21.388 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:21.416 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:21'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:21.423 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:21'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:21.429 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:21'.
+2025-10-12 19:19:21.441 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:21'.
+2025-10-12 19:19:21.448 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:21.451 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:21.454 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:21.465 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:21.500 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:19:21.577 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-12 19:19:21.577 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:19:21.590 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:21.608 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:21.612 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 126.884ms
+2025-10-12 19:19:21.629 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 150.9827ms
+2025-10-12 19:19:21.640 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:21.651 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:21.654 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 326.4432ms
+2025-10-12 19:19:21.666 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 339.036ms
+2025-10-12 19:19:23.118 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-10-12 19:19:23.146 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-10-12 19:19:23.182 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-10-12 19:19:23.213 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-10-12 19:19:23.243 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [TotalTakenDays] = @p1, [UpdatedAt] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2025-10-12 19:19:23.264 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:23.270 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 5556.616ms
+2025-10-12 19:19:23.289 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:23.300 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 5670.9923ms
+2025-10-12 19:19:23.321 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:23.333 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 126
+2025-10-12 19:19:23.372 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:23.386 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:23.406 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:23'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:23.413 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:23'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:23.419 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:23'.
+2025-10-12 19:19:23.446 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:23'.
+2025-10-12 19:19:23.450 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:23.470 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:23.481 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:23.488 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:23.532 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:19:23.568 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-12 19:19:23.593 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:23.599 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:19:23.606 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 77.0483ms
+2025-10-12 19:19:23.620 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:23.643 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:23.664 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 147.3074ms
+2025-10-12 19:19:23.667 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 334.6774ms
+2025-10-12 19:19:23.686 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:23.739 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 419.677ms
+2025-10-12 19:19:25.022 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-10-12 19:19:25.050 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-10-12 19:19:25.083 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-10-12 19:19:25.154 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-10-12 19:19:25.222 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [TotalTakenDays] = @p1, [UpdatedAt] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2025-10-12 19:19:25.258 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:25.266 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 4989.2617ms
+2025-10-12 19:19:25.301 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:25.333 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 5122.0487ms
+2025-10-12 19:19:25.350 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 126
+2025-10-12 19:19:25.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:25.447 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:25.484 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:25'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:25.466 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:25.503 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:25'.
+2025-10-12 19:19:25.527 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:25'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:25.542 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:25.574 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:25'.
+2025-10-12 19:19:25.586 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:25.608 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:25.644 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:25.696 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-12 19:19:25.734 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:19:25.738 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:25.772 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 146.5267ms
+2025-10-12 19:19:25.778 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:25.785 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 434.3507ms
+2025-10-12 19:19:25.786 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:19:25.847 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:25.859 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 169.2369ms
+2025-10-12 19:19:25.886 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:25.894 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 546.9968ms
+2025-10-12 19:19:26.667 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - null null
+2025-10-12 19:19:26.686 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:26.696 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - 204 null null 29.9568ms
+2025-10-12 19:19:26.700 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 55
+2025-10-12 19:19:26.739 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:26.753 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:26'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:26.768 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:26'.
+2025-10-12 19:19:26.781 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:26.792 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:26.827 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-10-12 19:19:26.859 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-10-12 19:19:26.899 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [DateApproved] = @p0, [ReviewedBy] = @p1, [Status] = @p2, [UpdatedAt] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-10-12 19:19:26.918 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Email]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-10-12 19:19:26.931 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:26.940 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 139.376ms
+2025-10-12 19:19:26.957 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-10-12 19:19:26.963 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 262.3144ms
+2025-10-12 19:19:26.980 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:26.983 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - null null
+2025-10-12 19:19:27.007 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:27.021 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:27.024 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 44.7105ms
+2025-10-12 19:19:27.027 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - 204 null null 45.1165ms
+2025-10-12 19:19:27.045 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 127
+2025-10-12 19:19:27.034 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:19:27.138 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:27.152 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:19:27.162 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:27'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:27.165 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:27'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:19:27.174 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:27'.
+2025-10-12 19:19:27.193 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:49:27'.
+2025-10-12 19:19:27.197 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:27.200 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:27.205 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:19:27.211 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:19:27.234 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-12 19:19:27.265 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:19:27.265 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:27.293 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 71.4327ms
+2025-10-12 19:19:27.312 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-10-12 19:19:27.320 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 278.8001ms
+2025-10-12 19:19:27.348 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:19:27.385 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:19:27.417 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 183.4481ms
+2025-10-12 19:19:27.426 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:19:27.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 396.5513ms
+2025-10-12 19:20:24.328 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:20:24.384 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:24.407 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 89.057ms
+2025-10-12 19:20:24.468 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:20:24.556 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:24.613 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:24'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:24.690 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:24'.
+2025-10-12 19:20:24.712 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:24.738 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:20:24.887 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:20:24.931 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:20:24.947 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 199.2596ms
+2025-10-12 19:20:24.967 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:24.974 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 506.5575ms
+2025-10-12 19:20:25.256 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:20:25.268 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:25.282 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:25'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:25.293 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:25'.
+2025-10-12 19:20:25.299 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:25.303 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:20:25.333 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:20:25.347 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:20:25.355 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 40.1409ms
+2025-10-12 19:20:25.366 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:25.372 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 116.6434ms
+2025-10-12 19:20:27.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:20:27.514 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:27.518 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:27'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:27.524 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:27'.
+2025-10-12 19:20:27.526 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:27.528 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:20:27.537 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:20:27.544 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:20:27.547 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 15.0841ms
+2025-10-12 19:20:27.550 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:27.553 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 51.2352ms
+2025-10-12 19:20:28.677 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:20:28.682 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:20:28.696 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:28.714 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:28.719 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 45.0953ms
+2025-10-12 19:20:28.756 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:20:28.783 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:28.813 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:28.836 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:28'.
+2025-10-12 19:20:28.843 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:28.845 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:28.863 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:28'.
+2025-10-12 19:20:28.870 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:20:28.886 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:20:28.908 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:20:28.933 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:20:28.961 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:20:28.969 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 69.1193ms
+2025-10-12 19:20:28.979 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:20:28.984 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 304.2035ms
+2025-10-12 19:20:29.028 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:20:29.177 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:20:29.198 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:20:29.237 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 295.0839ms
+2025-10-12 19:20:29.245 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:20:29.264 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 509.0389ms
+2025-10-12 19:20:34.209 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-10-12 19:20:34.224 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:34.231 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 22.6775ms
+2025-10-12 19:20:34.241 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-10-12 19:20:34.267 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:34.286 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:34'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-12 19:20:34.305 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '12-10-2025 13:50:34'.
+2025-10-12 19:20:34.761 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-10-12 19:20:34.918 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-10-12 19:20:34.925 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 401 0 null 684.179ms
+2025-10-12 19:20:45.104 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-10-12 19:20:45.119 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:45.121 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 16.7548ms
+2025-10-12 19:20:45.137 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-10-12 19:20:45.147 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:20:45.149 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-12 19:20:45.151 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:20:45.187 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-10-12 19:21:04.013 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-12 19:21:04.020 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 18865.61ms
+2025-10-12 19:21:04.022 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-10-12 19:21:04.025 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 18888.2617ms
+2025-10-12 19:21:04.105 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:21:04.116 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:04.118 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 12.8979ms
+2025-10-12 19:21:04.122 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:21:04.131 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:04.134 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:21:04.137 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:21:04.161 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:21:04.166 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:21:04.170 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 24.5261ms
+2025-10-12 19:21:04.180 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:21:04.182 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 60.1496ms
+2025-10-12 19:21:11.706 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:21:11.706 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:21:11.718 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:11.727 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:11.730 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 23.5171ms
+2025-10-12 19:21:11.733 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 26.2497ms
+2025-10-12 19:21:11.741 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:21:11.736 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:21:11.815 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:11.844 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:21:11.856 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:21:11.860 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:21:11.868 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:21:11.878 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:21:11.989 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:21:12.117 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:21:12.137 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:21:12.141 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 244.3368ms
+2025-10-12 19:21:12.182 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:21:12.199 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 458.8829ms
+2025-10-12 19:21:12.408 +05:30 [INF] Executed DbCommand (152ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:21:12.434 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:21:12.507 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 431.9856ms
+2025-10-12 19:21:12.529 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:21:12.539 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 804.5428ms
+2025-10-12 19:24:42.448 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:24:42.447 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:24:42.597 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:24:42.597 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:24:42.617 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 180.3207ms
+2025-10-12 19:24:42.618 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 182.552ms
+2025-10-12 19:24:42.720 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:24:42.715 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:24:42.788 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:24:42.793 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:24:42.861 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:24:42.861 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:24:42.873 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:24:42.873 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:24:42.994 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:24:43.003 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:24:43.021 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:24:43.036 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 154.0114ms
+2025-10-12 19:24:43.044 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:24:43.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 342.1509ms
+2025-10-12 19:24:43.083 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:24:43.091 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:24:43.106 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 216.8958ms
+2025-10-12 19:24:43.110 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:24:43.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 394.5643ms
+2025-10-12 19:25:52.194 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:25:52.194 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:25:52.223 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:52.223 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:52.231 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 39.6075ms
+2025-10-12 19:25:52.252 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:25:52.231 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 39.6698ms
+2025-10-12 19:25:52.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:25:52.297 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:52.311 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:52.363 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:25:52.363 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:25:52.376 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:25:52.376 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:25:52.483 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:25:52.495 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:25:52.512 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:25:52.519 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 135.0798ms
+2025-10-12 19:25:52.524 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:25:52.528 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 277.4576ms
+2025-10-12 19:25:52.546 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:25:52.552 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:25:52.562 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 172.1226ms
+2025-10-12 19:25:52.567 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:25:52.570 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 307.6198ms
+2025-10-12 19:25:53.825 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:25:53.828 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:25:53.841 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:53.845 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:25:53.848 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:25:53.849 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:25:53.861 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:25:53.867 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:25:53.882 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:25:53.899 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:25:53.905 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:25:53.922 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 66.6104ms
+2025-10-12 19:25:53.929 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:25:53.933 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 106.3416ms
+2025-10-12 19:25:53.934 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:25:53.951 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:25:53.961 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 72.7041ms
+2025-10-12 19:25:53.965 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:25:53.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 143.3086ms
+2025-10-12 19:26:24.152 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:26:24.152 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:26:24.164 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:24.199 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:24.213 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 60.6964ms
+2025-10-12 19:26:24.277 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:26:24.217 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 66.686ms
+2025-10-12 19:26:24.284 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:26:24.376 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:24.400 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:24.418 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:26:24.421 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:26:24.425 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:26:24.434 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:26:24.489 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:26:24.501 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:26:24.514 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:26:24.532 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 91.2485ms
+2025-10-12 19:26:24.544 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:26:24.555 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 277.9297ms
+2025-10-12 19:26:24.582 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:26:24.600 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:26:24.618 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 161.0185ms
+2025-10-12 19:26:24.629 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:26:24.644 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 367.2789ms
+2025-10-12 19:26:29.989 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:26:29.997 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:29.999 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 11.0654ms
+2025-10-12 19:26:30.002 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:26:30.017 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:26:30.021 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:26:30.027 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:26:30.040 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:26:30.066 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:26:30.073 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 41.2263ms
+2025-10-12 19:26:30.079 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:26:30.082 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 80.0664ms
+2025-10-12 19:28:24.121 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:28:24.191 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:28:24.210 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 93.9821ms
+2025-10-12 19:28:24.259 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:28:24.287 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:28:24.371 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:28:24.394 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:28:24.623 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:28:24.652 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:28:24.669 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 258.2558ms
+2025-10-12 19:28:24.679 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:28:24.700 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 442.983ms
+2025-10-12 19:28:45.137 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:28:45.214 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:28:45.241 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 104.4007ms
+2025-10-12 19:28:45.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:28:45.318 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:28:45.325 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:28:45.335 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:28:45.419 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:28:45.430 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:28:45.435 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 67.9869ms
+2025-10-12 19:28:45.441 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:28:45.446 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 149.8869ms
+2025-10-12 19:29:45.114 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:29:45.155 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:29:45.167 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 105.1572ms
+2025-10-12 19:29:45.177 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:29:45.202 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:29:45.248 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:29:45.284 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:29:45.712 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:29:45.788 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:29:45.833 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 523.5685ms
+2025-10-12 19:29:45.848 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:29:45.866 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 690.3473ms
+2025-10-12 19:31:31.144 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:31.148 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:31:31.178 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:31.231 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 87.2847ms
+2025-10-12 19:31:31.234 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:31.280 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:31.316 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 168.5201ms
+2025-10-12 19:31:31.381 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:31:31.365 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:31.453 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:31.466 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:31.481 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:31.500 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:31:31.516 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:31:31.536 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:31.567 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:31.584 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 90.6442ms
+2025-10-12 19:31:31.598 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:31.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 325.4209ms
+2025-10-12 19:31:31.702 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:31:31.969 +05:30 [INF] Executed DbCommand (168ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:31:31.992 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:32.047 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 503.314ms
+2025-10-12 19:31:32.058 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:31:32.066 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 685.028ms
+2025-10-12 19:31:33.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:33.277 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:33.290 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:33.296 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:33.322 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:33.338 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:33.364 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 58.9639ms
+2025-10-12 19:31:33.386 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:33.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 143.4072ms
+2025-10-12 19:31:35.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:35.565 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:35.570 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:35.576 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:35.680 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:35.707 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:35.721 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 128.2686ms
+2025-10-12 19:31:35.730 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:35.738 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 192.3262ms
+2025-10-12 19:31:40.257 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:40.273 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:40.285 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 28.963ms
+2025-10-12 19:31:40.295 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:40.313 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:40.317 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:40.330 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:40.389 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:40.411 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:40.419 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 77.7768ms
+2025-10-12 19:31:40.439 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:40.449 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 153.2121ms
+2025-10-12 19:31:42.054 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:31:42.061 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:42.066 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:42.078 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:42.085 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 30.76ms
+2025-10-12 19:31:42.092 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-12 19:31:42.090 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:42.128 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:42.133 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:42.143 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:31:42.155 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-12 19:31:42.187 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:42.216 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:42.235 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 85.5625ms
+2025-10-12 19:31:42.244 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-12 19:31:42.247 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:42.290 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 229.471ms
+2025-10-12 19:31:42.339 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-12 19:31:42.357 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:42.396 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 204.7071ms
+2025-10-12 19:31:42.403 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-12 19:31:42.416 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 324.2071ms
+2025-10-12 19:31:45.874 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:45.890 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:45.895 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 21.6175ms
+2025-10-12 19:31:45.907 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:45.927 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:45.933 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:45.938 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:45.969 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:45.991 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:46.005 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 56.985ms
+2025-10-12 19:31:46.029 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:46.038 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 131.3758ms
+2025-10-12 19:31:47.788 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:31:47.806 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:31:47.811 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:47.817 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:31:47.840 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:31:47.849 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:31:47.852 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 29.0676ms
+2025-10-12 19:31:47.859 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:31:47.865 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 78.3291ms
+2025-10-12 19:35:26.641 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:35:26.702 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:35:26.715 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 100.5309ms
+2025-10-12 19:35:26.732 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:35:26.776 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:35:26.831 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:35:26.846 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:35:26.999 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:35:27.043 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:35:27.064 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 211.2137ms
+2025-10-12 19:35:27.071 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:35:27.076 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 344.5416ms
+2025-10-12 19:36:41.929 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:36:42.002 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:36:42.011 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 88.8124ms
+2025-10-12 19:36:42.018 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-12 19:36:42.039 +05:30 [INF] CORS policy execution successful.
+2025-10-12 19:36:42.076 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:36:42.085 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-12 19:36:42.316 +05:30 [INF] Executed DbCommand (136ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-12 19:36:42.335 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-12 19:36:42.348 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 256.5839ms
+2025-10-12 19:36:42.351 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-12 19:36:42.356 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 338.0152ms
+2025-10-12 22:28:02.174 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:16.4150436 and is in the Running state now

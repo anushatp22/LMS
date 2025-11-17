@@ -1,0 +1,57 @@
+2025-10-11 21:45:21.591 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:17.2865006 and is in the Running state now
+2025-10-11 21:45:21.591 +05:30 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:17.2852157 and is in the Running state now
+2025-10-11 21:47:08.689 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-11 21:47:08.689 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-11 21:47:08.807 +05:30 [INF] CORS policy execution successful.
+2025-10-11 21:47:08.807 +05:30 [INF] CORS policy execution successful.
+2025-10-11 21:47:08.829 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 167.5528ms
+2025-10-11 21:47:08.829 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 204 null null 167.6128ms
+2025-10-11 21:47:08.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-10-11 21:47:08.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - null null
+2025-10-11 21:47:08.885 +05:30 [INF] CORS policy execution successful.
+2025-10-11 21:47:08.886 +05:30 [INF] CORS policy execution successful.
+2025-10-11 21:47:09.246 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '11-10-2025 16:17:08'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-11 21:47:09.246 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '11-10-2025 16:17:08'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-10-11 21:47:09.931 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '11-10-2025 16:17:08'.
+2025-10-11 21:47:09.932 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '10-10-2025 19:38:42', Current time (UTC): '11-10-2025 16:17:08'.
+2025-10-11 21:47:09.947 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-11 21:47:09.947 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-11 21:47:09.963 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-11 21:47:09.963 +05:30 [INF] Route matched with {action = "GetEmployeeLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeLeaveRequests(Int32) on controller LMS.Controllers.Admin (LMS).
+2025-10-11 21:47:10.173 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__adminId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId], [e].[Name]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__adminId_0
+2025-10-11 21:47:10.196 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-11 21:47:10.228 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-11 21:47:10.259 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 287.2613ms
+2025-10-11 21:47:10.279 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-11 21:47:10.292 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 1450.2626ms
+2025-10-11 21:47:10.362 +05:30 [INF] Executed DbCommand (132ms) [Parameters=[@__adminDetail_Name_2='?' (Size = 4000), @__adminDetail_CompanyId_0='?' (DbType = Int32), @__fromDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Reason], [l].[Status], [l].[AppliedAt], [l].[DateApproved], @__adminDetail_Name_2 AS [ReviewedBy]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[CompanyId] = @__adminDetail_CompanyId_0 AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[CreatedAt] >= @__fromDate_1 AND [l].[IsActive] = CAST(1 AS bit)
+2025-10-11 21:47:10.379 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Collections.Generic.List`1[[LMS.DTOs.Admin.GetEmployeeLeaveResponse, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-11 21:47:10.409 +05:30 [INF] Executed action LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS) in 434.0326ms
+2025-10-11 21:47:10.414 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.GetEmployeeLeaveRequests (LMS)'
+2025-10-11 21:47:10.425 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Admin/Admin/ViewEmployeeLeaveRequest/24 - 200 null application/json; charset=utf-8 1579.6956ms

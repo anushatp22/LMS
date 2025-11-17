@@ -1,0 +1,956 @@
+2025-09-30 10:21:20.217 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:19.0079274 and is in the Running state now
+2025-09-30 10:21:20.222 +05:30 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:19.0086080 and is in the Running state now
+2025-09-30 11:27:58.182 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-30 11:28:03.950 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-30 11:28:08.318 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-30 11:28:09.995 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-30 11:28:10.004 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-30 11:28:10.533 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-30 11:28:10.537 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-30 11:28:10.551 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-30 11:28:10.642 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-30 11:28:10.651 +05:30 [INF] Hosting environment: Development
+2025-09-30 11:28:10.656 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-30 11:28:10.943 +05:30 [INF] Server hhlap0012:33564:cff3bb4e successfully announced in 301.3024 ms
+2025-09-30 11:28:11.029 +05:30 [INF] Server hhlap0012:33564:cff3bb4e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-30 11:28:11.459 +05:30 [INF] Server hhlap0012:33564:cff3bb4e all the dispatchers started
+2025-09-30 11:28:12.620 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:28:12.620 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-30 11:28:13.026 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:28:13.026 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:28:13.102 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - 204 null null 566.5888ms
+2025-09-30 11:28:13.102 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 566.5973ms
+2025-09-30 11:28:27.959 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-30 11:28:32.685 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 4763.4039ms
+2025-09-30 11:28:47.196 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-30 11:28:47.358 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-30 11:28:47.422 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 220.5619ms
+2025-09-30 11:28:48.429 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1067.6632ms
+2025-09-30 11:29:03.335 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-30 11:29:06.961 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3620.4112ms
+2025-09-30 11:29:19.582 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:29:19.582 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:29:19.714 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:29:19.714 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:29:19.767 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 192.486ms
+2025-09-30 11:29:19.769 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 194.424ms
+2025-09-30 11:29:19.840 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:29:19.839 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:29:20.025 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:29:20.025 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:29:22.773 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '29-09-2025 18:58:12', Current time (UTC): '30-09-2025 05:59:22'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-09-30 11:29:22.773 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '29-09-2025 18:58:12', Current time (UTC): '30-09-2025 05:59:22'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-09-30 11:29:23.326 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '29-09-2025 18:58:12', Current time (UTC): '30-09-2025 05:59:22'.
+2025-09-30 11:29:23.326 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '29-09-2025 18:58:12', Current time (UTC): '30-09-2025 05:59:22'.
+2025-09-30 11:29:23.489 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:29:23.544 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-30 11:29:23.634 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-30 11:29:23.693 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 401 0 null 3856.4663ms
+2025-09-30 11:29:24.727 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:29:39.497 +05:30 [INF] Executed DbCommand (486ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 11:29:40.099 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:29:40.562 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 15743.9602ms
+2025-09-30 11:29:40.582 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:29:40.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 499 null application/json; charset=utf-8 20853.6071ms
+2025-09-30 11:33:11.206 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-30 11:42:55.987 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-30 11:42:56.095 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:42:56.116 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 143.7153ms
+2025-09-30 11:42:56.174 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-30 11:42:56.200 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:42:56.271 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 11:42:56.465 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:43:14.805 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-30 11:43:15.721 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-30 11:43:15.876 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 19394.7336ms
+2025-09-30 11:43:15.887 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 11:43:15.901 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 19723.8946ms
+2025-09-30 11:43:16.782 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:43:16.805 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:16.810 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 31.1571ms
+2025-09-30 11:43:16.846 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:43:16.867 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:16.965 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:43:16.986 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:43:17.315 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 11:43:17.337 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:43:17.356 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 357.9191ms
+2025-09-30 11:43:17.367 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:43:17.374 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 529.3945ms
+2025-09-30 11:43:23.375 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:43:23.375 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:43:23.400 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:23.430 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:23.434 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 62.2604ms
+2025-09-30 11:43:23.440 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 65.3807ms
+2025-09-30 11:43:23.455 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 11:43:23.486 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:43:23.634 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:23.663 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:23.673 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:43:23.697 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:43:23.710 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:43:23.729 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 11:43:23.749 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:43:23.755 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 48.9561ms
+2025-09-30 11:43:23.770 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 11:43:23.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 321.6076ms
+2025-09-30 11:43:23.789 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:43:24.346 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 11:43:24.369 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:43:24.381 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 568.1138ms
+2025-09-30 11:43:24.388 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:43:24.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 911.5101ms
+2025-09-30 11:43:28.246 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 11:43:28.274 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:28.279 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 34.6448ms
+2025-09-30 11:43:28.284 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-30 11:43:28.314 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:43:28.328 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:43:28.350 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:43:28.680 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 11:43:28.693 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:43:28.699 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 340.1388ms
+2025-09-30 11:43:28.708 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:43:28.713 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 400 null application/json; charset=utf-8 429.2134ms
+2025-09-30 11:44:45.229 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - application/json 165
+2025-09-30 11:44:45.258 +05:30 [INF] CORS policy execution failed.
+2025-09-30 11:44:45.261 +05:30 [INF] Request origin https://localhost:7284 does not have permission to access the resource.
+2025-09-30 11:44:45.265 +05:30 [INF] Executing endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-30 11:44:45.284 +05:30 [INF] Route matched with {action = "AddLeaveRequest", controller = "Leave"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddLeaveRequest(LMS.DTOs.Employee.LeaveRequest) on controller LMS.Controllers.Leave (LMS).
+2025-09-30 11:44:45.386 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[CompanyId]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Id] = @__employeeId_0
+2025-09-30 11:44:46.013 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = Int32), @p9='?' (Size = 4000), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveApplication] ([AppliedAt], [CompanyId], [CreatedAt], [DateApproved], [EmployeeId], [EndDate], [IsActive], [IsDeleted], [LeaveTypeId], [Reason], [ReviewedBy], [StartDate], [Status], [TotalDays], [UpdatedAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-09-30 11:44:46.103 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-09-30 11:44:46.115 +05:30 [INF] Executed action LMS.Controllers.Leave.AddLeaveRequest (LMS) in 825.0095ms
+2025-09-30 11:44:46.119 +05:30 [INF] Executed endpoint 'LMS.Controllers.Leave.AddLeaveRequest (LMS)'
+2025-09-30 11:44:46.124 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/Employee/AddLeaveApplication - 200 null application/json; charset=utf-8 895.8428ms
+2025-09-30 11:45:31.533 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 11:45:31.563 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:45:31.567 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 41.2632ms
+2025-09-30 11:45:31.574 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 11:45:31.584 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:45:31.592 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:45:31.597 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:45:31.646 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 11:45:31.660 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:45:31.693 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 90.8326ms
+2025-09-30 11:45:31.697 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:45:31.701 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 127.8553ms
+2025-09-30 11:45:33.159 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-30 11:45:33.176 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:45:33.181 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:45:33.186 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:45:33.211 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 11:45:33.217 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:45:33.222 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 29.3194ms
+2025-09-30 11:45:33.225 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:45:33.228 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 68.6625ms
+2025-09-30 11:47:40.055 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - null null
+2025-09-30 11:47:40.121 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:40.142 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - 204 null null 98.1387ms
+2025-09-30 11:47:40.162 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 54
+2025-09-30 11:47:40.185 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:40.261 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-30 11:47:40.419 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:47:41.078 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-09-30 11:47:41.358 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-09-30 11:47:41.472 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [DateApproved] = @p0, [ReviewedBy] = @p1, [Status] = @p2, [UpdatedAt] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2025-09-30 11:47:41.585 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-09-30 11:47:41.637 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-09-30 11:47:41.692 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-09-30 11:47:43.963 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [leaveBalance] ([CompanyId], [CreatedAt], [EmployeeId], [IsActive], [IsDeleted], [LastAllocatedDate], [LeaveTypeId], [RemainingDays], [TotalAllocatedDays], [TotalTakenDays], [UpdatedAt], [Year])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2025-09-30 11:47:43.981 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:47:43.994 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 3568.0763ms
+2025-09-30 11:47:43.998 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-30 11:47:44.004 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 3842.0098ms
+2025-09-30 11:47:52.040 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:47:52.051 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:52.059 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 21.9875ms
+2025-09-30 11:47:52.089 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:47:52.116 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:52.144 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:47:52.156 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:47:52.276 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 11:47:52.282 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:47:52.286 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 124.2723ms
+2025-09-30 11:47:52.291 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:47:52.295 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 208.6829ms
+2025-09-30 11:47:59.663 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - null null
+2025-09-30 11:47:59.673 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:59.677 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - 204 null null 14.0872ms
+2025-09-30 11:47:59.685 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 105
+2025-09-30 11:47:59.712 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:47:59.722 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-09-30 11:47:59.759 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:48:01.785 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-30 11:48:01.791 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:01.795 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 2028.9048ms
+2025-09-30 11:48:01.799 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-09-30 11:48:01.803 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 2118.9436ms
+2025-09-30 11:48:26.321 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - null null
+2025-09-30 11:48:26.337 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:26.340 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/UpdateLeaveStatus - 204 null null 19.7021ms
+2025-09-30 11:48:26.345 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - application/json 54
+2025-09-30 11:48:26.356 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:26.367 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-30 11:48:26.370 +05:30 [INF] Route matched with {action = "UpdateLeaveStatus", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateLeaveStatus(LMS.DTOs.Admin.UpdateLeaveStatusRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:48:26.392 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [employeeRegistration] AS [e]
+        WHERE [e].[Id] = @__Id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-09-30 11:48:26.402 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[AppliedAt], [l].[CompanyId], [l].[CreatedAt], [l].[DateApproved], [l].[EmployeeId], [l].[EndDate], [l].[IsActive], [l].[IsDeleted], [l].[LeaveTypeId], [l].[Reason], [l].[ReviewedBy], [l].[StartDate], [l].[Status], [l].[TotalDays], [l].[UpdatedAt]
+FROM [leaveApplication] AS [l]
+WHERE [l].[Id] = @__p_0
+2025-09-30 11:48:26.414 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveApplication] SET [UpdatedAt] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-09-30 11:48:26.422 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CompanyId], [c].[CreatedAt], [c].[HolidayDate], [c].[HolidayName], [c].[HolidayType], [c].[IsActive], [c].[IsDeleted], [c].[LastUpdatedAt], [c].[Year]
+FROM [companyHoliday] AS [c]
+WHERE [c].[CompanyId] = @__companyId_0 AND [c].[IsActive] = CAST(1 AS bit) AND [c].[IsDeleted] = CAST(0 AS bit) AND [c].[Year] = DATEPART(year, GETUTCDATE())
+2025-09-30 11:48:26.431 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__LeaveTypeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id] AS [LeaveTypeId], [l].[Type] AS [LeaveType], [l].[GenderRestriction], [l].[DefaultAllocation], [l].[AllocationFrequency], [l].[IsActive], [l].[IsDeleted]
+FROM [leaveType] AS [l]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[AllocationFrequency] IS NOT NULL AND [l].[Id] = @__LeaveTypeId_0
+2025-09-30 11:48:26.441 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_Value_0='?' (DbType = Int32), @__leaveTypeId_Value_1='?' (DbType = Int32), @__targetYear_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveBalanceId], [l].[LeaveTypeId], [l].[EmployeeId], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[RemainingDays], [l].[Year], [l].[CompanyId], [l].[IsActive], [l].[IsDeleted] AS [IsDelete]
+FROM [leaveBalance] AS [l]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[EmployeeId] = @__employeeId_Value_0 AND [l].[LeaveTypeId] = @__leaveTypeId_Value_1 AND [l].[Year] = @__targetYear_2
+2025-09-30 11:48:26.621 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__Ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[CompanyId], [l].[CreatedAt], [l].[EmployeeId], [l].[IsActive], [l].[IsDeleted], [l].[LastAllocatedDate], [l].[LeaveTypeId], [l].[RemainingDays], [l].[TotalAllocatedDays], [l].[TotalTakenDays], [l].[UpdatedAt], [l].[Year]
+FROM [leaveBalance] AS [l]
+WHERE [l].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__Ids_0) WITH ([value] int '$') AS [i]
+)
+2025-09-30 11:48:37.065 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [leaveBalance] SET [RemainingDays] = @p0, [TotalTakenDays] = @p1, [UpdatedAt] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+2025-09-30 11:48:37.074 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:37.078 +05:30 [INF] Executed action LMS.Controllers.Admin.UpdateLeaveStatus (LMS) in 10705.8079ms
+2025-09-30 11:48:37.082 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.UpdateLeaveStatus (LMS)'
+2025-09-30 11:48:37.086 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/UpdateLeaveStatus - 200 null application/json; charset=utf-8 10742.1855ms
+2025-09-30 11:48:37.103 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:48:37.112 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - null null
+2025-09-30 11:48:37.115 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:37.121 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:37.123 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 20.7135ms
+2025-09-30 11:48:37.127 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - application/json 105
+2025-09-30 11:48:37.129 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 11:48:37.125 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/AddNotification - 204 null null 13.3806ms
+2025-09-30 11:48:37.148 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:37.160 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:37.164 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-09-30 11:48:37.168 +05:30 [INF] Route matched with {action = "AddNotification", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddNotification(LMS.DTOs.Common.NotificationResponse) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:48:37.169 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:48:37.175 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 11:48:38.572 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Boolean), @p3='?' (Size = 500), @p4='?' (Size = 50), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [notifications] ([Id], [CreatedAt], [IsRead], [Message], [Type], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-09-30 11:48:38.585 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:38.586 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 11:48:38.605 +05:30 [INF] Executed action LMS.Controllers.Employee.AddNotification (LMS) in 1433.9071ms
+2025-09-30 11:48:38.605 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:38.607 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.AddNotification (LMS)'
+2025-09-30 11:48:38.611 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 56.9356ms
+2025-09-30 11:48:38.615 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/AddNotification - 200 null application/json; charset=utf-8 1488.2109ms
+2025-09-30 11:48:38.618 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 11:48:38.626 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 1496.8715ms
+2025-09-30 11:48:48.501 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 11:48:48.511 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:48.514 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 13.5191ms
+2025-09-30 11:48:48.516 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 11:48:48.527 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:48.533 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:48:48.536 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:48:48.567 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 11:48:48.578 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:48.588 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 48.244ms
+2025-09-30 11:48:48.594 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:48:48.597 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 81.1392ms
+2025-09-30 11:48:52.511 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-30 11:48:52.521 +05:30 [INF] CORS policy execution successful.
+2025-09-30 11:48:52.526 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:48:52.530 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 11:48:52.548 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 11:48:52.559 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 11:48:52.565 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 30.3791ms
+2025-09-30 11:48:52.569 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 11:48:52.575 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 400 null application/json; charset=utf-8 64.647ms
+2025-09-30 12:35:55.437 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 12:35:55.437 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 12:35:55.619 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:35:55.619 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:35:55.668 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 247.3594ms
+2025-09-30 12:35:55.668 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 247.3231ms
+2025-09-30 12:35:55.721 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 12:35:55.710 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 12:35:55.870 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:35:55.870 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:35:56.071 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 12:35:56.074 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 12:35:56.124 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 12:35:56.137 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 12:35:56.686 +05:30 [INF] Executed DbCommand (217ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 12:35:56.686 +05:30 [INF] Executed DbCommand (218ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 12:35:56.764 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 12:35:56.807 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 12:35:56.937 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 786.0295ms
+2025-09-30 12:35:56.942 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 804.3835ms
+2025-09-30 12:35:56.954 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 12:35:56.974 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 12:35:57.001 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 1292.8276ms
+2025-09-30 12:35:57.009 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 1293.9475ms
+2025-09-30 12:36:09.203 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 12:36:09.218 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:36:09.223 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 20.1938ms
+2025-09-30 12:36:09.226 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-30 12:36:09.240 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:36:09.245 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:09.248 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 12:36:09.304 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 12:36:09.311 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 12:36:09.316 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 61.8582ms
+2025-09-30 12:36:09.322 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:09.326 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 400 null application/json; charset=utf-8 100.3982ms
+2025-09-30 12:36:12.416 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 12:36:12.428 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:36:12.431 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:12.435 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 12:36:12.463 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 12:36:12.471 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 12:36:12.479 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 38.2932ms
+2025-09-30 12:36:12.482 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:12.486 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 70.1878ms
+2025-09-30 12:36:15.538 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 12:36:15.549 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:36:15.552 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 14.0432ms
+2025-09-30 12:36:15.555 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 12:36:15.567 +05:30 [INF] CORS policy execution successful.
+2025-09-30 12:36:15.571 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:15.573 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 12:36:15.593 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 12:36:15.600 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 12:36:15.604 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 27.2818ms
+2025-09-30 12:36:15.607 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 12:36:15.610 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 55.5707ms
+2025-09-30 13:14:36.407 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:14:36.407 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:14:36.457 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:14:36.457 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:14:36.494 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 93.3665ms
+2025-09-30 13:14:36.494 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 93.3689ms
+2025-09-30 13:15:43.762 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 13:15:43.797 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:15:43.807 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 51.4334ms
+2025-09-30 13:15:43.845 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 13:15:43.881 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:15:43.967 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 13:15:43.994 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 13:15:44.269 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 13:15:44.310 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:15:44.335 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 334.8333ms
+2025-09-30 13:15:44.340 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 13:15:44.347 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 502.3198ms
+2025-09-30 13:16:05.242 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:05.288 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:05.292 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 50.3236ms
+2025-09-30 13:16:05.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:05.342 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:05.346 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:05.351 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:16:05.412 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:16:05.433 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:16:05.441 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 84.5762ms
+2025-09-30 13:16:05.445 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:05.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 163.6702ms
+2025-09-30 13:16:31.993 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:32.050 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:32.067 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 101.6262ms
+2025-09-30 13:16:32.089 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:32.147 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:32.253 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:32.275 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:16:32.514 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:16:32.559 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:16:32.590 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 308.4456ms
+2025-09-30 13:16:32.595 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:32.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 516.0018ms
+2025-09-30 13:16:58.402 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:16:58.402 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:58.468 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:58.482 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:58.486 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 89.1027ms
+2025-09-30 13:16:58.490 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 89.9261ms
+2025-09-30 13:16:58.506 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:16:58.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:16:58.571 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:58.602 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:16:58.604 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:58.619 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:16:58.623 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:16:58.638 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:16:58.672 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:16:58.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:16:58.721 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 91.9283ms
+2025-09-30 13:16:58.730 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:16:58.739 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 233.8342ms
+2025-09-30 13:16:58.887 +05:30 [INF] Executed DbCommand (134ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 13:16:58.903 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:16:58.908 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 236.2025ms
+2025-09-30 13:16:58.914 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:16:58.921 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 417.2489ms
+2025-09-30 13:17:09.189 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:09.196 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:09.199 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 11.3728ms
+2025-09-30 13:17:09.213 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:09.228 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:09.232 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:09.235 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:09.295 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:17:09.312 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:09.343 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 100.5675ms
+2025-09-30 13:17:09.348 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:09.362 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 153.1364ms
+2025-09-30 13:17:13.085 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:17:13.095 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:13.103 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:13.120 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 37.0423ms
+2025-09-30 13:17:13.140 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:17:13.124 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:13.163 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:13.173 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:13.177 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:17:13.186 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:13.192 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:13.241 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:17:13.270 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 13:17:13.272 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:13.286 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:13.295 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 90.661ms
+2025-09-30 13:17:13.303 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 84.7059ms
+2025-09-30 13:17:13.310 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:13.317 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:17:13.325 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 232.1392ms
+2025-09-30 13:17:13.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 191.923ms
+2025-09-30 13:17:33.434 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:33.471 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:33.475 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 43.7925ms
+2025-09-30 13:17:33.511 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:33.618 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:33.627 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:33.664 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:33.781 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:17:33.809 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:33.891 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 198.7214ms
+2025-09-30 13:17:33.923 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:33.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 428.2703ms
+2025-09-30 13:17:37.430 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:17:37.430 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:17:37.490 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:37.503 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:37.507 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 78.0903ms
+2025-09-30 13:17:37.537 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:17:37.539 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:37.593 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:17:37.605 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:37.610 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:17:37.625 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:17:37.646 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:17:37.670 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:37.675 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 13:17:37.681 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 62.9707ms
+2025-09-30 13:17:37.696 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:17:37.705 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:17:37.715 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 74.8239ms
+2025-09-30 13:17:37.721 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 292.4174ms
+2025-09-30 13:17:37.729 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:17:37.758 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 221.0175ms
+2025-09-30 13:18:50.410 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:18:50.410 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:18:50.783 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:50.784 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:50.943 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 582.5268ms
+2025-09-30 13:18:51.032 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - null null
+2025-09-30 13:18:51.082 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:18:50.943 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/24 - 204 null null 582.4583ms
+2025-09-30 13:18:51.235 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:51.242 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:51.884 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:18:51.962 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:18:52.154 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:18:52.203 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:18:53.794 +05:30 [INF] Executed DbCommand (321ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:18:54.137 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:18:54.326 +05:30 [INF] Executed DbCommand (903ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-30 13:18:54.427 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 1951.3123ms
+2025-09-30 13:18:54.500 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:18:54.541 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:18:54.593 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 3528.6828ms
+2025-09-30 13:18:54.666 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 2196.7896ms
+2025-09-30 13:18:54.723 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-30 13:18:54.741 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/24 - 400 null application/json; charset=utf-8 3709.995ms
+2025-09-30 13:18:58.724 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-30 13:18:58.755 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:58.769 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 50.0856ms
+2025-09-30 13:18:58.792 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-30 13:18:58.833 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:18:58.861 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 13:18:58.883 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-30 13:18:59.299 +05:30 [INF] Executed DbCommand (141ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-30 13:18:59.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:18:59.361 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 461.4274ms
+2025-09-30 13:18:59.375 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-30 13:18:59.394 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 603.0949ms
+2025-09-30 13:19:02.569 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:19:02.615 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:19:02.619 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/24 - 204 null null 50.531ms
+2025-09-30 13:19:02.626 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - null null
+2025-09-30 13:19:02.644 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:19:02.653 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:19:02.662 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:19:02.701 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:19:02.716 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:19:02.738 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 52.2245ms
+2025-09-30 13:19:02.747 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:19:02.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/24 - 200 null application/json; charset=utf-8 151.3651ms
+2025-09-30 13:19:31.307 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-30 13:19:31.365 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:19:31.383 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 82.4086ms
+2025-09-30 13:19:31.480 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-09-30 13:19:31.507 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:19:31.596 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 13:19:31.632 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:20:06.228 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 49
+2025-09-30 13:20:06.295 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:20:06.327 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 13:20:06.342 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-30 13:20:06.343 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:20:06.444 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-30 13:20:06.494 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-30 13:20:06.502 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 34845.4646ms
+2025-09-30 13:20:06.506 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 13:20:06.510 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 35032.0692ms
+2025-09-30 13:20:06.517 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-30 13:20:06.520 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 159.6793ms
+2025-09-30 13:20:06.524 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-30 13:20:06.525 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 307.9866ms
+2025-09-30 13:20:07.174 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:20:07.189 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:20:07.194 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 20.3587ms
+2025-09-30 13:20:07.202 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:20:07.218 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:20:07.222 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:20:07.227 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:20:07.265 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:20:07.270 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:20:07.276 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 43.4759ms
+2025-09-30 13:20:07.280 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:20:07.282 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 80.1209ms
+2025-09-30 13:20:22.385 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:20:22.399 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:20:22.402 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 16.6827ms
+2025-09-30 13:20:22.450 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:20:22.469 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:20:22.494 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:20:22.512 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:20:22.737 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:20:22.789 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:20:22.822 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 291.2966ms
+2025-09-30 13:20:22.845 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:20:22.856 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 406.2123ms
+2025-09-30 13:24:14.411 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:24:14.486 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:24:14.499 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 138.9812ms
+2025-09-30 13:24:14.517 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:24:14.556 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:24:14.675 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:24:14.706 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:24:15.064 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:24:15.087 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:24:15.127 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 410.0564ms
+2025-09-30 13:24:15.133 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:24:15.146 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 630.0371ms
+2025-09-30 13:45:12.859 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:45:13.094 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:45:13.111 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 272.013ms
+2025-09-30 13:45:47.940 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:45:47.940 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:45:48.113 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:45:48.128 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 192.4776ms
+2025-09-30 13:45:48.170 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:45:48.187 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:45:48.199 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 269.0435ms
+2025-09-30 13:45:48.284 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:45:48.314 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:45:48.348 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:45:48.420 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:45:48.452 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 168.0646ms
+2025-09-30 13:45:48.453 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:45:48.556 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 13:45:48.860 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:45:48.904 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:45:48.946 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 463.7193ms
+2025-09-30 13:45:48.963 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:45:48.976 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 789.2246ms
+2025-09-30 13:47:30.112 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:47:30.112 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:47:30.224 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:30.231 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:30.237 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 206.9633ms
+2025-09-30 13:47:30.237 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 206.4721ms
+2025-09-30 13:47:30.259 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:47:30.255 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:47:30.349 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:30.361 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:30.430 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:47:30.436 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 181.847ms
+2025-09-30 13:47:30.450 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:47:30.466 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 13:47:30.743 +05:30 [INF] Executed DbCommand (72ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:47:30.765 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:47:30.798 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 337.9525ms
+2025-09-30 13:47:30.818 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:47:30.832 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 573.0978ms
+2025-09-30 13:47:39.421 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:47:39.432 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:39.436 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 14.8553ms
+2025-09-30 13:47:39.439 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:47:39.455 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:39.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 19.8999ms
+2025-09-30 13:47:39.471 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 13:47:39.486 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:47:39.494 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:39.498 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 13.412ms
+2025-09-30 13:47:39.510 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:47:39.526 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:47:39.530 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:47:39.539 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:47:39.562 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:47:39.571 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:47:39.577 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 30.3673ms
+2025-09-30 13:47:39.582 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:47:39.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 81.6989ms
+2025-09-30 13:48:06.284 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:48:06.284 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:48:06.363 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:06.363 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:06.389 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 117.7102ms
+2025-09-30 13:48:06.389 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 117.7369ms
+2025-09-30 13:48:06.709 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:48:06.709 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:48:06.753 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:06.755 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:06.874 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:48:06.883 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 173.4383ms
+2025-09-30 13:48:06.900 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:48:06.912 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 13:48:07.226 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:48:07.261 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:48:07.299 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 387.9629ms
+2025-09-30 13:48:07.305 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:48:07.314 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 605.6826ms
+2025-09-30 13:48:52.607 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:48:52.607 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:48:52.686 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:52.686 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:52.699 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 155.5679ms
+2025-09-30 13:48:52.700 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 158.1103ms
+2025-09-30 13:48:52.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 13:48:52.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 13:48:52.826 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:52.831 +05:30 [INF] CORS policy execution successful.
+2025-09-30 13:48:52.932 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:48:52.937 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 159.4827ms
+2025-09-30 13:48:52.963 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 13:48:52.970 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 13:48:53.444 +05:30 [INF] Executed DbCommand (140ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 13:48:53.498 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 13:48:53.547 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 573.1204ms
+2025-09-30 13:48:53.577 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 13:48:53.596 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 827.0177ms
+2025-09-30 14:53:30.672 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 14:53:30.672 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 14:53:30.799 +05:30 [INF] CORS policy execution successful.
+2025-09-30 14:53:30.799 +05:30 [INF] CORS policy execution successful.
+2025-09-30 14:53:30.840 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 181.6219ms
+2025-09-30 14:53:30.840 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 204 null null 182.424ms
+2025-09-30 14:53:30.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-09-30 14:53:30.930 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - null null
+2025-09-30 14:53:31.148 +05:30 [INF] CORS policy execution successful.
+2025-09-30 14:53:31.152 +05:30 [INF] CORS policy execution successful.
+2025-09-30 14:53:31.384 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 14:53:31.403 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/EmployeeGetLeaveBalance/26 - 404 0 null 473.4704ms
+2025-09-30 14:53:31.489 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-09-30 14:53:31.533 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7284/api/EmployeeGetLeaveBalance/26, Response status code: 404
+2025-09-30 14:53:32.757 +05:30 [INF] Execution DelayedJobScheduler recovered from the Faulted state after 00:00:20.2640004 and is in the Running state now
+2025-09-30 14:53:32.765 +05:30 [INF] Execution RecurringJobScheduler recovered from the Faulted state after 00:00:20.2487276 and is in the Running state now
+2025-09-30 14:53:33.476 +05:30 [INF] Executed DbCommand (1,352ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-09-30 14:53:33.526 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-30 14:53:33.641 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 2076.5802ms
+2025-09-30 14:53:33.663 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-09-30 14:53:33.674 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 2720.9913ms

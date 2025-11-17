@@ -1,0 +1,706 @@
+2025-09-25 15:39:50.031 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 15:39:54.367 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 15:39:55.852 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 15:39:56.600 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 15:39:56.606 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 15:39:56.834 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 15:39:56.840 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 15:39:56.843 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 15:39:56.903 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 15:39:56.907 +05:30 [INF] Hosting environment: Development
+2025-09-25 15:39:56.912 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 15:39:56.941 +05:30 [INF] Server hhlap0012:24708:54a29763 successfully announced in 42.4038 ms
+2025-09-25 15:39:56.965 +05:30 [INF] Server hhlap0012:24708:54a29763 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 15:39:57.060 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 15:39:57.315 +05:30 [INF] Server hhlap0012:24708:54a29763 all the dispatchers started
+2025-09-25 15:40:00.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 15:40:01.060 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 666.6966ms
+2025-09-25 15:40:01.234 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 15:40:01.234 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 15:40:01.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 109.5993ms
+2025-09-25 15:40:01.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 337.9338ms
+2025-09-25 15:40:01.821 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 15:40:02.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 274.3905ms
+2025-09-25 15:41:30.687 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:41:30.741 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:41:30.746 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:41:30.752 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 66.3558ms
+2025-09-25 15:41:42.384 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:41:42.405 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:41:42.409 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:41:42.413 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 31.4372ms
+2025-09-25 15:41:49.857 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:41:49.871 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:41:49.874 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:41:49.879 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 22.8864ms
+2025-09-25 15:41:52.139 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:41:52.149 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:41:52.150 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:41:52.153 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 15.4527ms
+2025-09-25 15:41:55.065 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:41:55.083 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:41:55.087 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:41:55.095 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 30.373ms
+2025-09-25 15:43:25.501 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 15:43:25.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 74.5414ms
+2025-09-25 15:43:25.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 15:43:25.663 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 15:43:25.688 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 25.0134ms
+2025-09-25 15:43:25.744 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.1654ms
+2025-09-25 15:43:26.245 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 15:43:26.279 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 35.4631ms
+2025-09-25 15:43:46.628 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:43:46.640 +05:30 [INF] CORS policy execution failed.
+2025-09-25 15:43:46.642 +05:30 [INF] Request origin http://localhost:64941 does not have permission to access the resource.
+2025-09-25 15:43:46.644 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 17.3776ms
+2025-09-25 15:44:15.347 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 15:44:16.807 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 15:44:17.447 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 15:44:17.765 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 15:44:17.768 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 15:44:17.921 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 15:44:17.925 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 15:44:17.929 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 15:44:17.968 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 15:44:17.973 +05:30 [INF] Hosting environment: Development
+2025-09-25 15:44:17.976 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 15:44:18.003 +05:30 [INF] Server hhlap0012:23372:f5c4856c successfully announced in 36.8804 ms
+2025-09-25 15:44:18.014 +05:30 [INF] Server hhlap0012:23372:f5c4856c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 15:44:18.262 +05:30 [INF] Server hhlap0012:23372:f5c4856c all the dispatchers started
+2025-09-25 15:44:21.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 15:44:22.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 636.0502ms
+2025-09-25 15:44:22.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 15:44:22.777 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 15:44:22.882 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 199.0459ms
+2025-09-25 15:44:23.038 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 261.3554ms
+2025-09-25 15:44:23.499 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 15:44:23.572 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.4268ms
+2025-09-25 15:46:31.273 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:46:31.405 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:46:31.429 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 160.746ms
+2025-09-25 15:46:31.473 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 15:46:31.497 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:46:31.840 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:46:32.007 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 15:46:33.402 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 15:47:29.315 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 15:47:29.373 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 57349.6139ms
+2025-09-25 15:47:29.379 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:47:29.403 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 57931.5465ms
+2025-09-25 15:49:18.103 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 15:52:47.310 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:52:47.382 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:52:47.397 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 93.3799ms
+2025-09-25 15:52:47.467 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 15:52:47.495 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:52:47.528 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:52:47.568 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 15:52:47.880 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 15:52:54.613 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 15:52:54.628 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 7051.271ms
+2025-09-25 15:52:54.631 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:52:54.636 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 7169.5162ms
+2025-09-25 15:52:57.667 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:52:57.674 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:52:57.678 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 11.3915ms
+2025-09-25 15:52:57.687 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 15:52:57.695 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:52:57.709 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:52:57.717 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 15:52:57.899 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 15:52:59.577 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 15:52:59.583 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 1858.9186ms
+2025-09-25 15:52:59.588 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:52:59.593 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 1906.5449ms
+2025-09-25 15:53:40.082 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 15:53:40.100 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:53:40.107 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 26.0419ms
+2025-09-25 15:53:40.123 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 15:53:40.131 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:53:40.134 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:53:40.139 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 15:53:40.157 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 15:53:41.896 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 15:53:41.904 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 1761.3625ms
+2025-09-25 15:53:41.913 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 15:53:41.919 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 1796.3761ms
+2025-09-25 15:56:45.709 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 15:56:45.731 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:56:45.735 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - 204 null null 27.5098ms
+2025-09-25 15:56:45.741 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 15:56:45.763 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:56:45.906 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 15:56:45.957 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 15:56:46.164 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-25 15:56:46.172 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 15:56:46.216 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 253.8753ms
+2025-09-25 15:56:46.219 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 15:56:46.221 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 480.0844ms
+2025-09-25 15:57:28.714 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 15:57:28.725 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:57:28.732 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 15:57:28.743 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 15:57:28.746 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 401 0 null 32.4802ms
+2025-09-25 15:59:09.046 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 15:59:09.136 +05:30 [INF] CORS policy execution successful.
+2025-09-25 15:59:09.163 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 15:59:09.167 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 15:59:09.178 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 401 0 null 133.9086ms
+2025-09-25 16:00:02.896 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 16:00:02.957 +05:30 [INF] CORS policy execution successful.
+2025-09-25 16:00:02.961 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 16:00:02.964 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 16:00:02.969 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 401 0 null 76.6547ms
+2025-09-25 16:09:03.082 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 16:09:05.194 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 16:09:06.273 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 16:09:06.805 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 16:09:06.809 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 16:09:07.226 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 16:09:07.232 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 16:09:07.236 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 16:09:07.288 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 16:09:07.292 +05:30 [INF] Hosting environment: Development
+2025-09-25 16:09:07.294 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 16:09:07.337 +05:30 [INF] Server hhlap0012:22860:d8e6ac16 successfully announced in 50.4212 ms
+2025-09-25 16:09:07.348 +05:30 [INF] Server hhlap0012:22860:d8e6ac16 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 16:09:07.657 +05:30 [INF] Server hhlap0012:22860:d8e6ac16 all the dispatchers started
+2025-09-25 16:09:11.571 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 16:09:12.354 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 824.3321ms
+2025-09-25 16:09:12.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 16:09:12.671 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 16:09:12.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 62.1902ms
+2025-09-25 16:09:12.987 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 317.2326ms
+2025-09-25 16:09:13.201 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 16:09:13.283 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.64ms
+2025-09-25 16:13:53.384 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 16:13:54.484 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 16:13:54.973 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 16:13:55.243 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 16:13:55.247 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 16:13:55.373 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 16:13:55.375 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 16:13:55.377 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 16:13:55.409 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 16:13:55.411 +05:30 [INF] Hosting environment: Development
+2025-09-25 16:13:55.413 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 16:13:55.440 +05:30 [INF] Server hhlap0012:29856:90e572f0 successfully announced in 33.0757 ms
+2025-09-25 16:13:55.453 +05:30 [INF] Server hhlap0012:29856:90e572f0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 16:13:55.508 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 16:13:55.639 +05:30 [INF] Server hhlap0012:29856:90e572f0 all the dispatchers started
+2025-09-25 16:13:58.169 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 16:13:58.532 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 389.8888ms
+2025-09-25 16:13:58.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 16:13:58.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 16:13:58.692 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 56.338ms
+2025-09-25 16:13:58.810 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 173.6011ms
+2025-09-25 16:13:58.882 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 16:13:58.938 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.1578ms
+2025-09-25 16:18:55.573 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 17:32:37.894 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 17:32:40.752 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 17:32:42.043 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 17:32:42.992 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 17:32:43.001 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 17:32:43.491 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 17:32:43.498 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 17:32:43.503 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 17:32:43.596 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 17:32:43.602 +05:30 [INF] Hosting environment: Development
+2025-09-25 17:32:43.607 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 17:32:43.680 +05:30 [INF] Server hhlap0012:28808:3f57c177 successfully announced in 86.1224 ms
+2025-09-25 17:32:43.706 +05:30 [INF] Server hhlap0012:28808:3f57c177 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 17:32:44.084 +05:30 [INF] Server hhlap0012:28808:3f57c177 all the dispatchers started
+2025-09-25 17:32:50.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 17:32:52.122 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 1328.3941ms
+2025-09-25 17:32:52.813 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 17:32:52.846 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 33.1513ms
+2025-09-25 17:32:52.885 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 17:32:53.065 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 181.7776ms
+2025-09-25 17:32:53.979 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 17:32:54.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.7597ms
+2025-09-25 17:37:43.899 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 17:50:24.616 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 17:50:26.765 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 17:50:27.381 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 17:50:27.696 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 17:50:27.700 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 17:50:27.954 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 17:50:27.956 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 17:50:27.959 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 17:50:27.993 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 17:50:27.997 +05:30 [INF] Hosting environment: Development
+2025-09-25 17:50:27.999 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 17:50:28.029 +05:30 [INF] Server hhlap0012:26752:27f6cf8f successfully announced in 35.966 ms
+2025-09-25 17:50:28.040 +05:30 [INF] Server hhlap0012:26752:27f6cf8f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 17:50:28.281 +05:30 [INF] Server hhlap0012:26752:27f6cf8f all the dispatchers started
+2025-09-25 17:50:31.655 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 17:50:32.329 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 719.5718ms
+2025-09-25 17:50:32.538 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 17:50:32.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 17:50:32.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 56.5246ms
+2025-09-25 17:50:32.775 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 229.001ms
+2025-09-25 17:50:32.928 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 17:50:32.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 77.1639ms
+2025-09-25 17:50:58.305 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 17:50:59.551 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 17:51:00.095 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 17:51:00.453 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 17:51:00.456 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 17:51:00.601 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 17:51:00.603 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 17:51:00.605 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 17:51:00.661 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 17:51:00.666 +05:30 [INF] Hosting environment: Development
+2025-09-25 17:51:00.672 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 17:51:00.703 +05:30 [INF] Server hhlap0012:28576:52c838d4 successfully announced in 42.5388 ms
+2025-09-25 17:51:00.740 +05:30 [INF] Server hhlap0012:28576:52c838d4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 17:51:00.965 +05:30 [INF] Server hhlap0012:28576:52c838d4 all the dispatchers started
+2025-09-25 17:51:04.023 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 17:51:04.830 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 869.9747ms
+2025-09-25 17:51:04.965 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 17:51:04.970 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 17:51:05.060 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 99.6965ms
+2025-09-25 17:51:05.139 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.4149ms
+2025-09-25 17:51:05.264 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 17:51:05.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 117.2962ms
+2025-09-25 17:56:00.846 +05:30 [INF] 2 servers were removed due to timeout
+2025-09-25 18:00:44.943 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 59
+2025-09-25 18:00:45.200 +05:30 [INF] CORS policy execution failed.
+2025-09-25 18:00:45.206 +05:30 [INF] Request origin https://localhost:7284 does not have permission to access the resource.
+2025-09-25 18:00:45.770 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:00:45.997 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 18:00:53.975 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 18:00:55.642 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 18:00:55.672 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 9661.4187ms
+2025-09-25 18:00:55.675 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:00:55.692 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 10763.8938ms
+2025-09-25 18:03:22.992 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7284/api/Employee/User/Login - application/json 62
+2025-09-25 18:03:23.069 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:03:23.096 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 18:03:28.424 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 18:03:31.446 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 18:03:31.485 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 8380.5902ms
+2025-09-25 18:03:31.492 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:03:31.500 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 8515.9777ms
+2025-09-25 18:05:04.123 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 18:05:04.164 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:05:04.183 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 62.2491ms
+2025-09-25 18:05:04.249 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 18:05:04.263 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:05:04.281 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:05:04.294 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 18:05:09.477 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 18:05:10.708 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 18:05:10.721 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 6422.8509ms
+2025-09-25 18:05:10.729 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 18:05:10.736 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 6487.8558ms
+2025-09-25 18:06:34.310 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 18:06:34.347 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:06:34.354 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - 204 null null 47.0586ms
+2025-09-25 18:06:34.366 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 18:06:34.401 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:06:34.719 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 18:06:34.840 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 18:06:35.177 +05:30 [INF] Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-25 18:06:35.196 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 18:06:35.282 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 436.5038ms
+2025-09-25 18:06:35.288 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 18:06:35.291 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 927.2214ms
+2025-09-25 18:06:54.409 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 18:06:54.423 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:06:54.427 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 18.2328ms
+2025-09-25 18:06:54.429 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-25 18:06:54.446 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:06:54.455 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 18:06:54.469 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 18:06:54.623 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 18:06:54.629 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 18:06:54.633 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 149.129ms
+2025-09-25 18:06:54.638 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 18:06:54.643 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 214.3491ms
+2025-09-25 18:07:03.928 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 18:07:03.944 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:07:03.953 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 25.7216ms
+2025-09-25 18:07:03.963 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-25 18:07:03.993 +05:30 [INF] CORS policy execution successful.
+2025-09-25 18:07:04.006 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 18:07:04.012 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 18:07:04.046 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 18:07:04.057 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 18:07:04.066 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 45.3674ms
+2025-09-25 18:07:04.069 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 18:07:04.072 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 400 null application/json; charset=utf-8 111.2409ms
+2025-09-25 20:35:51.733 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 20:36:02.060 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 20:36:02.664 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 20:36:03.056 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 20:36:03.058 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 20:36:03.166 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 20:36:03.170 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 20:36:03.171 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 20:36:03.206 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 20:36:03.210 +05:30 [INF] Hosting environment: Development
+2025-09-25 20:36:03.213 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 20:36:03.255 +05:30 [INF] Server hhlap0012:21428:e8cb0fda successfully announced in 45.1706 ms
+2025-09-25 20:36:03.266 +05:30 [INF] Server hhlap0012:21428:e8cb0fda is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 20:36:03.310 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 20:36:03.450 +05:30 [INF] Server hhlap0012:21428:e8cb0fda all the dispatchers started
+2025-09-25 20:36:10.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 20:36:10.739 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 628.1966ms
+2025-09-25 20:36:10.873 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 20:36:10.873 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 20:36:10.928 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 57.1056ms
+2025-09-25 20:36:11.011 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 139.3793ms
+2025-09-25 20:36:11.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 20:36:11.115 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.2727ms
+2025-09-25 20:50:46.635 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 20:50:48.320 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 20:50:48.997 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 20:50:49.421 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 20:50:49.425 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 20:50:49.548 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 20:50:49.552 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 20:50:49.555 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 20:50:49.624 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 20:50:49.628 +05:30 [INF] Hosting environment: Development
+2025-09-25 20:50:49.631 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 20:50:49.688 +05:30 [INF] Server hhlap0012:29728:39291d8d successfully announced in 65.6699 ms
+2025-09-25 20:50:49.710 +05:30 [INF] Server hhlap0012:29728:39291d8d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 20:50:50.220 +05:30 [INF] Server hhlap0012:29728:39291d8d all the dispatchers started
+2025-09-25 20:50:54.689 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 20:50:55.404 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 730.9511ms
+2025-09-25 20:50:55.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 20:50:55.564 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 20:50:55.604 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 41.4934ms
+2025-09-25 20:50:55.743 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 180.6484ms
+2025-09-25 20:50:55.877 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 20:50:55.913 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.6348ms
+2025-09-25 20:55:49.873 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 22:05:34.626 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 22:05:35.077 +05:30 [WRN] Server hhlap0012:29728:39291d8d was considered dead by other servers, restarting...
+2025-09-25 22:05:35.087 +05:30 [INF] Server hhlap0012:29728:39291d8d caught restart signal...
+2025-09-25 22:05:35.239 +05:30 [WRN] Server hhlap0012:29728:39291d8d stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2025-09-25 22:05:35.393 +05:30 [INF] Server hhlap0012:29728:39291d8d successfully reported itself as stopped in 34.0153 ms
+2025-09-25 22:05:35.397 +05:30 [INF] Server hhlap0012:29728:39291d8d has been stopped in total 178.5033 ms
+2025-09-25 22:05:35.441 +05:30 [INF] Server hhlap0012:29728:7871fbcd successfully announced in 36.0959 ms
+2025-09-25 22:05:35.463 +05:30 [INF] Server hhlap0012:29728:7871fbcd is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 22:05:35.810 +05:30 [INF] Server hhlap0012:29728:7871fbcd all the dispatchers started
+2025-09-25 22:26:43.208 +05:30 [INF] Start installing Hangfire SQL objects...
+2025-09-25 22:26:45.988 +05:30 [INF] Hangfire SQL objects installed.
+2025-09-25 22:26:47.111 +05:30 [INF] User profile is available. Using 'C:\Users\AnushaTP\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-25 22:26:47.611 +05:30 [INF] Now listening on: https://localhost:7284
+2025-09-25 22:26:47.618 +05:30 [INF] Now listening on: http://localhost:5082
+2025-09-25 22:26:48.087 +05:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: (localdb)\MSSQLLocalDB@LMS'
+2025-09-25 22:26:48.091 +05:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2025-09-25 22:26:48.095 +05:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2025-09-25 22:26:48.157 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-25 22:26:48.162 +05:30 [INF] Hosting environment: Development
+2025-09-25 22:26:48.168 +05:30 [INF] Content root path: C:\Users\AnushaTP\source\repos\LMS\LMS
+2025-09-25 22:26:48.204 +05:30 [INF] Server hhlap0012:28932:92b99bb2 successfully announced in 49.1144 ms
+2025-09-25 22:26:48.217 +05:30 [INF] Server hhlap0012:28932:92b99bb2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2025-09-25 22:26:48.487 +05:30 [INF] Server hhlap0012:28932:92b99bb2 all the dispatchers started
+2025-09-25 22:26:51.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/index.html - null null
+2025-09-25 22:26:52.660 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/index.html - 200 null text/html;charset=utf-8 729.5211ms
+2025-09-25 22:26:52.914 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - null null
+2025-09-25 22:26:52.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/_vs/browserLink - null null
+2025-09-25 22:26:52.962 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_framework/aspnetcore-browser-refresh.js - 200 16491 application/javascript; charset=utf-8 47.9714ms
+2025-09-25 22:26:53.129 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/_vs/browserLink - 200 null text/javascript; charset=UTF-8 210.4315ms
+2025-09-25 22:26:53.309 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - null null
+2025-09-25 22:26:53.352 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.1899ms
+2025-09-25 22:28:12.657 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - null null
+2025-09-25 22:28:12.769 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:28:12.783 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/User/Login - 204 null null 129.5854ms
+2025-09-25 22:28:12.807 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Employee/User/Login - application/json 50
+2025-09-25 22:28:12.831 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:28:13.217 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 22:28:13.362 +05:30 [INF] Route matched with {action = "LoginUser", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(LMS.DTOs.Employee.LoginRequest) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 22:28:15.847 +05:30 [INF] Executed DbCommand (78ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[CompanyId], [e].[CreatedAt], [e].[Department], [e].[Email], [e].[EmployeeId], [e].[ForcePasswordChange], [e].[Gender], [e].[IsActive], [e].[IsDeleted], [e].[JoiningDate], [e].[LastUpdatedAt], [e].[Name], [e].[PasswordHash], [e].[Role]
+FROM [employeeRegistration] AS [e]
+WHERE [e].[Email] = @__email_0 AND [e].[IsActive] = CAST(1 AS bit) AND [e].[IsDeleted] = CAST(0 AS bit)
+2025-09-25 22:28:20.868 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.JwtLoginResponse`1[[LMS.ResponseModel.Common.LoginTokens, LMS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-09-25 22:28:20.933 +05:30 [INF] Executed action LMS.Controllers.Employee.LoginUser (LMS) in 7558.1236ms
+2025-09-25 22:28:20.940 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.LoginUser (LMS)'
+2025-09-25 22:28:20.962 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Employee/User/Login - 200 null application/json; charset=utf-8 8155.4121ms
+2025-09-25 22:28:50.382 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 22:28:50.413 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:28:50.418 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetLeaveRequests/23 - 204 null null 38.3186ms
+2025-09-25 22:28:50.423 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - null null
+2025-09-25 22:28:50.447 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:28:50.623 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 22:28:50.658 +05:30 [INF] Route matched with {action = "GetLeaveRequests", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetLeaveRequests(Int32, System.Nullable`1[System.Int32]) on controller LMS.Controllers.Employee (LMS).
+2025-09-25 22:28:51.006 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsActive] = CAST(1 AS bit) AND [l].[IsDeleted] = CAST(0 AS bit) AND [l].[EmployeeId] = @__userId_0
+2025-09-25 22:28:51.021 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:28:51.069 +05:30 [INF] Executed action LMS.Controllers.Employee.GetLeaveRequests (LMS) in 400.0049ms
+2025-09-25 22:28:51.073 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetLeaveRequests (LMS)'
+2025-09-25 22:28:51.080 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetLeaveRequests/23 - 200 null application/json; charset=utf-8 657.7053ms
+2025-09-25 22:29:27.001 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:29:27.045 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:29:27.053 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 54.1717ms
+2025-09-25 22:29:27.060 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-25 22:29:27.075 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:29:27.101 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:29:27.126 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:29:27.458 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 22:29:27.468 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:29:27.472 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 337.0061ms
+2025-09-25 22:29:27.475 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:29:27.480 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 420.5533ms
+2025-09-25 22:30:26.206 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:30:26.260 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:30:26.263 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 57.4048ms
+2025-09-25 22:30:26.272 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 20
+2025-09-25 22:30:26.284 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:30:26.292 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:30:26.297 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:30:26.332 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 22:30:26.339 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:30:26.343 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 39.2226ms
+2025-09-25 22:30:26.347 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:30:26.352 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 400 null application/json; charset=utf-8 80.2364ms
+2025-09-25 22:31:11.273 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:31:11.301 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:31:11.307 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 34.0819ms
+2025-09-25 22:31:11.312 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-25 22:31:11.322 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:31:11.354 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:31:11.357 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:31:11.383 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 22:31:11.387 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:31:11.390 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 26.5442ms
+2025-09-25 22:31:11.393 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:31:11.397 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 86.215ms
+2025-09-25 22:31:37.046 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:31:37.060 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:31:37.065 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 23.1741ms
+2025-09-25 22:31:37.071 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 21
+2025-09-25 22:31:37.088 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:31:37.093 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:31:37.096 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:31:37.113 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__ToString_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0
+2025-09-25 22:31:37.118 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:31:37.122 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 21.8615ms
+2025-09-25 22:31:37.126 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:31:37.129 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 59.8178ms
+2025-09-25 22:31:48.310 +05:30 [INF] 1 servers were removed due to timeout
+2025-09-25 22:32:29.557 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:32:29.586 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:32:29.592 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 31.4925ms
+2025-09-25 22:32:29.600 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 69
+2025-09-25 22:32:29.610 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:32:29.617 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:32:29.620 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:32:29.680 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__start_1='?' (DbType = DateTime2), @__end_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__start_1 AND [l].[EndDate] <= @__end_2
+2025-09-25 22:32:29.687 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:32:29.690 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 67.1341ms
+2025-09-25 22:32:29.694 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:32:29.698 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 100.2661ms
+2025-09-25 22:33:41.874 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:33:41.910 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:33:41.922 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 48.0461ms
+2025-09-25 22:33:41.927 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 69
+2025-09-25 22:33:41.942 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:33:41.946 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:33:41.949 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:33:41.970 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__start_1='?' (DbType = DateTime2), @__end_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__start_1 AND [l].[EndDate] <= @__end_2
+2025-09-25 22:33:41.978 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:33:41.982 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 27.7375ms
+2025-09-25 22:33:41.986 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:33:41.991 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 63.9371ms
+2025-09-25 22:34:09.992 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:34:10.006 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:34:10.009 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 18.695ms
+2025-09-25 22:34:10.014 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 69
+2025-09-25 22:34:10.035 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:34:10.040 +05:30 [INF] Executing endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:34:10.045 +05:30 [INF] Route matched with {action = "FilterLeaveRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] FilterLeaveRequests(LMS.DTOs.Admin.LeaveFilterRequest) on controller LMS.Controllers.Admin (LMS).
+2025-09-25 22:34:22.727 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__ToString_0='?' (Size = 4000), @__start_1='?' (DbType = DateTime2), @__end_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id] AS [LeaveRequestId], [l].[EmployeeId], [e].[Name] AS [EmployeeName], [l].[LeaveTypeId], [l0].[Type] AS [LeaveType], [l].[StartDate], [l].[EndDate], [l].[Status], [l].[TotalDays], [l].[Reason], [l].[AppliedAt], [l].[DateApproved]
+FROM [leaveApplication] AS [l]
+INNER JOIN [employeeRegistration] AS [e] ON [l].[EmployeeId] = [e].[Id]
+INNER JOIN [leaveType] AS [l0] ON [l].[LeaveTypeId] = [l0].[Id]
+WHERE [l].[IsDeleted] = CAST(0 AS bit) AND [l].[IsActive] = CAST(1 AS bit) AND [l].[Status] = @__ToString_0 AND [l].[StartDate] >= @__start_1 AND [l].[EndDate] <= @__end_2
+2025-09-25 22:34:22.731 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-25 22:34:22.735 +05:30 [INF] Executed action LMS.Controllers.Admin.FilterLeaveRequests (LMS) in 12683.9254ms
+2025-09-25 22:34:22.740 +05:30 [INF] Executed endpoint 'LMS.Controllers.Admin.FilterLeaveRequests (LMS)'
+2025-09-25 22:34:22.743 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 200 null application/json; charset=utf-8 12730.3491ms
+2025-09-25 22:37:59.620 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:37:59.695 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:37:59.707 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 98.3562ms
+2025-09-25 22:37:59.725 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 69
+2025-09-25 22:37:59.760 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:37:59.986 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:07:59'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-09-25 22:38:00.258 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:07:59'.
+2025-09-25 22:38:00.292 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 22:38:00.339 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 22:38:00.345 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 401 0 null 629.2195ms
+2025-09-25 22:38:53.544 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:38:53.626 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:38:53.630 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 86.6367ms
+2025-09-25 22:38:53.635 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 49
+2025-09-25 22:38:53.655 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:38:53.660 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:08:53'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-09-25 22:38:53.668 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:08:53'.
+2025-09-25 22:38:53.671 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 22:38:53.675 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 22:38:53.678 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 401 0 null 43.2867ms
+2025-09-25 22:39:28.833 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - null null
+2025-09-25 22:39:28.862 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:39:28.865 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Admin/Filter - 204 null null 33.324ms
+2025-09-25 22:39:28.877 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7284/api/Admin/Filter - application/json 69
+2025-09-25 22:39:28.891 +05:30 [INF] CORS policy execution successful.
+2025-09-25 22:39:28.895 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:09:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2025-09-25 22:39:28.901 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25-09-2025 17:01:16', Current time (UTC): '25-09-2025 17:09:28'.
+2025-09-25 22:39:28.905 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-09-25 22:39:28.907 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-09-25 22:39:28.910 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7284/api/Admin/Filter - 401 0 null 33.2778ms

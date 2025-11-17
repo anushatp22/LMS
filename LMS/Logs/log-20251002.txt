@@ -1,0 +1,96 @@
+2025-10-02 00:56:32.547 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:56:32.989 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:56:33.005 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 473.0485ms
+2025-10-02 00:56:33.033 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:56:33.060 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:56:33.208 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:56:33.237 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 00:56:33.526 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 00:56:33.557 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 00:56:33.594 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 348.7422ms
+2025-10-02 00:56:33.605 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:56:33.613 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 581.4095ms
+2025-10-02 00:57:08.347 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:57:08.432 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:57:08.448 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 108.9167ms
+2025-10-02 00:57:08.463 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:57:08.500 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:57:08.583 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:57:08.618 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 00:57:08.888 +05:30 [INF] Executed DbCommand (98ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 00:57:08.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 00:57:08.934 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 302.6366ms
+2025-10-02 00:57:08.944 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:57:08.950 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 488.6101ms
+2025-10-02 00:58:31.450 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:58:31.526 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:58:31.551 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 104.7858ms
+2025-10-02 00:58:31.581 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:58:31.665 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:58:31.716 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:58:31.734 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 00:58:31.925 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 00:58:31.950 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 00:58:31.973 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 201.1365ms
+2025-10-02 00:58:31.977 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:58:31.981 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 404.1791ms
+2025-10-02 00:59:53.914 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:59:54.081 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:59:54.176 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 297.3406ms
+2025-10-02 00:59:54.245 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 00:59:54.294 +05:30 [INF] CORS policy execution successful.
+2025-10-02 00:59:54.494 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:59:54.529 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 00:59:55.090 +05:30 [INF] Executed DbCommand (104ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 00:59:55.230 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 00:59:55.301 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 757.3235ms
+2025-10-02 00:59:55.330 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 00:59:55.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 1116.5006ms
+2025-10-02 01:00:53.649 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 01:00:53.779 +05:30 [INF] CORS policy execution successful.
+2025-10-02 01:00:53.862 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 227.3342ms
+2025-10-02 01:00:53.896 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 01:00:54.091 +05:30 [INF] CORS policy execution successful.
+2025-10-02 01:00:54.236 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 01:00:54.337 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 01:00:55.152 +05:30 [INF] Executed DbCommand (350ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 01:00:55.226 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 01:00:55.277 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 899.1589ms
+2025-10-02 01:00:55.292 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 01:00:55.318 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 1424.143ms
+2025-10-02 01:01:04.483 +05:30 [INF] Request starting HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 01:01:04.536 +05:30 [INF] CORS policy execution successful.
+2025-10-02 01:01:04.556 +05:30 [INF] Request finished HTTP/2 OPTIONS https://localhost:7284/api/Employee/GetNotifications/26 - 204 null null 73.0205ms
+2025-10-02 01:01:04.603 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - null null
+2025-10-02 01:01:04.726 +05:30 [INF] CORS policy execution successful.
+2025-10-02 01:01:04.741 +05:30 [INF] Executing endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 01:01:04.748 +05:30 [INF] Route matched with {action = "GetNotifications", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetNotifications(Int32) on controller LMS.Controllers.Employee (LMS).
+2025-10-02 01:01:04.796 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [n].[Id], [n].[CreatedAt], [n].[IsRead], [n].[Message], [n].[Type], [n].[UserId]
+FROM [notifications] AS [n]
+WHERE [n].[UserId] = @__userId_0
+ORDER BY [n].[CreatedAt] DESC
+2025-10-02 01:01:04.831 +05:30 [INF] Executing OkObjectResult, writing value of type 'LMS.ResponseModel.Common.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-02 01:01:04.853 +05:30 [INF] Executed action LMS.Controllers.Employee.GetNotifications (LMS) in 93.6648ms
+2025-10-02 01:01:04.868 +05:30 [INF] Executed endpoint 'LMS.Controllers.Employee.GetNotifications (LMS)'
+2025-10-02 01:01:04.878 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7284/api/Employee/GetNotifications/26 - 200 null application/json; charset=utf-8 281.1396ms
